@@ -5,7 +5,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Primary Meta Tags -->
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Doorflora</title>
 
 {{--@yield('meta')--}}
@@ -16,7 +17,7 @@
 </head>
 <body id="root">
 <div id="wrap_all">
-    {{-- @include('includes/header')--}}
+    @include('components/header')
     {{--   @yield('title')--}}
     @yield('content')
 
@@ -24,13 +25,23 @@
 </body>
 <div class="footer">
     <div class="container">
-        <div class="main-menu-container">
-            <a class="menu-item" href="">menu items</a>
+        <div class="row">
+            <div class="col-sm">
+                <h3>menu</h3>
+                <div class="main-menu-container">
+                    <a class="menu-item" href="">menu items</a>
 
+                </div>
+            </div>
+            <div class="col-sm">
+                <h3>contact</h3>
+                <div class="main-menu-container">
+                    <a class="menu-item" href="">menu items</a>
+
+                </div>
+            </div>
         </div>
-        <div class="logo-container">
-            {{--<img src="{{ asset('/storage/logo.png') }}">--}}
-        </div>
+
     </div>
 </div>
 <div class="socket">
