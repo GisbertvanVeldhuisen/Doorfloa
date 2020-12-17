@@ -1,0 +1,17 @@
+html #root {
+  header#header {
+    .container {
+      padding: 20px 10%;
+      max-width: 100%;
+      .menu-item{
+        margin: 0 10px;
+      }
+      .col-11 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+    }
+
+  }
+}

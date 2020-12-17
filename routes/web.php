@@ -17,6 +17,15 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
+
+/*Route::POST('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);*/
+
+/*Route::get('/form', function () {
+    return view('form');
+});*/
+
 Route::get('/elementen', function () {
     return view('elementen');
 });

@@ -18,25 +18,45 @@
 <body id="root">
 <div id="wrap_all">
     @include('components/header')
-    {{--   @yield('title')--}}
-    @yield('content')
-
+    <div class="main">
+        {{--   @yield('title')--}}
+        @yield('content')
+    </div>
 </div>
 </body>
 <div class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-sm menu">
                 <h3>menu</h3>
                 <div class="main-menu-container">
-                    <a class="menu-item" href="">menu items</a>
+                    <a class="menu-item" href="#">Fotografie</a>
+                    <a class="menu-item" href="#">Recepten</a>
+                    <a class="menu-item" href="#">Over mij</a>
+                    <a class="menu-item" href="#">Contact</a>
 
                 </div>
             </div>
-            <div class="col-sm">
+            <div class="col-sm contact">
                 <h3>contact</h3>
                 <div class="main-menu-container">
-                    <a class="menu-item" href="">menu items</a>
+
+                    <a class="menu-item" href="www.doorflora.nl">
+                        <span class="icon location"></span>
+                        <span>Doorflora.nl</span>
+                    </a>
+                    <a class="menu-item" href="www.doorflora.nl">
+                        <span class="icon search"></span>
+                        <span>Doorflora.nl</span>
+                    </a>
+                    <a class="menu-item" href="www.doorflora.nl">
+                        <span class="icon instagram"></span>
+                        <span>Doorflora.nl</span>
+                    </a>
+                    <a class="menu-item" href="www.doorflora.nl">
+                        <span class="icon pintrest"></span>
+                        <span>Doorflora.nl</span>
+                    </a>
 
                 </div>
             </div>
@@ -46,7 +66,8 @@
 </div>
 <div class="socket">
     <div class="container">
-        <p>title</p>
+        <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen & Jurre
+            van Esveld</p>
     </div>
 </div>
 </html>

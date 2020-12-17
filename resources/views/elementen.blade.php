@@ -119,16 +119,85 @@
             </div>
             <div class="row">
                 <div class="col-sm">
-                    <p>fotografie</p>
+                    <p>pasta met tomatensaus</p>
                 </div>
                 <div class="col-sm">
-                    <p>recepten</p>
+                    <p>pasta met tomatensaus</p>
                 </div>
                 <div class="col-sm">
-                    <p>contact</p>
+                    <p>pasta met tomatensaus</p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="section recipe-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h1>pasta met tomatensaus</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <img src="" alt="">
+                </div>
+                <div class="col-sm">
+                    <h2>Ingredienten</h2>
+                    <table>
+                        <tr>1 courgette</tr>
+                        <tr>1 courgette</tr>
+                        <tr>1 courgette</tr>
+                        <tr>1 courgette</tr>
+                        <tr>1 courgette</tr>
+                        <tr>1 courgette</tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section recipe-single preparation">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h2>pasta met tomatensaus</h2>
+                </div>
+            </div>
+            <div class="row">
 
+                <div class="col-sm">
+                    <h3>Ingredienten</h3>
+                    <p>Begin met het snijden van de groenten. Snijd de courgette in blokjes van
+                        1 centimeter, de ui in ringen en pers de knoflook (of snijd fijn). Zet de hapjespan
+                        om middelhoog vuur en voeg de olijfolie toe in de pan. Als de pan heet is voeg de
+                        ui toe aan de pan. Als de ui glazig is geworden voeg je de knoflook en de courgette toe.
+                        Bak dit even aan en voeg vervolgens de kruiden toe en de tomatenblokjes toe.
+                        Zet het vuur wat lager en laat het gerecht 20 min pruttelen. Optioneel: voeg na
+                        een kwartier 100ml kookroom toe. Zet een pan water op het vuur. Als het water
+                        kookt, voeg de pasta toe. Na tien minuten giet je de pasta af.
+                        Snijd de mozzarella in stukjes. Serveer de pasta, hierboven op de saus en de
+                        mozzarella.
+                        Eetsmakelijk!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section recipe-single images">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <img src="" alt="">
+                </div>
+
+
+                <div class="col-sm">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
 @endsection

@@ -1,17 +1,17 @@
 <header id="header" class="menu">
     <div class="container">
-        <div class="menu-container">
-            <div class="menu-container">
-                <div class="logo-container">
-                    <a href="{{ url('/') }}"><img src="{{ asset('/storage/logo.png') }}" alt=""></a>
-                </div>
-                <div class="main-menu-container">
-                    <a class="menu-item" href="{{ url('/car') }}">menu item</a>
-                    <a class="menu-item button background-secondary" href="{{ url('/post') }}">menu item</a>
-                </div>
-                <div class="responsive-menu">
+        <div class="row">
+            <div class="col-1">
+                <a class="menu-item icon home" href="{{ url('/') }}">
+                </a>
+            </div>
 
-                </div>
+            <div class="col-11">
+                <a class="menu-item icon search" href="{{ url('#') }}"></a>
+                <a class="menu-item icon instagram" href="{{ url('#') }}"></a>
+                <a class="menu-item icon pintrest" href="{{ url('#') }}"></a>
+                <a class="menu-item icon facebook" href="{{ url('#') }}"></a>
+                <a class="menu-item icon mail" href="{{ url('#') }}"></a>
             </div>
         </div>
     </div>
