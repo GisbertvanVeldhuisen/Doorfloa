@@ -13,18 +13,19 @@ class CreateHomeTable extends Migration
      */
     public function up()
     {
-        Schema::create('home', function (Blueprint $table) {
+        Schema::create('Home', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
-            $table->text('intro');
-            $table->text('title_text');
-            $table->text('text');
-            $table->text('title_text_1');
-            $table->text('text_1');
-            $table->text('page_color');
+            $table->text('title')->nullable(true);
+            $table->text('intro')->nullable(true);
+            $table->text('title_text')->nullable(true);
+            $table->text('text')->nullable(true);
+            $table->text('title_text_1')->nullable(true);
+            $table->text('text_1')->nullable(true);
+            $table->text('page_color')->nullable(true);
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

@@ -13,18 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [App\Http\Controllers\HomePageController::class, 'Homeinfo']);
+
+
 
 
 Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
 
-/*Route::POST('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);*/
+Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']);
 
-/*Route::get('/form', function () {
-    return view('form');
-});*/
 
 Route::get('/elementen', function () {
     return view('elementen');

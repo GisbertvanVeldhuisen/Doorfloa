@@ -48,7 +48,7 @@
             </div>
         </div>
     </div>
-    <div class="section text one-half">
+    <div class="section text image">
         <div class="container">
             <div class="row">
                 <div class="col-sm">

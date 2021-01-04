@@ -19332,6 +19332,10 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$('input:checkbox').change(function () {
+  $('.col-sm').toggleClass('menuitemshow', this.checked);
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
