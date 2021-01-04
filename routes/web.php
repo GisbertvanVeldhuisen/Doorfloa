@@ -26,3 +26,7 @@ Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']
 Route::get('/elementen', function () {
     return view('elementen');
 });
+
+Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
+
+Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');
