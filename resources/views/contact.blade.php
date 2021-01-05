@@ -1,7 +1,7 @@
 @extends ('layouts/app')
 
+@section('content')
 
-<body>
 <div class="container mt-5">
 
     <!-- Success message -->
@@ -76,4 +76,5 @@
         <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
     </form>
 </div>
-</body>
+
+@endsection
