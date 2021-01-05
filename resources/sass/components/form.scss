@@ -1,0 +1,44 @@
+html #root {
+  form {
+    h1{
+      text-align: start;
+      font-size: 20px;
+      letter-spacing: 5px;
+      margin: 20px 0;
+    }
+    .row{
+      min-width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+    .col-sm{
+      margin: 10px;
+    }
+    label{
+      margin-bottom: 20px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 700;
+
+    }
+    textarea{
+      height: 200px;
+      overflow: hidden;
+    }
+    input[type="text"], textarea{
+      width: 100%;
+      border: 1px solid #EDEDED;
+      border-radius: 3px;
+      padding: 10px 20px;
+      color: black;
+    }
+    input.file-hidden {
+      display: none;
+    }
+
+    input:checked + input[type="file"] {
+      display: block;
+    }
+
+  }
+}

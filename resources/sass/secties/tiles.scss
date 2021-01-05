@@ -1,0 +1,60 @@
+html #root {
+  .section.tiles {
+    margin-bottom: 50px;
+    position: relative;
+    .shadow {
+      height: 500px;
+      width: 300px;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      &.left {
+        left: 0;
+        transform: translateY(-50%);
+      }
+      &.right {
+        right: 0;
+        transform: translateY(10%);
+      }
+    }
+    .container {
+      padding-bottom: 300px;
+      z-index: 99;
+      position: relative;
+    }
+    .intro {
+      margin: 20px 0 100px;
+    }
+    .grid-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .one-third {
+      min-width: calc(100% / 3 - 30px);
+      max-width: calc(100% / 3 - 30px);
+      position: relative;
+    }
+    .info-container {
+      position: relative;
+      text-align: center;
+      padding: 30px 10px;
+      p {
+        font-family: $title-family;
+        font-size: 35px;
+        position: relative;
+
+      }
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: white;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.6;
+      }
+    }
+  }
+}

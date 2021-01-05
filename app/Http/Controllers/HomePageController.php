@@ -19,12 +19,14 @@ class HomePageController extends Controller
             [
                 /*vult deze tabellen*/
                 'title' => $request->get('title'),
+                'title_intro' => $request->get('title_intro'),
                 'intro' => $request->get('intro'),
                 'title_text' => $request->get('title_text'),
                 'text' => $request->get('text'),
                 'title_text_1' => $request->get('title_text_1'),
                 'text_1' => $request->get('text_1'),
                 'page_color' => $request->get('color'),
+                'accent_color' => $request->get('accent_color')
             ]
         );
         /*controleert of image png is*/
@@ -44,11 +46,11 @@ class HomePageController extends Controller
         return redirect()->back()->withInput();
     }
     public function formInfo(){
-        $values = Home::all();
+        $value = Home::find(1);
 
         return view('form',
             [
-                'values' => $values
+                'value' => $value
             ]);
     }
     public function Homeinfo(){

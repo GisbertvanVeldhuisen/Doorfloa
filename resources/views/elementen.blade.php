@@ -4,7 +4,7 @@
     <div class="section header">
         <div class="container">
             <div class="row">
-                <div class="col-sm"><h1>elementen</h1></div>
+                <div class="col-sm"><h1>elem<strong>enten</strong></h1></div>
             </div>
         </div>
     </div>
@@ -22,7 +22,10 @@
             </div>
             <div class="row">
                 <div class="col-sm">
+                    <div class="img-container">
+                        <img src="" alt="">
                     <p>fotografie</p>
+                    </div>
                 </div>
                 <div class="col-sm">
                     <p>recepten</p>
@@ -77,20 +80,6 @@
         </div>
     </div>
 
-    <div class="section contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <p>vragen of meer informatie voor het aanvragen van een photoshoot?</p>
-                    <p>Neem contact met mij op:</p>
-                    <button>Klik hier</button>
-                </div>
-                <div class="col-sm">
-                    <img src="" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="section contact-form">
         <div class="container">
