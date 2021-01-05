@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b2defa58-ef6c-4417-bbb4-8121daa8972f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_17_101545_create_home_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_17_101545_create_home_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,6 +244,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="main&#9;FILE&#9;file://C:/xampp/htdocs/Doorfloa/resources/sass/main.scss&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/doorflora/routes/web.php" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -275,6 +279,7 @@
       <workItem from="1608117680206" duration="61000" />
       <workItem from="1608117759163" duration="3228000" />
       <workItem from="1609771229966" duration="5154000" />
+      <workItem from="1609839145887" duration="3291000" />
     </task>
     <servers />
   </component>

@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomePageController::class, 'Homeinfo']);
+Route::get('/', [App\Http\Controllers\HomePageController::class, 'Homeinfo'])->name('home');
 
-
-
-
+//home page editor
 Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
 
 Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']);
@@ -30,3 +28,7 @@ Route::get('/elementen', function () {
 Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
 
 Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');
+
+Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
