@@ -20,12 +20,26 @@ Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOr
 
 Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']);
 
-//post
-Route::get('/post', 'App\Http\Controllers\PostController@index');
+//post create
+Route::post('/post', [\App\Http\Controllers\PostController::class, 'updateOrCreatePost']);
+Route::get('/post', [\App\Http\Controllers\PostController::class, 'postInfo']);
 
-Route::post('/post', 'App\Http\Controllers\PostController@createPost');
+//post edit
+Route::get('/postedit', [\App\Http\Controllers\PostController::class, 'postEdit']);
+
+Route::get('/postedit', [\App\Http\Controllers\PostController::class, 'getPost']);
+
+Route::delete('/{post_id}', [\App\Http\Controllers\PostController::class, 'deletePost'])->name('delete-post');
 
 
+//single post page
+Route::get('/{post_title}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('singlepage');
+
+//create category
+Route::get('/category-editor', [\App\Http\Controllers\CategoryController::class, 'updateOrCreateCategory']);
+Route::get('/category-editor', [\App\Http\Controllers\CategoryController::class, 'index']);
+
+//
 Route::get('/elementen', function () {
     return view('elementen');
 });

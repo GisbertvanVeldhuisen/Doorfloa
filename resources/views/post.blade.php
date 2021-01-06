@@ -2,6 +2,67 @@
 
 @section ("content")
 
-    <div class="container">Huts</div>
+    <div class="section form">
+
+        <div class="container">
+
+
+            <form method="POST" enctype="multipart/form-data" action="">
+                @csrf
+
+                <div class="row">
+                    <div class="col-sm">
+                        <h1>Post aanmaken</h1>
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {{Session::get('success')}}
+                            </div>
+                        @endif
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="title">Post Titel</label>
+
+                        <input placeholder="vul hier de titel in" type="text"
+                               name="post_title">
+                    </div>
+
+                    <div class="col-sm">
+                        <label for="post_ingredients">Post ingrediënten</label>
+                        <input placeholder="vul hier de ingrediënten in" type="text"
+                               name="post_ingredients">
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm">
+                            <label for="post_preparation_title">Post bereiding titel</label>
+                            <input placeholder="vul hier titel in" type="text"
+                                   name="post_preparation_title">
+
+                        </div>
+
+                        <div class="col-sm">
+                            <label for="post_preparation">Post ingrediënten</label>
+                            <input placeholder="vul hier bereidingswijze in" type="text"
+                                   name="post_preparation">
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-sm">
+                        <input class="btn btn-primary" type="submit">
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
 
 @endsection

@@ -13,13 +13,13 @@ class CreatePostTable extends Migration
      */
     public function up()
     {
-        Schema::create('post', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->integer('category_id');
-            $table->char('post_title');
-            $table->string('post_ingredients');
-            $table->char('post_preparation_title');
-            $table->string('post_preparation');
+            $table->integer('category_id')->default(0);
+            $table->char('post_title')->nullable(true);
+            $table->string('post_ingredients')->nullable(true);
+            $table->char('post_preparation_title')->nullable(true);
+            $table->string('post_preparation')->nullable(true);
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreatePostTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('posts');
     }
 }
