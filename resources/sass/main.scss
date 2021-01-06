@@ -1,9 +1,15 @@
 //
+@import "includes/mixins";
 @import "includes/base";
 @import "includes/icons";
 
-
+//secties
+@import "secties/header";
+@import "secties/tiles";
+@import "secties/text";
+@import "secties/contact";
 
 //components
 @import "components/header";
 @import "components/footer";
+@import "components/form";

@@ -1,5 +1,10 @@
 html #root {
   header#header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 999;
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, .1);
     .container {
       padding: 20px 10%;
       max-width: 100%;

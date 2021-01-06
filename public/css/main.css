@@ -1,5 +1,52 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;
+
+700&display=swap);@import url(https://use.typekit.net/pxv6mzt.css);@charset "UTF-8";
+h1 {
+  font-family: "banana", sans-serif;
+  font-size: 100px;
+  letter-spacing: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: 5px;
+  font-size: 20px;
+  margin: 0;
+}
+
 .col-sm {
   padding: 0;
+}
+
+.full-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .menu-item {
@@ -56,6 +103,200 @@ html #root .icon.mail:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='far' data-icon='envelope' class='svg-inline--fa fa-envelope fa-w-16' role='img' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffff' d='M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z'/%3E%3C/svg%3E");
 }
 
+html #root .section.header {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+html #root .section.header:before {
+  content: "";
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  background: white;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+}
+
+html #root .section.tiles {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+html #root .section.tiles .shadow {
+  height: 500px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+html #root .section.tiles .shadow.left {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+html #root .section.tiles .shadow.right {
+  right: 0;
+  transform: translateY(10%);
+}
+
+html #root .section.tiles .container {
+  padding-bottom: 300px;
+  z-index: 99;
+  position: relative;
+}
+
+html #root .section.tiles .intro {
+  margin: 20px 0 100px;
+}
+
+html #root .section.tiles .grid-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+html #root .section.tiles .one-third {
+  min-width: calc(100% / 3 - 30px);
+  max-width: calc(100% / 3 - 30px);
+  position: relative;
+}
+
+html #root .section.tiles .info-container {
+  position: relative;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+html #root .section.tiles .info-container p {
+  font-family: "banana", sans-serif;
+  font-size: 35px;
+  position: relative;
+}
+
+html #root .section.tiles .info-container:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+}
+
+html #root .section.text .col-14 h2 {
+  margin-bottom: 50px;
+}
+
+html #root .section.text.image {
+  margin-bottom: 150px;
+}
+
+html #root .section.text.image .container {
+  padding: 0 10%;
+}
+
+html #root .section.text.image .col-5 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+html #root .section.text.image .col-5 img {
+  margin: auto 0 0 0;
+}
+
+html #root .section.text.image .col-7 {
+  padding: 80px 0;
+}
+
+html #root .section.text h2 {
+  text-align: left;
+  font-family: "banana", sans-serif;
+  letter-spacing: 10px;
+  line-height: 2;
+}
+
+html #root .section.text h2:before,
+html #root .section.text h2:after {
+  content: "\201C";
+  font-size: 32px;
+  line-height: 1;
+}
+
+html #root .section.text h2:after {
+  content: "\201C";
+}
+
+html #root .section.text .row {
+  position: relative;
+}
+
+html #root .section.text img,
+html #root .section.text p,
+html #root .section.text h2 {
+  position: relative;
+  z-index: 99;
+}
+
+html #root .section.text img {
+  margin-top: 50px;
+}
+
+html #root .section.text .shadow {
+  position: absolute;
+  width: 400px;
+  height: 350px;
+  top: 0;
+  transform: translate(40%, 60%);
+  z-index: 1;
+}
+
+html #root .section.contact {
+  margin-bottom: 80px;
+}
+
+html #root .section.contact p:nth-child(1) {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+html #root .section.contact .button {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+html #root .section.contact .button .icon {
+  padding: 4px 10px;
+  margin-left: 10px;
+}
+
+html #root .section.contact .image-container img {
+  transform: translateY(50%);
+}
+
+html #root .section.contact strong {
+  font-weight: 700;
+}
+
+html #root header#header {
+  position: fixed;
+  width: 100%;
+  background: white;
+  z-index: 999;
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.1);
+}
+
 html #root header#header .container {
   padding: 20px 10%;
   max-width: 100%;
@@ -78,6 +319,53 @@ html #root .footer h3 {
 
 html #root .footer .menu-item {
   margin: 20px 0;
+  display: block;
+}
+
+html #root form h1 {
+  font-family: "Open Sans", sans-serif;
+  text-align: start;
+  font-size: 20px;
+  letter-spacing: 0;
+  margin: 20px 0;
+}
+
+html #root form .row {
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+html #root form .col-sm {
+  margin: 10px;
+}
+
+html #root form label {
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+html #root form textarea {
+  height: 200px;
+  overflow: hidden;
+}
+
+html #root form input[type=text],
+html #root form textarea {
+  width: 100%;
+  border: 1px solid #EDEDED;
+  border-radius: 3px;
+  padding: 10px 20px;
+  color: black;
+}
+
+html #root form input.file-hidden {
+  display: none;
+}
+
+html #root form input:checked + input[type=file] {
   display: block;
 }
 

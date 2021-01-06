@@ -41,7 +41,6 @@
             <div class="col-sm contact">
                 <h3>contact</h3>
                 <div class="main-menu-container">
-
                     <a class="menu-item" href="www.doorflora.nl">
                         <span class="icon location"></span>
                         <span>Doorflora.nl</span>

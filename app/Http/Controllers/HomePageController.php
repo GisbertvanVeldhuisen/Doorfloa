@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Home;
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 
 class HomePageController extends Controller
 {
-    public function updateOrCreate(Request $request){
+    public function updateOrCreate(Request $request)
+    {
         Home::updateOrCreate(
             [
                 /*past alleen aan van id 1*/
@@ -19,12 +21,14 @@ class HomePageController extends Controller
             [
                 /*vult deze tabellen*/
                 'title' => $request->get('title'),
+                'title_intro' => $request->get('title_intro'),
                 'intro' => $request->get('intro'),
                 'title_text' => $request->get('title_text'),
                 'text' => $request->get('text'),
                 'title_text_1' => $request->get('title_text_1'),
                 'text_1' => $request->get('text_1'),
                 'page_color' => $request->get('color'),
+                'accent_color' => $request->get('accent_color')
             ]
         );
         /*controleert of image png is*/
@@ -43,15 +47,19 @@ class HomePageController extends Controller
 
         return redirect()->back()->withInput();
     }
-    public function formInfo(){
-        $values = Home::all();
+
+    public function formInfo()
+    {
+        $value = Home::find(1);
 
         return view('form',
             [
-                'values' => $values
+                'value' => $value
             ]);
     }
-    public function Homeinfo(){
+
+    public function Homeinfo()
+    {
         $values = Home::find(1);
 
         return view('home',
@@ -59,4 +67,12 @@ class HomePageController extends Controller
                 'values' => $values
             ]);
     }
+
+/*    public static function getColour()
+    {
+        DB::table('Home')->select('page_color', 'accent_color')->get();
+
+        return redirect()->back()->withInput();
+
+    }*/
 }
