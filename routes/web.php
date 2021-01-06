@@ -25,6 +25,14 @@ Route::get('/elementen', function () {
     return view('elementen');
 });
 
+Route::get('/photography', function () {
+    return view('photography');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
 Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
 
 Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');

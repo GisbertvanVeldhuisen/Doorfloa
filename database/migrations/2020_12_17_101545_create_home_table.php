@@ -15,7 +15,6 @@ class CreateHomeTable extends Migration
     {
         Schema::create('Home', function (Blueprint $table) {
             $table->id();
-            $table->text('title')->nullable(true);
             $table->text('title_intro')->nullable(true);
             $table->text('intro')->nullable(true);
             $table->text('title_text')->nullable(true);
