@@ -323,9 +323,10 @@ html #root .footer .menu-item {
 }
 
 html #root form h1 {
+  font-family: "Open Sans", sans-serif;
   text-align: start;
   font-size: 20px;
-  letter-spacing: 5px;
+  letter-spacing: 0;
   margin: 20px 0;
 }
 

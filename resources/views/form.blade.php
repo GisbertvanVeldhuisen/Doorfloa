@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-sm">
                         <label for="title_intro">Titel boven intro</label>
-                        <input value="{{$value->title}}" placeholder="vul hier de titel in" type="text"
+                        <input value="{{$value->title_intro}}" placeholder="vul hier de titel in" type="text"
                                name="title_intro">
                     </div>
                     <div class="col-sm">

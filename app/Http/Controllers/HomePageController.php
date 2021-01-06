@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Home;
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 
 class HomePageController extends Controller
 {
-    public function updateOrCreate(Request $request){
+    public function updateOrCreate(Request $request)
+    {
         Home::updateOrCreate(
             [
                 /*past alleen aan van id 1*/
@@ -45,7 +47,9 @@ class HomePageController extends Controller
 
         return redirect()->back()->withInput();
     }
-    public function formInfo(){
+
+    public function formInfo()
+    {
         $value = Home::find(1);
 
         return view('form',
@@ -53,7 +57,9 @@ class HomePageController extends Controller
                 'value' => $value
             ]);
     }
-    public function Homeinfo(){
+
+    public function Homeinfo()
+    {
         $values = Home::find(1);
 
         return view('home',
@@ -61,4 +67,12 @@ class HomePageController extends Controller
                 'values' => $values
             ]);
     }
+
+/*    public static function getColour()
+    {
+        DB::table('Home')->select('page_color', 'accent_color')->get();
+
+        return redirect()->back()->withInput();
+
+    }*/
 }
