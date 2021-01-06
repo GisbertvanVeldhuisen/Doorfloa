@@ -20,6 +20,11 @@ Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOr
 
 Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']);
 
+//post
+Route::get('/post', 'App\Http\Controllers\PostController@index');
+
+Route::post('/post', 'App\Http\Controllers\PostController@createPost');
+
 
 Route::get('/elementen', function () {
     return view('elementen');
