@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2defa58-ef6c-4417-bbb4-8121daa8972f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/singlepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/singlepage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editpost.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editpost.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

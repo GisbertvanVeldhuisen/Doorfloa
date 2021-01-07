@@ -67,7 +67,6 @@
             <div class="row">
                 <div class="col-sm">
                     @foreach($posts as  $post)
-                    <form action="{{ route('delete-post', $post->post_id) }}" method="post">
 
                         <label>{{$post->post_title}}</label>
                         {{--                            <a class="btn btn-primary" href="{{ route('singlepage',  $post->post_title) }}">Bekijk</a>--}}
@@ -76,7 +75,6 @@
                         <input type="hidden" name="post_id" value="{{ $post->post_id }}">
                         <button class="btn btn-primary" type="submit" >Delete</button>
                         @endforeach
-                    </form>
                 </div>
             </div>
 

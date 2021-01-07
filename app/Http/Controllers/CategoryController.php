@@ -10,7 +10,7 @@ class CategoryController extends Controller
     public function updateOrCreateCategory(Request $request)
     {
         Category::updateOrCreate([
-            'post_title' => $request->post('post_title'),
+            'category_name' => $request->post('category_name'),
         ]);
 
 

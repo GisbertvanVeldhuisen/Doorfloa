@@ -36,6 +36,12 @@ Route::get('/about', function () {
     return view('about');
 });
 
+//post make/edit/delete
+Route::get('/post', [\App\Http\Controllers\PostController::class, 'postInfo']);
+Route::post('/post', [\App\Http\Controllers\PostController::class, 'updateOrCreatePost']);
+
+Route::get('/editpost',  [\App\Http\Controllers\PostController::class, 'getPost']);
+
 //contact page
 Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
 
@@ -43,5 +49,7 @@ Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsF
 
 \Illuminate\Support\Facades\Auth::routes();
 
-Route::middleware('AdminCheck')
+Route::middleware('admin')->group(function(){
+    Route::get('/admin', 'App\Http\Controllers\AdminController@index');
+});
 

@@ -22,12 +22,7 @@ class PostController extends Controller
 
     public function postInfo()
     {
-        $posts = Post::find(1);
-
-        return view('post',
-            [
-                'posts' => $posts
-            ]);
+        return view('post');
     }
 
     public function getPost()
