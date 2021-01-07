@@ -13,21 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//pages
 Route::get('/', [App\Http\Controllers\HomePageController::class, 'Homeinfo'])->name('home');
+Route::get('/photography', [App\Http\Controllers\PhotographyPageController::class, 'photographyInfo'])->name('photography');
+
 
 //home page editor
 Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
+//Route::post('/form', [\App\Http\Controllers\PhotographyPageController::class, 'updateOrCreate']);
 
 Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']);
+//Route::get('/form', [App\Http\Controllers\PhotographyPageController::class, 'formInfo']);
+
 
 
 Route::get('/elementen', function () {
     return view('elementen');
 });
 
-Route::get('/photography', function () {
-    return view('photography');
-});
 
 Route::get('/about', function () {
     return view('about');
