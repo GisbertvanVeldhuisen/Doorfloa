@@ -36,8 +36,12 @@ Route::get('/about', function () {
     return view('about');
 });
 
+//contact page
 Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
 
 Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');
 
+\Illuminate\Support\Facades\Auth::routes();
+
+Route::middleware('AdminCheck')
 
