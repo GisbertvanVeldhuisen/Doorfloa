@@ -3,25 +3,48 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\About;
+
 
 class AboutPageController extends Controller
 {
     public function updateOrCreate(Request $request)
     {
-        Home::updateOrCreate(
+        About::updateOrCreate(
             [
                 /*past alleen aan van id 1*/
                 'id' => 1
             ],
             [
                 /*vult deze tabellen*/
-                'title_intro' => $request->get('title'),
+                'title' => $request->get('title'),
                 'intro' => $request->get('intro'),
+                'title_text' => $request->get('title_text'),
+                'text' => $request->get('text'),
                 'page_color' => $request->get('color'),
                 'accent_color' => $request->get('accent_color')
             ]
         );
 
         return back()->with('success', 'De about pagina is aangepast!');
+    }
+    public function formInfo()
+    {
+        $value = About::find(1);
+
+        return view('form-about',
+            [
+                'value' => $value
+            ]);
+    }
+
+    public function Aboutinfo()
+    {
+        $values = About::find(1);
+
+        return view('about',
+            [
+                'values' => $values
+            ]);
     }
 }

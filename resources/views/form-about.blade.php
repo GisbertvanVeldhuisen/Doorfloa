@@ -29,8 +29,7 @@
                 @csrf
                 <div class="row">
                     <div class="col-sm">
-                        <h1>Home pagina bewerken</h1>
-
+                        <h1>About pagina bewerken</h1>
                         @if(Session::has('success'))
                             <div class="alert alert-success">
                                 {{Session::get('success')}}
@@ -41,26 +40,26 @@
                 <div class="row">
                     <div class="col-sm">
                         <label for="title_intro">Titel boven intro</label>
-                        <input value="{{--{{$value->title_intro}}--}}" placeholder="vul hier de titel in" type="text"
-                               name="title_intro">
+                        <input value="{{$value->title}}" placeholder="vul hier de titel in" type="text"
+                               name="title">
                     </div>
                     <div class="col-sm">
                         <label for="intro">Intro</label>
                         <textarea placeholder="vul hier de intro in"
-                                  name="intro">{{--{{$value->intro}}--}}</textarea>
+                                  name="intro">{{$value->intro}}</textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm">
                         <label for="title_text">Titel boven tekst</label>
-                        <input value="{{--{{$value->title_text}}--}}"
+                        <input value="{{$value->title_text}}"
                                placeholder="vul hier de titel boven de tekst in"
                                type="text" name="title_text">
                     </div>
                     <div class="col-sm">
                         <label for="text">Tekst onder de titel</label>
                         <textarea placeholder="vul hier de tekst in"
-                                  name="text">{{--{{$value->text}}--}}</textarea>
+                                  name="text">{{$value->text}}</textarea>
                     </div>
                     <div class="col-sm">
                         <label for="checkbox">Wil je een foto toevoegen?</label>
@@ -73,11 +72,11 @@
                 <div class="row">
                     <div class="col-4">
                         <label for="color">Welke kleur moet de pagina hebben?</label>
-                        <input value="{{--{{$value->page_color}}--}}" type="color" name="color">
+                        <input value="{{$value->page_color}}" type="color" name="color">
                     </div>
                     <div class="col-4">
                         <label for="color">Welke kleur moeten de accenten hebben?</label>
-                        <input value="{{--{{$value->accent_color}}--}}" type="color" name="accent_color">
+                        <input value="{{$value->accent_color}}" type="color" name="accent_color">
                     </div>
                 </div>
                 <div class="row">
