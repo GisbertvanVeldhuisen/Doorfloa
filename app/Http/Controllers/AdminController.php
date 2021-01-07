@@ -7,11 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    public function checkAdmin(){
-        if (Auth::guest()){
-            redirect('/');
-        } elseif (Auth::user(0)){
-            redirect('/');
-        }
+    public function index(){
+        return view('admin');
     }
 }
