@@ -8,6 +8,11 @@ html #root {
     flex-wrap: wrap;
     align-items: center;
 
+    strong{
+      font-family: $title-family;
+      font-size: 100px;
+      letter-spacing: 30px;
+    }
     &:before{
       content: '';
       width: 100%;

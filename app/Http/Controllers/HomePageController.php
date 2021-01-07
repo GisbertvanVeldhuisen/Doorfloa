@@ -20,7 +20,6 @@ class HomePageController extends Controller
             ],
             [
                 /*vult deze tabellen*/
-                'title' => $request->get('title'),
                 'title_intro' => $request->get('title_intro'),
                 'intro' => $request->get('intro'),
                 'title_text' => $request->get('title_text'),
@@ -35,6 +34,9 @@ class HomePageController extends Controller
         $request->validate([
             'image' => ['mimes:png'],
             'image_1' => ['mimes:png'],
+            'image_fotografie' => ['mimes:png'],
+            'image_recepten' => ['mimes:png'],
+            'image_contact' => ['mimes:png'],
         ]);
 
         /*controleert of image gevuld is anders doet hij niks.*/
@@ -44,8 +46,16 @@ class HomePageController extends Controller
         if ($request->file('image_1'))
             $request->file('image_1')->storeAs('public', 'image-tekst_1.' . $request->file('image_1')->getClientOriginalExtension());
 
+        if ($request->file('image_fotografie'))
+            $request->file('image_fotografie')->storeAs('public', 'image_fotografie.' . $request->file('image_fotografie')->getClientOriginalExtension());
 
-        return redirect()->back()->withInput();
+        if ($request->file('image_recepten'))
+            $request->file('image_recepten')->storeAs('public', 'image_recepten.' . $request->file('image_recepten')->getClientOriginalExtension());
+
+        if ($request->file('image_contact'))
+            $request->file('image_contact')->storeAs('public', 'image_contact.' . $request->file('image_contact')->getClientOriginalExtension());
+
+        return back()->with('success', 'De home pagina is aangepast!');
     }
 
     public function formInfo()

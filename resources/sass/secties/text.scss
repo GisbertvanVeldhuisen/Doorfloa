@@ -1,4 +1,26 @@
 html #root {
+
+  .section.quote{
+    blockquote{
+      font-family: $title-family;
+      letter-spacing: 10px;
+      line-height: 2;
+      font-size: 50px;
+      min-width: calc(100% / 3 * 2);
+      max-width: calc(100% / 3 * 2);
+
+
+      &:before, &:after {
+        content: '“';
+        font-size: 50px;
+        line-height: 1;
+
+      }
+      &:after {
+        content: '“';
+      }
+    }
+  }
   .section.text {
     .col-14 {
       h2 {
@@ -53,7 +75,7 @@ html #root {
       width: 400px;
       height: 350px;
       top: 0;
-      transform: translate(40%, 60%);
+      transform: translate(40%, 40%);
       z-index: 1;
     }
   }

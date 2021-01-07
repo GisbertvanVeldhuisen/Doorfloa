@@ -10,6 +10,13 @@ h1 {
   z-index: 1;
 }
 
+a,
+li,
+strong {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
 h2,
 h3,
 h4,
@@ -54,9 +61,25 @@ img {
   color: black;
 }
 
+.error {
+  color: red;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+
 .main .container {
   padding: 80px 10%;
   max-width: 100%;
+}
+
+.column.two-fifth {
+  min-width: calc(100% / 5 * 2);
+  max-width: calc(100% / 5 * 2);
+}
+
+.column.three-fifth {
+  min-width: calc(100% / 5 * 3);
+  max-width: calc(100% / 5 * 3);
 }
 
 html #root .icon {
@@ -111,6 +134,12 @@ html #root .section.header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+html #root .section.header strong {
+  font-family: "banana", sans-serif;
+  font-size: 100px;
+  letter-spacing: 30px;
 }
 
 html #root .section.header:before {
@@ -192,6 +221,26 @@ html #root .section.tiles .info-container:before {
   opacity: 0.6;
 }
 
+html #root .section.quote blockquote {
+  font-family: "banana", sans-serif;
+  letter-spacing: 10px;
+  line-height: 2;
+  font-size: 50px;
+  min-width: calc(100% / 3 * 2);
+  max-width: calc(100% / 3 * 2);
+}
+
+html #root .section.quote blockquote:before,
+html #root .section.quote blockquote:after {
+  content: "\201C";
+  font-size: 50px;
+  line-height: 1;
+}
+
+html #root .section.quote blockquote:after {
+  content: "\201C";
+}
+
 html #root .section.text .col-14 h2 {
   margin-bottom: 50px;
 }
@@ -255,7 +304,7 @@ html #root .section.text .shadow {
   width: 400px;
   height: 350px;
   top: 0;
-  transform: translate(40%, 60%);
+  transform: translate(40%, 40%);
   z-index: 1;
 }
 
@@ -312,14 +361,76 @@ html #root header#header .container .col-11 {
   justify-content: flex-end;
 }
 
-html #root .footer h3 {
-  background: white;
-  padding: 10px 0;
+html #root .footer {
+  margin-top: 120px;
 }
 
-html #root .footer .menu-item {
+html #root .footer .container {
+  padding: 0;
+  position: relative;
+}
+
+html #root .footer .container .row {
+  margin: 0;
+  width: 100%;
+}
+
+html #root .footer .menu,
+html #root .footer .contact {
+  padding: 10px 10px 10px 0;
+}
+
+html #root .footer .contact {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+html #root .footer .contact.two-fifth {
+  min-width: calc(100% / 5 * 2 + 100px);
+  max-width: calc(100% / 5 * 2 + 100px);
+  transform: translateY(-20%);
+}
+
+html #root .footer .heading {
+  background-color: white;
+  max-width: inherit;
+  padding: 5px 30px;
+}
+
+html #root .footer h3 {
+  padding: 10px 0;
+  text-align: start;
+  line-height: 1;
+  font-size: 28px;
+  margin: 0;
+  font-family: "banana", sans-serif;
+}
+
+html #root .footer .main-menu-container {
+  padding-left: 30px;
+  margin: 30px 0;
+}
+
+html #root .footer .main-menu-container .menu-item {
   margin: 20px 0;
   display: block;
+  font-size: 18px;
+}
+
+html #root .footer .main-menu-container .menu-item .item {
+  margin-left: 20px;
+}
+
+html #root .socket .container {
+  padding: 10px 30px;
+  margin: 0;
+  width: 100%;
+}
+
+html #root .socket .container p {
+  font-size: 16px;
+  letter-spacing: 3px;
 }
 
 html #root form h1 {
