@@ -15,15 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 //pages
 Route::get('/', [App\Http\Controllers\HomePageController::class, 'Homeinfo'])->name('home');
-Route::get('/photography', [App\Http\Controllers\PhotographyPageController::class, 'photographyInfo'])->name('photography');
+Route::get('/photography', [App\Http\Controllers\PhotographyPageController::class, 'PhotographyInfo'])->name('photography');
+Route::get('/contact', [App\Http\Controllers\ContactPageController::class, 'ContactInfo'])->name('contact');
 
 
-//home page editor
-Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
-//Route::post('/form', [\App\Http\Controllers\PhotographyPageController::class, 'updateOrCreate']);
+//page editor
+Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate'])->name('form');
+Route::post('/form/photography', [\App\Http\Controllers\PhotographyPageController::class, 'updateOrCreate']);
+Route::post('/form/contact', [\App\Http\Controllers\ContactPageController::class, 'updateOrCreate']);
 
 Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']);
-//Route::get('/form', [App\Http\Controllers\PhotographyPageController::class, 'formInfo']);
+Route::get('/form/photography', [App\Http\Controllers\PhotographyPageController::class, 'formInfo']);
+Route::get('/form/contact', [App\Http\Controllers\ContactPageController::class, 'formInfo']);
 
 
 
@@ -32,11 +35,15 @@ Route::get('/elementen', function () {
 });
 
 
+Route::get('/form/about', function () {
+    return view('form-about');
+});
+
 Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
+//Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
 
 Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');
 

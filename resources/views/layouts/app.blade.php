@@ -13,7 +13,7 @@
 
 <!-- Site includes -->
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body id="root">

@@ -46,13 +46,13 @@ class PhotographyPageController extends Controller
     {
         $value = photography::find(1);
 
-        return view('form',
+        return view('form-photography',
             [
                 'value' => $value
             ]);
     }
 
-    public function photographyInfo()
+    public function PhotographyInfo()
     {
         $values = photography::find(1);
 

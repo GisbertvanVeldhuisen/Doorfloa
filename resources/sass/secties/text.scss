@@ -1,14 +1,13 @@
 html #root {
 
-  .section.quote{
-    blockquote{
+  .section.quote {
+    blockquote {
       font-family: $title-family;
       letter-spacing: 10px;
       line-height: 2;
       font-size: 50px;
       min-width: calc(100% / 3 * 2);
       max-width: calc(100% / 3 * 2);
-
 
       &:before, &:after {
         content: '“';
@@ -22,61 +21,69 @@ html #root {
     }
   }
   .section.text {
-    .col-14 {
-      h2 {
-        margin-bottom: 50px;
+    &.intro {
+      text-align: center;
+      .container{
+        padding-bottom: 20px;
       }
     }
-    &.image {
-      margin-bottom: 150px;
-      .container {
-        padding: 0 10%;
-      }
-      .col-5 {
-        display: flex;
-        flex-wrap: wrap;
-        img {
-          margin: auto 0 0 0;
+    &.quote {
+      .col-14 {
+        h2 {
+          margin-bottom: 50px;
         }
       }
-      .col-7 {
-        padding: 80px 0;
+      &.image {
+        margin-bottom: 150px;
+        .container {
+          padding: 0 10%;
+        }
+        .col-5 {
+          display: flex;
+          flex-wrap: wrap;
+          img {
+            margin: auto 0 0 0;
+          }
+        }
+        .col-7 {
+          padding: 80px 0;
+        }
       }
-    }
-    h2 {
-      text-align: left;
-      font-family: $title-family;
-      letter-spacing: 10px;
-      line-height: 2;
+      h2 {
+        text-align: left;
+        font-family: $title-family;
+        letter-spacing: 10px;
+        line-height: 2;
 
-      &:before, &:after {
-        content: '“';
-        font-size: 32px;
-        line-height: 1;
+        &:before, &:after {
+          content: '“';
+          font-size: 32px;
+          line-height: 1;
 
+        }
+        &:after {
+          content: '“';
+        }
       }
-      &:after {
-        content: '“';
+      .row {
+        position: relative;
       }
-    }
-    .row {
-      position: relative;
-    }
-    img, p, h2 {
-      position: relative;
-      z-index: 99;
-    }
-    img {
-      margin-top: 50px;
-    }
+      img, p, h2 {
+        position: relative;
+        z-index: 99;
+      }
+      img {
+        margin-top: 50px;
+      }
 
-    .shadow {
-      position: absolute;
-      width: 400px;
-      height: 350px;
-      top: 0;
-      transform: translate(40%, 40%);
-      z-index: 1;
+      .shadow {
+        position: absolute;
+        width: 400px;
+        height: 350px;
+        top: 0;
+        transform: translate(40%, 40%);
+        z-index: 1;
+      }
     }
   }
 }

@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-    <div class="section text full">
+    <div class="section text quote full">
         <div class="container">
             <div class="row">
                 <div class="col-14">

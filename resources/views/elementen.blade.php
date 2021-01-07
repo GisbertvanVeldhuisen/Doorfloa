@@ -1,10 +1,11 @@
 @extends ('layouts/app')
 
 @section ("content")
-    <div class="section header">
+    <div class="section header" style="background-image: url({{asset('storage/image-tekst_1.png')}})">
         <div class="container">
             <div class="row">
-                <div class="col-sm"><h1>elem<strong>enten</strong></h1></div>
+                <div class="col-sm"><h1>Door<strong style="color: {{--{{$values->page_color}}--}}">flora</strong></h1>
+                </div>
             </div>
         </div>
     </div>
@@ -24,7 +25,7 @@
                 <div class="col-sm">
                     <div class="img-container">
                         <img src="" alt="">
-                    <p>fotografie</p>
+                        <p>fotografie</p>
                     </div>
                 </div>
                 <div class="col-sm">
