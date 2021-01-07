@@ -40,6 +40,4 @@ Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm'
 
 Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');
 
-Auth::routes();
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

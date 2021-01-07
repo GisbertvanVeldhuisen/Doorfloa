@@ -1,6 +1,7 @@
 @extends ('layouts/app')
 
 
+@section('content')
 <body>
 <div class="container mt-5">
 
@@ -77,3 +78,4 @@
     </form>
 </div>
 </body>
+@endsection
