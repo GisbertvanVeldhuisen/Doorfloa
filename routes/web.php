@@ -44,12 +44,14 @@ Route::get('/elementen', function () {
     return view('elementen');
 });
 
+//contact form
 Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
 
 Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');
 
 Auth::routes();
 
+//admin protection
 Route::middleware('auth', 'admin')->group(function(){
     Route::get('/admin', 'App\Http\Controllers\AdminController@index');
 });
