@@ -69,6 +69,6 @@ class PostController extends Controller
     {
         Post::destroy($post_id);
 
-        return redirect()->with('success', 'De post is verwijdert!');
+        return redirect()->back()->with('success', 'De post is verwijderd!');
     }
 }

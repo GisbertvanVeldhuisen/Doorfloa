@@ -42,8 +42,7 @@ Route::post('/post', [\App\Http\Controllers\PostController::class, 'updateOrCrea
 
 Route::get('/editpost',  [\App\Http\Controllers\PostController::class, 'getPost']);
 
-Route::put('/editpost', [\App\Http\Controllers\PostController::class, 'deletePost']);
-Route::delete('/editpost', [\App\Http\Controllers\PostController::class, 'deletePost'])->name('deletepost');
+Route::get('/delete/{id}', [\App\Http\Controllers\PostController::class, 'deletePost']);
 
 //single page
 Route::get('/{id}',  [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('singlepage');
