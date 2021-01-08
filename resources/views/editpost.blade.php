@@ -69,7 +69,7 @@
                     @foreach($posts as  $post)
 
                         <label>{{$post->post_title}}</label>
-                        {{--                            <a class="btn btn-primary" href="{{ route('singlepage',  $post->post_title) }}">Bekijk</a>--}}
+                        <a class="btn btn-primary" href="{{ route('singlepage',  $post->id) }}">Bekijk</a>
                         {{--                            <button class="btn btn-primary">Bewerk</button>--}}
                         <input type="hidden" name="_method" value="DELETE">
                         <input type="hidden" name="post_id" value="{{ $post->post_id }}">

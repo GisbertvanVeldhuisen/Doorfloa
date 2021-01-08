@@ -2,44 +2,45 @@
 
 @section ("content")
 
-
-
     <div class="container">
-        <h1>{{ $post ->post_title }}</h1>
 
-    </div>
+{{--        @dd($posts)--}}
 
-    <div class="section tekstblock" style="">
-        <div class="container">
-            <div class="column one-half">
-                <p>{{ $post->post_ingredients }}</p>
-            </div>
-
-
-        </div>
-    </div>
-
-    <div class="section tekstblock" style="">
-        <div class="container">
-
-            <div class="column one-half">
-                <p>{{ $post->post_preparation_title }}</p>
+        <div class="row">
+            <div class="col-sm">
+                <h1>{{ $posts->post_title }}</h1>
             </div>
         </div>
 
-    </div>
+        <div class="section text" style="">
+            <div class="container">
+                <div class="column one-half">
+                    <p>{{ $posts->post_ingredients }}</p>
+                </div>
 
-    <div class="section tekstblock" style="">
-        <div class="container">
 
-            <div class="column one-half">
-                <p>{{ $post->post_preparation }}</p>
             </div>
         </div>
 
+        <div class="section text" style="">
+            <div class="container">
+
+                <div class="column one-half">
+                    <p>{{ $posts->post_preparation_title }}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section text" style="">
+            <div class="container">
+
+                <div class="column one-half">
+                    <p>{{ $posts->post_preparation }}</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    @endforeach
-
 
 @endsection

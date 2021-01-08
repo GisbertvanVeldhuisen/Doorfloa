@@ -44,13 +44,19 @@ class PostController extends Controller
             'post_preparation' => $request->get('post_preparation'),
         ]);
 
-
         return back()->with('success', 'De post is geupdated!');
     }
 
-    public function singlePageContent($post_title)
+    public function singlePageContent($post_id)
     {
-        $posts = Post::select('id')->where('post_title', $post_title)->first();
+
+         $posts = Post::findOrFail($post_id);
+
+//        $post_title = $request->get('post_title');
+//
+////        $post_id = $request->get('id');
+//
+//        $posts = Post::select('id')->where($post_title)->first();;
 
         return view('singlepage', [
 
@@ -59,11 +65,10 @@ class PostController extends Controller
         ]);
     }
 
-    public function deletePost(Request $request)
+    public function deletePost($post_id)
     {
-        Post::destroy($request->get('post_id'));
+        Post::destroy($post_id);
 
         return redirect()->back();
     }
-
 }

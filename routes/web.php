@@ -42,6 +42,10 @@ Route::post('/post', [\App\Http\Controllers\PostController::class, 'updateOrCrea
 
 Route::get('/editpost',  [\App\Http\Controllers\PostController::class, 'getPost']);
 
+//single page
+Route::get('/{id}',  [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('singlepage');
+
+
 //contact page
 Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
 
