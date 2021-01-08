@@ -2,13 +2,12 @@
 
 @section ("content")
 
-    <div class="container">
 
-{{--        @dd($posts)--}}
+    <div class="container">
 
         <div class="row">
             <div class="col-sm">
-                <h1>{{ $posts->post_title }}</h1>
+                <h2>{{ $posts->post_title }}</h2>
             </div>
         </div>
 
@@ -42,5 +41,6 @@
 
         </div>
     </div>
+
 
 @endsection

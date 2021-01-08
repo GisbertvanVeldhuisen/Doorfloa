@@ -36,12 +36,17 @@ Route::get('/about', function () {
     return view('about');
 });
 
-//post make/edit/delete
+//category make
+Route::get('/category', [\App\Http\Controllers\PostController::class, 'postInfo']);
+
+//post make
 Route::get('/post', [\App\Http\Controllers\PostController::class, 'postInfo']);
 Route::post('/post', [\App\Http\Controllers\PostController::class, 'updateOrCreatePost']);
 
+//edit post
 Route::get('/editpost',  [\App\Http\Controllers\PostController::class, 'getPost']);
 
+//delete post
 Route::get('/delete/{id}', [\App\Http\Controllers\PostController::class, 'deletePost']);
 
 //single page
