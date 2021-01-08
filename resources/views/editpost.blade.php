@@ -70,11 +70,13 @@
 
                         <label>{{$post->post_title}}</label>
                         <a class="btn btn-primary" href="{{ route('singlepage',  $post->id) }}">Bekijk</a>
-                        {{--                            <button class="btn btn-primary">Bewerk</button>--}}
+
+                    <form action="{{ route('deletepost', $post->id) }}" method="post">
                         <input type="hidden" name="_method" value="DELETE">
-                        <input type="hidden" name="post_id" value="{{ $post->post_id }}">
+                        <input type="hidden" name="id" value="{{ $post->id }}">
                         <button class="btn btn-primary" type="submit" >Delete</button>
-                        @endforeach
+                    </form>
+                    @endforeach
                 </div>
             </div>
 
