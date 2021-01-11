@@ -9,21 +9,7 @@
                         <h1>Welke pagina wil je bewerken?</h1>
                     </div>
                 </div>
-                <select id="dynamic_select">
-                    <script>
-                        jQuery(function ($) {
-                            jQuery("#dynamic_select").change(function () {
-                                location.href = jQuery(this).val();
-                            })
-
-                        });
-                    </script>
-                    <option value="">Selecteer een pagina om te bewerken</option>
-                    <option value="{{route('form')}}">Home</option>
-                    <option value="{{route('form')}}/photography">Fotografie</option>
-                    <option value="{{route('form')}}/about">Over</option>
-                    <option value="{{route('form')}}/contact">Contact</option>
-                </select>
+                @include('form-select')
             </form>
             <form method="POST" enctype="multipart/form-data" action="">
                 @csrf

@@ -25,6 +25,16 @@ class AboutPageController extends Controller
                 'accent_color' => $request->get('accent_color')
             ]
         );
+        /*controleert of image png is*/
+        $request->validate([
+            'image' => ['mimes:png'],
+        ]);
+        /*controleert of image gevuld is anders doet hij niks.*/
+        if ($request->file('image'))
+            $request->file('image')->storeAs('public', 'image-about.' . $request->file('image')->getClientOriginalExtension());
+
+
+
 
         return back()->with('success', 'De about pagina is aangepast!');
     }

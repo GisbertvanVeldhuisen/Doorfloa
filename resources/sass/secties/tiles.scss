@@ -2,6 +2,11 @@ html #root {
   .section.tiles {
     margin-bottom: 50px;
     position: relative;
+    &.recipe{
+      .grid-container{
+        justify-content: space-evenly;
+      }
+    }
     .shadow {
       height: 500px;
       width: 300px;

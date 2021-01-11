@@ -10,13 +10,13 @@
         </div>
     </div>
 
-    <div class="section tiles" style="background-color: {{$values->accent_color}}">
+    <div class="section tiles recipe" style="background-color: {{$values->accent_color}}">
         <div class="shadow left" style="background-color: {{$values->page_color}}"></div>
         <div class="shadow right" style="background-color: {{$values->page_color}}"></div>
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <h2>{{$values->title_intro}}</h2>
+                    <h2>{{$values->title}}</h2>
                     <p class="intro">
                         {{$values->intro}}
                     </p>
@@ -27,41 +27,29 @@
                 <div class="one-third">
                     <a href="#" class="full-link"></a>
                     <div class="image-container">
-                        <img src="{{asset('storage/image_fotografie.png')}}" alt="">
+                        <img src="{{asset('storage/image_zoet.png')}}" alt="">
                         <div class="info-container">
-                            <p>fotografie</p>
+                            <p>zoet</p>
                         </div>
                     </div>
                 </div>
                 <div class="one-third">
                     <a href="#" class="full-link"></a>
                     <div class="image-container">
-                        <img src="{{asset('storage/image_recepten.png')}}" alt="">
+                        <img src="{{asset('storage/image_hartig.png')}}" alt="">
                         <div class="info-container">
-                            <p>recepten</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="one-third">
-                    <a href="/contact" class="full-link"></a>
-                    <div class="image-container">
-                        <img src="{{asset('storage/image_contact.png')}}" alt="">
-                        <div class="info-container">
-                            <p>contact</p>
+                            <p>hartig</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section text quote full">
+    <div class="section quote">
         <div class="container">
             <div class="row">
-                <div class="col-14">
-                    <h2>{{$values->title_text}}</h2>
-                    <p>
-                        {{$values->text}}
-                    </p>
+                <div class="col-sm">
+                    <blockquote>{{$values->quote}}</blockquote>
                 </div>
             </div>
         </div>
@@ -69,9 +57,25 @@
     <div class="section text image" style="background-color: {{$values->accent_color}}">
         <div class="container">
             <div class="row">
+                <div class="col-7">
+                    <h2>{{$values->title_text}}</h2>
+                    <p>
+                        {{$values->text}}
+                    </p>
+                </div>
                 <div class="col-5">
-                    <img src="{{asset('storage/image-home_1.png')}}" alt="">
+                    <img src="{{asset('storage/image_recipe_right.png')}}" alt="">
                     <div class="shadow" style="background-color: {{$values->page_color}}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section text image quote" style="background-color: {{$values->page_color}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="{{asset('storage/image_recipe_left.png')}}" alt="">
+                    <div class="shadow" style="background-color: {{$values->accent_color}}"></div>
                 </div>
 
                 <div class="col-7">
@@ -143,10 +147,10 @@
             </div>
         </div>
     </div>
-    <div class="socket"  style="background-color: {{$values->accent_color}}">
+    <div class="socket" style="background-color: {{$values->accent_color}}">
         <div class="container">
-            <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen & Jurre
-                van Esveld</p>
+            <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen &
+                Jurre van Esveld</p>
         </div>
     </div>
 @endsection

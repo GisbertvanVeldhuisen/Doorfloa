@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-5">
-                    <img src="{{asset('storage/image-tekst_1.png')}}" alt="">
+                    <img src="{{asset('storage/image-about.png')}}" alt="">
                     <div class="shadow" style="background-color: {{$values->page_color}}"></div>
                 </div>
 
