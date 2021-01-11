@@ -13,24 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//pages
+//Pages
 Route::get('/', [App\Http\Controllers\HomePageController::class, 'Homeinfo'])->name('home');
-Route::get('/photography', [App\Http\Controllers\PhotographyPageController::class, 'photographyInfo'])->name('photography');
+Route::get('/photography', [App\Http\Controllers\PhotographyPageController::class, 'PhotographyInfo'])->name('photography');
+Route::get('/contact', [App\Http\Controllers\ContactPageController::class, 'ContactInfo'])->name('contact');
+Route::get('/about', [App\Http\Controllers\AboutPageController::class, 'AboutInfo'])->name('about');
+Route::get('/recipe', [App\Http\Controllers\RecipePageController::class, 'RecipeInfo'])->name('recipe');
 
 
-//home page editor
-Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
-//Route::post('/form', [\App\Http\Controllers\PhotographyPageController::class, 'updateOrCreate']);
+//Page editor
+Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate'])->name('form');
+Route::post('/form/photography', [\App\Http\Controllers\PhotographyPageController::class, 'updateOrCreate']);
+Route::post('/form/contact', [\App\Http\Controllers\ContactPageController::class, 'updateOrCreate']);
+Route::post('/form/about', [\App\Http\Controllers\AboutPageController::class, 'updateOrCreate']);
+Route::post('/form/recipe', [\App\Http\Controllers\RecipePageController::class, 'updateOrCreate']);
 
+//Form informatie
 Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']);
-//Route::get('/form', [App\Http\Controllers\PhotographyPageController::class, 'formInfo']);
-
+Route::get('/form/photography', [App\Http\Controllers\PhotographyPageController::class, 'formInfo']);
+Route::get('/form/contact', [App\Http\Controllers\ContactPageController::class, 'formInfo']);
+Route::get('/form/about', [App\Http\Controllers\AboutPageController::class, 'formInfo']);
+Route::get('/form/recipe', [App\Http\Controllers\RecipePageController::class, 'formInfo']);
 
 
 Route::get('/elementen', function () {
     return view('elementen');
 });
-
 
 Route::get('/about', function () {
     return view('about');
@@ -55,6 +63,9 @@ Route::get('/{id}',  [\App\Http\Controllers\PostController::class, 'singlePageCo
 
 //contact page
 Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
+
+//Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
+
 
 Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');
 

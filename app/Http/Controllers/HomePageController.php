@@ -41,10 +41,10 @@ class HomePageController extends Controller
 
         /*controleert of image gevuld is anders doet hij niks.*/
         if ($request->file('image'))
-            $request->file('image')->storeAs('public', 'image-tekst.' . $request->file('image')->getClientOriginalExtension());
+            $request->file('image')->storeAs('public', 'image-home.' . $request->file('image')->getClientOriginalExtension());
 
         if ($request->file('image_1'))
-            $request->file('image_1')->storeAs('public', 'image-tekst_1.' . $request->file('image_1')->getClientOriginalExtension());
+            $request->file('image_1')->storeAs('public', 'image-home_1.' . $request->file('image_1')->getClientOriginalExtension());
 
         if ($request->file('image_fotografie'))
             $request->file('image_fotografie')->storeAs('public', 'image_fotografie.' . $request->file('image_fotografie')->getClientOriginalExtension());

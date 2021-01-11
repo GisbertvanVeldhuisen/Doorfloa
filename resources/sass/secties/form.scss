@@ -1,0 +1,45 @@
+html #root {
+  .section.contact {
+    position: relative;
+    .shadow {
+      height: 500px;
+      width: 300px;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      &.left {
+        left: 0;
+        transform: translateY(-50%);
+      }
+      &.right {
+        right: 0;
+        transform: translateY(10%);
+      }
+    }
+    form {
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+      background-color: white;
+      padding: 40px 100px;
+      z-index: 1;
+      position: relative;
+
+      input[type="email"], input[type="text"] {
+        min-width: calc(100% / 3 * 2 - 50px);
+        max-width: calc(100% / 3 * 2 - 50px);
+      }
+
+      input[type="submit"]{
+        margin-top: 30px;
+      }
+      label {
+        font-family: $base-family;
+        margin: 20px 0 0 0 !important;
+        &.required {
+          &:after {
+            content: '*';
+          }
+        }
+      }
+    }
+  }
+}
