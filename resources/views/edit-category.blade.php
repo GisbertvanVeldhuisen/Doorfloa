@@ -5,15 +5,6 @@
     <div class="section form">
         <div class="container">
 
-            <form action="">
-                <div class="row">
-                    <div class="col-sm">
-                        <h1>Welke categorie wil je bewerken?</h1>
-                    </div>
-                </div>
-                @include('category-select')
-            </form>
-
             <form method="POST" enctype="multipart/form-data" action="">
                 @csrf
                 <div class="row">
@@ -27,12 +18,14 @@
                         @endif
                     </div>
                 </div>
+                @foreach($categories as $category)
                 <div class="row">
                     <div class="col-sm">
                         <label for="category_name">Categorie naam</label>
-                        <input placeholder="vul hier de titel in" type="text"
+                        <input value="{{$category->category_name}}" placeholder="vul hier de titel in" type="text"
                                name="category_name">
                     </div>
+                @endforeach
 
                     <div class="row">
                         <div class="col-sm">

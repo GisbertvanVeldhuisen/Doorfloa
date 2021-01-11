@@ -26,6 +26,7 @@ Route::post('/form/photography', [\App\Http\Controllers\PhotographyPageControlle
 Route::post('/form/contact', [\App\Http\Controllers\ContactPageController::class, 'updateOrCreate']);
 Route::post('/form/about', [\App\Http\Controllers\AboutPageController::class, 'updateOrCreate']);
 Route::post('/form/recipe', [\App\Http\Controllers\RecipePageController::class, 'updateOrCreate']);
+Route::post('/category', [\App\Http\Controllers\CategoryController::class, 'updateOrCreateCategory']);
 
 //Form informatie
 Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']);
@@ -44,12 +45,21 @@ Route::get('/about', function () {
     return view('about');
 });
 
-//category make
-Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'index']);
-Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'updateOrCreateCategory']);
+//category page
+Route::get('/category', function () {
+    return view('category');
+});
+
+//display categories underneath category maker
+Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'getCategoryInfo']);
+Route::put('/category', [\App\Http\Controllers\CategoryController::class, 'getCategoryInfo2']);
+
+//edit category
+Route::put('/edit-category', [\App\Http\Controllers\CategoryController::class, 'categoryInfo'])->name('category');
+Route::get('/edit-category/{id}', [\App\Http\Controllers\CategoryController::class, 'editTheCategory']);
 
 //delete category
-Route::get('/delete/{id}', [\App\Http\Controllers\CategoryController::class, 'deleteCategory']);
+Route::get('/verwijder/{id}', [\App\Http\Controllers\CategoryController::class, 'deleteCategory']);
 
 //post make
 Route::get('/post', [\App\Http\Controllers\PostController::class, 'postInfo']);
@@ -68,9 +78,9 @@ Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsF
 
 \Illuminate\Support\Facades\Auth::routes();
 
-Route::middleware('admin')->group(function(){
-    Route::get('/admin', 'App\Http\Controllers\AdminController@index');
-});
+//Route::middleware('admin')->group(function(){
+////    Route::get('/admin', 'App\Http\Controllers\AdminController@index');
+//});
 
 //single page
 Route::get('/{id}',  [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('singlepage');
