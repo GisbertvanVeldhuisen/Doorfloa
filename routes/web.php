@@ -20,7 +20,6 @@ Route::get('/contact', [App\Http\Controllers\ContactPageController::class, 'Cont
 Route::get('/about', [App\Http\Controllers\AboutPageController::class, 'AboutInfo'])->name('about');
 Route::get('/recipe', [App\Http\Controllers\RecipePageController::class, 'RecipeInfo'])->name('recipe');
 
-
 //Page editor
 Route::post('/form', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate'])->name('form');
 Route::post('/form/photography', [\App\Http\Controllers\PhotographyPageController::class, 'updateOrCreate']);
@@ -35,17 +34,22 @@ Route::get('/form/contact', [App\Http\Controllers\ContactPageController::class, 
 Route::get('/form/about', [App\Http\Controllers\AboutPageController::class, 'formInfo']);
 Route::get('/form/recipe', [App\Http\Controllers\RecipePageController::class, 'formInfo']);
 
-
+//elementen page
 Route::get('/elementen', function () {
     return view('elementen');
 });
 
+//about page
 Route::get('/about', function () {
     return view('about');
 });
 
 //category make
-Route::get('/category', [\App\Http\Controllers\PostController::class, 'postInfo']);
+Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'index']);
+Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'updateOrCreateCategory']);
+
+//delete category
+Route::get('/delete/{id}', [\App\Http\Controllers\CategoryController::class, 'deleteCategory']);
 
 //post make
 Route::get('/post', [\App\Http\Controllers\PostController::class, 'postInfo']);
@@ -57,15 +61,8 @@ Route::get('/editpost',  [\App\Http\Controllers\PostController::class, 'getPost'
 //delete post
 Route::get('/delete/{id}', [\App\Http\Controllers\PostController::class, 'deletePost']);
 
-//single page
-Route::get('/{id}',  [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('singlepage');
-
-
 //contact page
 Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
-
-//Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
-
 
 Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');
 
@@ -74,4 +71,8 @@ Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsF
 Route::middleware('admin')->group(function(){
     Route::get('/admin', 'App\Http\Controllers\AdminController@index');
 });
+
+//single page
+Route::get('/{id}',  [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('singlepage');
+
 

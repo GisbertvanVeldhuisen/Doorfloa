@@ -14,10 +14,17 @@ class CategoryController extends Controller
         ]);
 
 
-        return back()->with('success', 'De post is aangemaakt!');
+        return back()->with('success', 'De categorie is aangemaakt!');
     }
 
     public function index(){
-        return view('createcategory');
+        return view('category');
+    }
+
+    public function deleteCategory($category_id)
+    {
+        Category::destroy($category_id);
+
+        return back()->with('success', 'De categorie is verwijderd!');
     }
 }
