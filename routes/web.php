@@ -27,6 +27,7 @@ Route::post('/form/photography', [\App\Http\Controllers\PhotographyPageControlle
 Route::post('/form/contact', [\App\Http\Controllers\ContactPageController::class, 'updateOrCreate']);
 Route::post('/form/about', [\App\Http\Controllers\AboutPageController::class, 'updateOrCreate']);
 Route::post('/form/recipe', [\App\Http\Controllers\RecipePageController::class, 'updateOrCreate']);
+Route::post('/form/general', [\App\Http\Controllers\GeneralFormController::class, 'updateOrCreate']);
 
 //Form informatie
 Route::get('/form', [App\Http\Controllers\HomePageController::class, 'formInfo']);
@@ -38,6 +39,13 @@ Route::get('/form/recipe', [App\Http\Controllers\RecipePageController::class, 'f
 
 Route::get('/elementen', function () {
     return view('elementen');
+});
+Route::get('/animals', function () {
+    return view('animals');
+});
+
+Route::get('/form/general', function () {
+    return view('form-general');
 });
 
 //Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');

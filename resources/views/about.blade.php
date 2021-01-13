@@ -1,7 +1,7 @@
 @extends ('layouts/app')
 
 @section ("content")
-    <div class="section header" style="background-image: url({{asset('storage/image-tekst_1.png')}})">
+    <div class="section header" style="background-image: url({{asset('storage/general/header_img.png')}})">
         <div class="container">
             <div class="row">
                 <div class="col-sm"><h1>Door<strong style="color: {{$values->page_color}}">flora</strong></h1>
@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-5">
-                    <img src="{{asset('storage/image-about.png')}}" alt="">
+                    <img src="{{asset('storage/about/image-about.png')}}" alt="">
                     <div class="shadow" style="background-color: {{$values->page_color}}"></div>
                 </div>
 
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-5">
                     <div class="image-container" style="background-color: {{$values->page_color}}">
-                        <img src="{{asset('storage/image-tekst_1.png')}}" alt="">
+                        <img src="{{asset('storage/general/contact_img.png')}}" alt="">
                     </div>
                 </div>
             </div>

@@ -41,19 +41,19 @@ class HomePageController extends Controller
 
         /*controleert of image gevuld is anders doet hij niks.*/
         if ($request->file('image'))
-            $request->file('image')->storeAs('public', 'image-home.' . $request->file('image')->getClientOriginalExtension());
+            $request->file('image')->storeAs('public/home', 'image-home.' . $request->file('image')->getClientOriginalExtension());
 
         if ($request->file('image_1'))
-            $request->file('image_1')->storeAs('public', 'image-home_1.' . $request->file('image_1')->getClientOriginalExtension());
+            $request->file('image_1')->storeAs('public/home', 'image-home_1.' . $request->file('image_1')->getClientOriginalExtension());
 
         if ($request->file('image_fotografie'))
-            $request->file('image_fotografie')->storeAs('public', 'image_fotografie.' . $request->file('image_fotografie')->getClientOriginalExtension());
+            $request->file('image_fotografie')->storeAs('public/home', 'image_fotografie.' . $request->file('image_fotografie')->getClientOriginalExtension());
 
         if ($request->file('image_recepten'))
-            $request->file('image_recepten')->storeAs('public', 'image_recepten.' . $request->file('image_recepten')->getClientOriginalExtension());
+            $request->file('image_recepten')->storeAs('public/home', 'image_recepten.' . $request->file('image_recepten')->getClientOriginalExtension());
 
         if ($request->file('image_contact'))
-            $request->file('image_contact')->storeAs('public', 'image_contact.' . $request->file('image_contact')->getClientOriginalExtension());
+            $request->file('image_contact')->storeAs('public/home', 'image_contact.' . $request->file('image_contact')->getClientOriginalExtension());
 
         return back()->with('success', 'De home pagina is aangepast!');
     }
@@ -78,11 +78,4 @@ class HomePageController extends Controller
             ]);
     }
 
-/*    public static function getColour()
-    {
-        DB::table('Home')->select('page_color', 'accent_color')->get();
-
-        return redirect()->back()->withInput();
-
-    }*/
 }

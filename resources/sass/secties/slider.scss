@@ -1,0 +1,152 @@
+html #root {
+  .section.slider {
+    .wrapper {
+      position: relative;
+    }
+
+    .carousel {
+      width: 100%;
+      position: relative;
+      padding-top: 60%;
+      overflow: hidden;
+    }
+
+    .inner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+    }
+
+    .slide.active,
+    .slide.left,
+    .slide.right {
+      z-index: 2;
+      opacity: 1;
+    }
+
+    .js-reset-left {
+      left: auto
+    }
+
+    .slide.left {
+      left: -100%;
+      right: 0;
+    }
+
+    .slide.right {
+      right: -100%;
+      left: auto;
+    }
+
+    .transition .slide.left {
+      left: 0%
+    }
+
+    .transition .slide.right {
+      right: 0%
+    }
+
+    .transition .slide.shift-right {
+      right: 100%;
+      left: auto
+    }
+
+    .transition .slide.shift-left {
+      left: 100%;
+      right: auto
+    }
+
+    .transition .slide {
+      transition-property: right, left, margin;
+    }
+
+    .indicators {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      z-index: 4;
+      padding: 0;
+      text-align: center;
+    }
+
+    .indicators li {
+      width: 13px;
+      height: 13px;
+      display: inline-block;
+      margin: 5px;
+      background: #fff;
+      list-style-type: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s ease-out;
+    }
+
+    .indicators li.active {
+      background: #2b2b2b;
+    }
+
+    .indicators li:hover {
+      background-color: #2b2b2b
+    }
+
+    .arrow {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      background-color: white;
+      border-radius: 50%;
+      //border-top: 3px solid #fff;
+      //border-right: 3px solid #fff;
+      cursor: pointer;
+      //transition: border-color 0.3s ease-out;
+      &:before{
+        content: '';
+        display: inline-block;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 99;
+        width: 20px;
+        height: 20px;
+        top: 15px;
+        left: 20px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-right' class='svg-inline--fa fa-chevron-right fa-w-10' role='img' viewBox='0 0 320 512'%3E%3Cpath fill='currentColor' d='M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z'/%3E%3C/svg%3E");
+      }
+    }
+
+    .arrow:hover {
+      //border-color: #2b2b2b;
+    }
+
+    .arrow-left {
+      left: 20px;
+      transform: rotate(180deg);
+      //transform: rotate(225deg);
+    }
+
+    .arrow-right {
+      right: 20px;
+      //transform: rotate(45deg);
+    }
+
+    .slide {
+      //text-align: center;
+      //padding-top: 25%;
+      //background-size: cover;
+    }
+  }
+}

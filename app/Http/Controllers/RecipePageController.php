@@ -37,16 +37,16 @@ class RecipePageController extends Controller
 
         /*controleert of image gevuld is anders doet hij niks.*/
         if ($request->file('image_zoet'))
-            $request->file('image_zoet')->storeAs('public', 'image_zoet.' . $request->file('image_zoet')->getClientOriginalExtension());
+            $request->file('image_zoet')->storeAs('public/recipe', 'image_zoet.' . $request->file('image_zoet')->getClientOriginalExtension());
 
         if ($request->file('image_hartig'))
-            $request->file('image_hartig')->storeAs('public', 'image_hartig.' . $request->file('image_hartig')->getClientOriginalExtension());
+            $request->file('image_hartig')->storeAs('public/recipe', 'image_hartig.' . $request->file('image_hartig')->getClientOriginalExtension());
 
         if ($request->file('image_right'))
-            $request->file('image_right')->storeAs('public', 'image_recipe_right.' . $request->file('image_right')->getClientOriginalExtension());
+            $request->file('image_right')->storeAs('public/recipe', 'image_recipe_right.' . $request->file('image_right')->getClientOriginalExtension());
 
         if ($request->file('image_left'))
-            $request->file('image_left')->storeAs('public', 'image_recipe_left.' . $request->file('image_left')->getClientOriginalExtension());
+            $request->file('image_left')->storeAs('public/recipe', 'image_recipe_left.' . $request->file('image_left')->getClientOriginalExtension());
 
         return back()->with('success', 'De recepten pagina is aangepast!');
     }

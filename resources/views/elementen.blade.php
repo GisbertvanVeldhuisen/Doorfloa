@@ -1,7 +1,7 @@
 @extends ('layouts/app')
 
 @section ("content")
-    <div class="section header" style="background-image: url({{asset('storage/image-tekst_1.png')}})">
+    <div class="section header" style="background-image: url({{asset('storage/general/header_img.png')}})">
         <div class="container">
             <div class="row">
                 <div class="col-sm"><h1>Door<strong style="color: {{--{{$values->page_color}}--}}">flora</strong></h1>
