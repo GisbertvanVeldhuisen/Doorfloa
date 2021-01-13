@@ -31,13 +31,13 @@ class PhotographyPageController extends Controller
 
         /*controleert of image gevuld is anders doet hij niks.*/
         if ($request->file('image_dieren'))
-            $request->file('image_dieren')->storeAs('public', 'image_dieren.' . $request->file('image_dieren')->getClientOriginalExtension());
+            $request->file('image_dieren')->storeAs('public/photography', 'image_dieren.' . $request->file('image_dieren')->getClientOriginalExtension());
 
         if ($request->file('image_mensen'))
-            $request->file('image_mensen')->storeAs('public', 'image_mensen.' . $request->file('image_mensen')->getClientOriginalExtension());
+            $request->file('image_mensen')->storeAs('public/photography', 'image_mensen.' . $request->file('image_mensen')->getClientOriginalExtension());
 
         if ($request->file('image_landschap'))
-            $request->file('image_landschap')->storeAs('public', 'image_landschap.' . $request->file('image_landschap')->getClientOriginalExtension());
+            $request->file('image_landschap')->storeAs('public/photography', 'image_landschap.' . $request->file('image_landschap')->getClientOriginalExtension());
 
         return back()->with('success', 'De fotografie pagina is aangepast!');
     }

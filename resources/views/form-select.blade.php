@@ -13,4 +13,6 @@
     <option value="{{route('form')}}/recipe">Recepten</option>
     <option value="{{route('form')}}/about">Over</option>
     <option value="{{route('form')}}/contact">Contact</option>
+    <option value="{{route('form')}}/animals">Dieren</option>
+    <option value="{{route('form')}}/general">General</option>
 </select>

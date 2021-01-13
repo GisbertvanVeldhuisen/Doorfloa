@@ -44,16 +44,16 @@
                                type="text" name="title_text">
                     </div>
                     <div class="col-sm">
+                        <label for="text">Tekst onder de titel</label>
+                        <textarea placeholder="vul hier de tekst in"
+                                  name="text">{{$value->text}}</textarea>
+                    </div>
+                    <div class="col-sm">
                         <label for="checkbox">Wil je een foto toevoegen?</label>
                         <input type="checkbox" class="checkbox" name="checkbox" value=""/>
                         <input class="file-hidden" type="file" name="image">
                         <div class="error">{{ $errors->first('image') }}</div>
 
-                    </div>
-                    <div class="col-sm">
-                        <label for="text">Tekst onder de titel</label>
-                        <textarea placeholder="vul hier de tekst in"
-                                  name="text">{{$value->text}}</textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -64,16 +64,15 @@
                                type="text" name="title_text_1">
                     </div>
                     <div class="col-sm">
+                        <label for="text_1">Tekst onder de titel</label>
+                        <textarea placeholder="vul hier de tekst in"
+                                  name="text_1">{{$value->text_1}}</textarea>
+                    </div>
+                    <div class="col-sm">
                         <label for="checkbox">Wil je een foto toevoegen?</label>
                         <input type="checkbox" class="checkbox" name="checkbox" value=""/>
                         <input class="file-hidden" type="file" name="image_1">
                         <div class="error">{{ $errors->first('image_1') }}</div>
-
-                    </div>
-                    <div class="col-sm">
-                        <label for="text_1">Tekst onder de titel</label>
-                        <textarea placeholder="vul hier de tekst in"
-                                  name="text_1">{{$value->text_1}}</textarea>
                     </div>
                 </div>
                 <div class="row">

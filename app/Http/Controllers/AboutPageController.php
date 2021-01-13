@@ -31,7 +31,7 @@ class AboutPageController extends Controller
         ]);
         /*controleert of image gevuld is anders doet hij niks.*/
         if ($request->file('image'))
-            $request->file('image')->storeAs('public', 'image-about.' . $request->file('image')->getClientOriginalExtension());
+            $request->file('image')->storeAs('public/about', 'image-about.' . $request->file('image')->getClientOriginalExtension());
 
 
 

@@ -11,7 +11,7 @@
             {{Session::get('success')}}
 
 @section ("content")
-    <div class="section header" style="background-image: url({{asset('storage/image-tekst_1.png')}})">
+    <div class="section header" style="background-image: url({{asset('storage/general/header_img.png')}})">
         <div class="container">
             <div class="row">
                 <div class="col-sm"><h1>Door<strong style="color:{{$values->page_color}}">flora</strong></h1>
@@ -20,7 +20,7 @@
 
         </div>
     </div>
-    <div class="section text full intro">
+    <div class="section text full intro" style="background-color: {{$values->accent_color}}">
         <div class="container">
             <div class="row">
                 <div class="col-14">
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="section contact">
+    <div class="section contact" style="background-color: {{$values->accent_color}}">
         <div class="shadow left" style="background-color: {{$values->page_color}}"></div>
         <div class="shadow right" style="background-color: {{$values->page_color}}"></div>
         <div class="container">

@@ -405,6 +405,141 @@ html #root .section.contact form label.required:after {
   content: "*";
 }
 
+html #root .section.slider .wrapper {
+  position: relative;
+}
+
+html #root .section.slider .carousel {
+  width: 100%;
+  position: relative;
+  padding-top: 60%;
+  overflow: hidden;
+}
+
+html #root .section.slider .inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+html #root .section.slider .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+html #root .section.slider .slide.active,
+html #root .section.slider .slide.left,
+html #root .section.slider .slide.right {
+  z-index: 2;
+  opacity: 1;
+}
+
+html #root .section.slider .js-reset-left {
+  left: auto;
+}
+
+html #root .section.slider .slide.left {
+  left: -100%;
+  right: 0;
+}
+
+html #root .section.slider .slide.right {
+  right: -100%;
+  left: auto;
+}
+
+html #root .section.slider .transition .slide.left {
+  left: 0%;
+}
+
+html #root .section.slider .transition .slide.right {
+  right: 0%;
+}
+
+html #root .section.slider .transition .slide.shift-right {
+  right: 100%;
+  left: auto;
+}
+
+html #root .section.slider .transition .slide.shift-left {
+  left: 100%;
+  right: auto;
+}
+
+html #root .section.slider .transition .slide {
+  transition-property: right, left, margin;
+}
+
+html #root .section.slider .indicators {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+  padding: 0;
+  text-align: center;
+}
+
+html #root .section.slider .indicators li {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin: 5px;
+  background: #fff;
+  list-style-type: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease-out;
+}
+
+html #root .section.slider .indicators li.active {
+  background: #2b2b2b;
+}
+
+html #root .section.slider .indicators li:hover {
+  background-color: #2b2b2b;
+}
+
+html #root .section.slider .arrow {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+html #root .section.slider .arrow:before {
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 99;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-right' class='svg-inline--fa fa-chevron-right fa-w-10' role='img' viewBox='0 0 320 512'%3E%3Cpath fill='currentColor' d='M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z'/%3E%3C/svg%3E");
+}
+
+html #root .section.slider .arrow-left {
+  left: 20px;
+  transform: rotate(180deg);
+}
+
+html #root .section.slider .arrow-right {
+  right: 20px;
+}
+
 html #root header#header {
   position: fixed;
   width: 100%;
