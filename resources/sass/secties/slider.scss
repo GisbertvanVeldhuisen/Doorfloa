@@ -1,5 +1,21 @@
 html #root {
   .section.slider {
+    position: relative;
+    .shadow {
+      height: 500px;
+      width: 300px;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      &.left {
+        left: 0;
+        transform: translateY(-50%);
+      }
+      &.right {
+        right: 0;
+        transform: translateY(10%);
+      }
+    }
     .wrapper {
       position: relative;
     }

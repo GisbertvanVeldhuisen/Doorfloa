@@ -9,10 +9,12 @@
     </script>
     <option value="">Selecteer een pagina om te bewerken</option>
     <option value="{{route('form')}}">Home</option>
-    <option value="{{route('form')}}/photography">Fotografie</option>
-    <option value="{{route('form')}}/recipe">Recepten</option>
-    <option value="{{route('form')}}/about">Over</option>
+    <option value="{{route('form')}}/fotografie">Fotografie</option>
+    <option value="{{route('form')}}/recepten">Recepten</option>
+    <option value="{{route('form')}}/over">Over</option>
     <option value="{{route('form')}}/contact">Contact</option>
-    <option value="{{route('form')}}/animals">Dieren</option>
+    <option value="{{route('form')}}/dieren">Dieren</option>
+    <option value="{{route('form')}}/mensen">Mensen</option>
+    <option value="{{route('form')}}/landschap">Landschap</option>
     <option value="{{route('form')}}/general">General</option>
 </select>

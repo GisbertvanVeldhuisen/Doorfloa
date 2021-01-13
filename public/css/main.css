@@ -379,17 +379,32 @@ html #root .section.contact .shadow.right {
 }
 
 html #root .section.contact form {
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
-  background-color: white;
-  padding: 40px 100px;
   z-index: 1;
   position: relative;
 }
 
-html #root .section.contact form input[type=email],
-html #root .section.contact form input[type=text] {
+html #root .section.contact form input[type=submit] {
+  border: none;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+html #root .section.contact form .form-group {
   min-width: calc(100% / 3 * 2 - 50px);
   max-width: calc(100% / 3 * 2 - 50px);
+  margin: 0 auto;
+}
+
+html #root .section.contact form input[type=email],
+html #root .section.contact form input[type=text],
+html #root .section.contact form textarea {
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+html #root .section.contact form textarea {
+  height: 300px;
 }
 
 html #root .section.contact form input[type=submit] {
@@ -398,11 +413,34 @@ html #root .section.contact form input[type=submit] {
 
 html #root .section.contact form label {
   font-family: "Open Sans", sans-serif;
-  margin: 20px 0 0 0 !important;
+  letter-spacing: 3px;
+  margin: 10px 0;
 }
 
 html #root .section.contact form label.required:after {
   content: "*";
+}
+
+html #root .section.slider {
+  position: relative;
+}
+
+html #root .section.slider .shadow {
+  height: 500px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+html #root .section.slider .shadow.left {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+html #root .section.slider .shadow.right {
+  right: 0;
+  transform: translateY(10%);
 }
 
 html #root .section.slider .wrapper {

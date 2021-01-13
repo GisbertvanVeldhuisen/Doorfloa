@@ -97,8 +97,10 @@
                         </div>
                     @endif
                 </div>
-
-                <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
+                <div class="form-group">
+                    <input type="submit" name="send" value="Verzenden" style="background-color: {{$values->page_color}}; color: {{$values->accent_color}};"
+                           class="btn btn-block">
+                </div>
             </form>
         </div>
     </div>
@@ -144,7 +146,8 @@
     </div>
     <div class="socket" style="background-color:{{$values->accent_color}}">
         <div class="container">
-            <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen & Jurre van Esveld</p>
+            <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen &
+                Jurre van Esveld</p>
         </div>
     </div>
 @endsection

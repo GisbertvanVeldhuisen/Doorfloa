@@ -28,7 +28,7 @@
             <div class="wrapper">
                 <div class="carousel">
                     <div class="inner">
-                        @php($files = glob('storage/animalsImages/*.{png}', GLOB_BRACE))
+                        @php($files = glob('storage/humansImages/*.{png}', GLOB_BRACE))
                         @foreach($files as $file)
                             <div class="slide active" style="background-image: url('{{$file}}')"></div>
                         @endforeach
@@ -292,7 +292,7 @@
     </script>
     <div class="footer">
         <div class="container">
-            <div class="column three-fifth menu" style="background-color: {{--{{$values->accent_color}}--}}">
+            <div class="column three-fifth menu" style="background-color: {{$values->accent_color}}">
                 <div class="heading">
                     <h3>menu</h3>
                 </div>
@@ -304,7 +304,7 @@
 
                 </div>
             </div>
-            <div class="column two-fifth contact" style="{{--background-color: {{$values->page_color}}--}}">
+            <div class="column two-fifth contact" style="background-color: {{$values->page_color}}">
                 <div class="heading">
                     <h3>contact</h3>
                 </div>
@@ -330,11 +330,9 @@
             </div>
         </div>
     </div>
-    <div class="socket" style="{{--background-color:{{$values->accent_color}}--}}">
+    <div class="socket" style="background-color:{{$values->accent_color}}">
         <div class="container">
-            <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen
-                &
-                Jurre van Esveld</p>
+            <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen & Jurre van Esveld</p>
         </div>
     </div>
 @endsection
