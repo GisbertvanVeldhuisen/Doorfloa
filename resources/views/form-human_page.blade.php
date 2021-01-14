@@ -74,16 +74,22 @@
     <div class="section delete images">
         <div class="container">
             <div class="row">
-                <div class="col-sm">
-                    @php($files = glob('storage/humansImages/*.{png}', GLOB_BRACE))
-                    @foreach($files as $file)
-                        <form method="" action="">
-                            {{$file}}
-                            <input type="hidden" value="{{$file}}">
-                            <input name="delete" class="btn btn-danger" type="submit" value="verwijder">
-                        </form>
-                    @endforeach
+                <div class="heading">
+                    <h3>Afbeelding in de slider</h3>
                 </div>
+            </div>
+            <div class="row">
+                @php($files = glob('storage/humansImages/*.{png}', GLOB_BRACE))
+                @foreach($files as $file)
+                    <div class="column one-fourth">
+                        <img src="/{{$file}}" alt="">
+                        <form action="{{route('deleteimage', $file)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">x</button>
+                        </form>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

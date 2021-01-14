@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\HumanPage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class HumanPageController extends Controller
 {
@@ -52,12 +54,10 @@ class HumanPageController extends Controller
             ]);
     }
 
-    public function DeleteImage(Request $request)
+    public function DeleteImage($file)
     {
-
-            Storage::delete();
-
-
+        Storage::destroy($file);
+        return back()->with('success', 'De afbeelding is verwijderd!');
     }
 
     public function HumanPageInfo()

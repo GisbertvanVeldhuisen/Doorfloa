@@ -196,11 +196,10 @@
                 <div class="col-sm menu">
                     <h3>menu</h3>
                     <div class="main-menu-container">
-                        <a class="menu-item" href="#">Fotografie</a>
-                        <a class="menu-item" href="#">Recepten</a>
-                        <a class="menu-item" href="#">Over mij</a>
-                        <a class="menu-item" href="#">Contact</a>
-
+                        <a class="menu-item" href="{{'fotografie'}}">Fotografie</a>
+                        <a class="menu-item" href="{{'recepten'}}">Recepten</a>
+                        <a class="menu-item" href="{{'over'}}">Over</a>
+                        <a class="menu-item" href="{{'contact'}}">Contact</a>
                     </div>
                 </div>
                 <div class="col-sm contact">
