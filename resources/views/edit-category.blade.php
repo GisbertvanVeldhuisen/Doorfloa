@@ -5,7 +5,7 @@
     <div class="section form">
         <div class="container">
 
-            <form method="POST" enctype="multipart/form-data" action="">
+            <form method="POST" enctype="multipart/form-data" action="{{route('update-category')}}">
                 @csrf
                 <div class="row">
                     <div class="col-sm">
@@ -19,11 +19,12 @@
                         @endif
                     </div>
                 </div>
-                @foreach($categories as $category)
+
+
                 <div class="row">
                     <div class="col-sm">
                         <label for="category_name">Categorie naam</label>
-                        <input value="{{$category->category_name}}" type="text"
+                        <input value="{{$categories->category_name}}" type="text"
                                name="category_name">
                     </div>
 
@@ -32,7 +33,7 @@
                             <input class="btn btn-primary" type="submit">
                         </div>
                     </div>
-                @endforeach
+                </div>
             </form>
 
 

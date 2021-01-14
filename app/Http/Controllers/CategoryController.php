@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class CategoryController extends Controller
 {
@@ -45,14 +46,21 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function editTheCategory(Request $request)
+    public function editTheCategory(Request $request, Category $category)
     {
-        Category::updateOrCreate(
 
-            ['category_name' => $request->get('category_name')
+        $categories['category_name'] = $request->get('category_name');
+
+        // This will save to the database
+        $category->update([
+            'category_name' => $request->get('category_name'),
+        ]);
+
+        return view('edit-category', [
+
+            'categories' => $categories
 
         ]);
 
-        return back()->with('success', 'De categorie is bijgewerkt!');
     }
 }

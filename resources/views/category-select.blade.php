@@ -11,7 +11,7 @@
 
     @foreach($categories as $category)
 
-        <option value="{{route('category')}}/{{$category->id}}">{{$category->category_name}}</option>
+        <option value="{{route('category')}}">{{$category->category_name}}</option>
 
     @endforeach
 </select>

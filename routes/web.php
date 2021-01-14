@@ -56,12 +56,13 @@ Route::get('/form/general', function () {
     return view('form-general');
 });
 
-//display categories underneath category maker
+//get category info and make category
 Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'getCategoryInfo']);
+Route::post('/category', [\App\Http\Controllers\CategoryController::class, 'updateOrCreateCategory']);
 
 //edit category
 Route::put('/edit-category', [\App\Http\Controllers\CategoryController::class, 'categoryInfo'])->name('category');
-Route::post('/edit-category/{id}', [\App\Http\Controllers\CategoryController::class, 'editTheCategory']);
+Route::get('/edit-category', [\App\Http\Controllers\CategoryController::class, 'editTheCategory'])->name('update-category');
 
 //delete category
 Route::get('/verwijder/{id}', [\App\Http\Controllers\CategoryController::class, 'deleteCategory']);

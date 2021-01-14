@@ -16,5 +16,7 @@ class Post extends Model
         'post_ingredients',
         'post_preparation_title',
         'post_preparation',
+        'page_color',
+        'accent_color'
     ];
 }

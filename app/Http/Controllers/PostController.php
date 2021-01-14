@@ -14,6 +14,8 @@ class PostController extends Controller
             'post_ingredients' => $request->post('post_ingredients'),
             'post_preparation_title' => $request->post('post_preparation_title'),
             'post_preparation' => $request->post('post_preparation'),
+            'page_color' => $request->post('color'),
+            'accent_color' => $request->post('accent_color')
         ]);
 
 

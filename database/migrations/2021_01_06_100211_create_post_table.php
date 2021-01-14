@@ -20,6 +20,8 @@ class CreatePostTable extends Migration
             $table->string('post_ingredients')->nullable(true);
             $table->char('post_preparation_title')->nullable(true);
             $table->string('post_preparation')->nullable(true);
+            $table->text('page_color')->nullable(true);
+            $table->text('accent_color')->nullable(true);
             $table->timestamps();
         });
     }

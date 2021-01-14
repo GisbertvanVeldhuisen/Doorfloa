@@ -33,8 +33,8 @@
 
                     <div class="col-sm">
                         <label for="post_ingredients">Post ingrediënten</label>
-                        <input placeholder="vul hier de ingrediënten in" type="text"
-                               name="post_ingredients">
+                        <textarea placeholder="vul hier de ingrediënten in" type="text"
+                                  name="post_ingredients"></textarea>
                     </div>
 
                 </div>
@@ -49,10 +49,21 @@
 
                         <div class="col-sm">
                             <label for="post_preparation">Post ingrediënten</label>
-                            <input placeholder="vul hier bereidingswijze in" type="text"
-                                   name="post_preparation">
+                            <textarea placeholder="vul hier bereidingswijze in" type="text"
+                                      name="post_preparation"></textarea>
                         </div>
                     </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label for="color">Welke kleur moet de pagina hebben?</label>
+                        <input type="color" name="color">
+                    </div>
+                    <div class="col-4">
+                        <label for="color">Welke kleur moeten de accenten hebben?</label>
+                        <input type="color" name="accent_color">
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-sm">
