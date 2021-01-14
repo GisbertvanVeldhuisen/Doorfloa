@@ -50,13 +50,7 @@ class PostController extends Controller
     public function singlePageContent($post_id)
     {
 
-         $posts = Post::findOrFail($post_id);
-
-//        $post_title = $request->get('post_title');
-//
-////        $post_id = $request->get('id');
-//
-//        $posts = Post::select('id')->where($post_title)->first();;
+        $posts = Post::findOrFail($post_id);
 
         return view('singlepage', [
 

@@ -27,17 +27,6 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function getCategoryInfo2()
-    {
-        $categories = Category::all();
-
-        return view('category', [
-
-            'categories' => $categories,
-
-        ]);
-    }
-
     public function deleteCategory($category_id)
     {
         Category::destroy($category_id);
@@ -45,17 +34,15 @@ class CategoryController extends Controller
         return back()->with('success', 'De categorie is verwijderd!');
     }
 
-
     public function categoryInfo($category_id)
     {
-        $categories = Category::findorfail($category_id);
+        $categories = Category::find($category_id);
 
         return view('edit-category', [
 
             'categories' => $categories
 
         ]);
-
     }
 
     public function editTheCategory(Request $request)
@@ -66,7 +53,6 @@ class CategoryController extends Controller
 
         ]);
 
-
-//        return redirect('/category');
+        return back()->with('success', 'De categorie is bijgewerkt!');
     }
 }
