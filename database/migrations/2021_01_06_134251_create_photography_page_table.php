@@ -18,6 +18,9 @@ class CreatePhotographyPageTable extends Migration
             $table->text('title')->nullable(true);
             $table->text('intro')->nullable(true);
             $table->text('quote')->nullable(true);
+            $table->text('contact')->nullable(true);
+            $table->text('contact_text')->nullable(true);
+            $table->text('contact_button')->nullable(true);
             $table->text('page_color')->nullable(true);
             $table->text('accent_color')->nullable(true);
             $table->timestamps();

@@ -15,7 +15,7 @@ class Home extends Model
 
 
     protected $fillable = [
-        'title', 'title_intro', 'intro', 'title_text', 'text', 'title_text_1', 'text_1', 'page_color', 'accent_color'
+        'title', 'title_intro', 'intro', 'title_text', 'text', 'title_text_1', 'text_1', 'contact', 'contact_text', 'contact_button', 'page_color', 'accent_color'
     ];
     public $timestamps = false;
 

@@ -44,13 +44,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4">
-                        <label for="color">Welke kleur moet de pagina hebben?</label>
-                        <input value="{{$value->page_color}}" type="color" name="color">
+                    <div class="col-sm">
+                        <label for="title_intro">Tekst in contact</label>
+                        <input value="{{$value->contact}}" placeholder="vul hier de tekst in" type="text" name="contact">
                     </div>
-                    <div class="col-4">
-                        <label for="color">Welke kleur moeten de accenten hebben?</label>
-                        <input value="{{$value->accent_color}}" type="color" name="accent_color">
+                    <div class="col-sm">
+                        <label for="title_intro">Tekst in contact</label>
+                        <input value="{{$value->contact_text}}" placeholder="vul hier de titel in" type="text" name="contact_text">
+                    </div>
+                    <div class="col-sm">
+                        <label for="title_intro">Tekst in de knop</label>
+                        <input value="{{$value->contact_button}}" placeholder="vul hier de titel in" type="text" name="button">
                     </div>
                 </div>
                 <div class="row">
@@ -70,7 +74,16 @@
                         <div class="error">{{ $errors->first('image_landschap') }}</div>
                     </div>
                 </div>
-
+                <div class="row">
+                    <div class="col-4">
+                        <label for="color">Welke kleur moet de pagina hebben?</label>
+                        <input value="{{$value->page_color}}" type="color" name="color">
+                    </div>
+                    <div class="col-4">
+                        <label for="color">Welke kleur moeten de accenten hebben?</label>
+                        <input value="{{$value->accent_color}}" type="color" name="accent_color">
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-sm">
                         <input class="btn btn-primary" type="submit">

@@ -15,6 +15,6 @@ class Recipe extends Model
 
 
     protected $fillable = [
-        'title', 'intro', 'quote', 'title_text', 'text', 'title_text_1', 'text_1', 'page_color', 'accent_color'
+        'title', 'intro', 'quote', 'title_text', 'text', 'title_text_1', 'text_1', 'contact', 'contact_text', 'contact_button', 'page_color', 'accent_color'
     ];
 }

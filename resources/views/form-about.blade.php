@@ -15,7 +15,7 @@
                 @csrf
                 <div class="row">
                     <div class="col-sm">
-                        <h1>About pagina bewerken</h1>
+                        <h1>Over mij pagina bewerken</h1>
                         @if(Session::has('success'))
                             <div class="alert alert-success">
                                 {{Session::get('success')}}
@@ -53,6 +53,20 @@
                         <input class="file-hidden" type="file" name="image">
                         <div class="error">{{ $errors->first('image') }}</div>
 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="title_intro">Tekst in contact</label>
+                        <input value="{{$value->contact}}" placeholder="vul hier de tekst in" type="text" name="contact">
+                    </div>
+                    <div class="col-sm">
+                        <label for="title_intro">Tekst in contact</label>
+                        <input value="{{$value->contact_text}}" placeholder="vul hier de titel in" type="text" name="contact_text">
+                    </div>
+                    <div class="col-sm">
+                        <label for="title_intro">Tekst in de knop</label>
+                        <input value="{{$value->contact_button}}" placeholder="vul hier de titel in" type="text" name="button">
                     </div>
                 </div>
                 <div class="row">

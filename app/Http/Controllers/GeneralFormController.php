@@ -22,4 +22,7 @@ class GeneralFormController extends Controller
 
         return back()->with('success', 'De standaard informatie is aangepast!');
     }
+
+
+
 }

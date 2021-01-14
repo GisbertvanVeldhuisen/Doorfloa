@@ -42,11 +42,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-7">
-                    <p><strong>vragen of meer informatie voor het aanvragen van een photoshoot?</strong></p>
-                    <p>Neem contact met mij op:</p>
+                    <p><strong>{{$values->contact}}</strong></p>
+                    <p>{{$values->contact_text}}</p>
                     <a class="button" href="/contact">
-                        Klik hier
-                        <span class="icon mail"></span>
+                        {{$values->contact_button}} <span class="icon mail"></span>
                     </a>
                 </div>
                 <div class="col-5">

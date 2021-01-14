@@ -36,6 +36,7 @@
                         <div class="error">{{ $errors->first('contact_img') }}</div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-sm">
                         <input class="btn btn-primary" type="submit">

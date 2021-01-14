@@ -54,10 +54,8 @@ class HumanPageController extends Controller
 
     public function DeleteImage(Request $request)
     {
-        $files = glob('storage/humansImages/*.{png}', GLOB_BRACE);
 
-        if ($request->file('delete'))
-            Storage::delete($files);
+            Storage::delete();
 
 
     }

@@ -15,6 +15,7 @@ class About extends Model
 
 
     protected $fillable = [
-        'title', 'intro', 'title_text', 'text', 'page_color', 'accent_color'
+        'title', 'intro', 'title_text', 'text', 'contact', 'contact_text', 'contact_button','page_color', 'accent_color'
+
     ];
 }

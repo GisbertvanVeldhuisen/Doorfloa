@@ -15,6 +15,6 @@ class Photography extends Model
 
 
     protected $fillable = [
-        'title', 'intro', 'quote', 'page_color', 'accent_color'
+        'title', 'intro', 'quote', 'contact', 'contact_text', 'contact_button', 'page_color', 'accent_color'
     ];
 }

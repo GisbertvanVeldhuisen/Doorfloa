@@ -79,7 +79,8 @@
                     @foreach($files as $file)
                         <form method="" action="">
                             {{$file}}
-                            <input name="delete" class="btn btn-danger" type="submit" value="verwijder afbeelding">
+                            <input type="hidden" value="{{$file}}">
+                            <input name="delete" class="btn btn-danger" type="submit" value="verwijder">
                         </form>
                     @endforeach
                 </div>

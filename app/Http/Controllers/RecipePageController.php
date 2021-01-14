@@ -23,6 +23,9 @@ class RecipePageController extends Controller
                 'text' => $request->get('text'),
                 'title_text_1' => $request->get('titel_text_1'),
                 'text_1' => $request->get('text_1'),
+                'contact' => $request->get('contact'),
+                'contact_text' => $request->get('contact_text'),
+                'contact_button' => $request->get('button'),
                 'page_color' => $request->get('color'),
                 'accent_color' => $request->get('accent_color')
             ]

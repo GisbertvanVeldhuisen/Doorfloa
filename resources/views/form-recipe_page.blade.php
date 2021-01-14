@@ -15,7 +15,7 @@
                 @csrf
                 <div class="row">
                     <div class="col-sm">
-                        <h1>Recipe pagina bewerken</h1>
+                        <h1>Recepten pagina bewerken</h1>
 
                         @if(Session::has('success'))
                             <div class="alert alert-success">
@@ -84,6 +84,32 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-sm">
+                        <label for="title_intro">Tekst in contact</label>
+                        <input value="{{$value->contact}}" placeholder="vul hier de tekst in" type="text" name="contact">
+                    </div>
+                    <div class="col-sm">
+                        <label for="title_intro">Tekst in contact</label>
+                        <input value="{{$value->contact_text}}" placeholder="vul hier de titel in" type="text" name="contact_text">
+                    </div>
+                    <div class="col-sm">
+                        <label for="title_intro">Tekst in de knop</label>
+                        <input value="{{$value->contact_button}}" placeholder="vul hier de titel in" type="text" name="button">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="file">Foto voor zoet toevoegen?</label>
+                        <input type="file" name="image_zoet">
+                        <div class="error">{{ $errors->first('image_fotografie') }}</div>
+                    </div>
+                    <div class="col-4">
+                        <label for="file">Foto voor hartig toevoegen?</label>
+                        <input type="file" name="image_hartig">
+                        <div class="error">{{ $errors->first('image_recepten') }}</div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-4">
                         <label for="color">Welke kleur moet de pagina hebben?</label>
                         <input value="{{$value->page_color}}" type="color" name="color">
@@ -93,19 +119,6 @@
                         <input value="{{$value->accent_color}}" type="color" name="accent_color">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <label for="file">Foto voor zoet toevoegen?</label>
-                        <input type="file" name="image_zoet">
-                        <div class="error">{{ $errors->first('image_fotografie') }}</div>
-                    </div>
-                    <div class="col-sm">
-                        <label for="file">Foto voor hartig toevoegen?</label>
-                        <input type="file" name="image_hartig">
-                        <div class="error">{{ $errors->first('image_recepten') }}</div>
-                    </div>
-                </div>
-
                 <div class="row">
                     <div class="col-sm">
                         <input class="btn btn-primary" type="submit">

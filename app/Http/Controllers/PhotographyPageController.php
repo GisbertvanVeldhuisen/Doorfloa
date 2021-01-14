@@ -18,6 +18,9 @@ class PhotographyPageController extends Controller
                 'title' => $request->get('title'),
                 'intro' => $request->get('intro'),
                 'quote' => $request->get('quote'),
+                'contact' => $request->get('contact'),
+                'contact_text' => $request->get('contact_text'),
+                'contact_button' => $request->get('button'),
                 'page_color' => $request->get('color'),
                 'accent_color' => $request->get('accent_color')
             ]

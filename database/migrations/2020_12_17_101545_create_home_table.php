@@ -21,6 +21,9 @@ class CreateHomeTable extends Migration
             $table->text('text')->nullable(true);
             $table->text('title_text_1')->nullable(true);
             $table->text('text_1')->nullable(true);
+            $table->text('contact')->nullable(true);
+            $table->text('contact_text')->nullable(true);
+            $table->text('contact_button')->nullable(true);
             $table->text('page_color')->nullable(true);
             $table->text('accent_color')->nullable(true);
             $table->timestamps();
