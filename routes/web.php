@@ -46,6 +46,7 @@ Route::get('/form/mensen', [App\Http\Controllers\HumanPageController::class, 'fo
 Route::get('/form/landschap', [App\Http\Controllers\LandscapesPageController::class, 'formInfo']);
 
 
+//elementen page
 Route::get('/elementen', function () {
     return view('elementen');
 });
@@ -55,10 +56,39 @@ Route::get('/form/general', function () {
     return view('form-general');
 });
 
+//display categories underneath category maker
+Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'getCategoryInfo']);
+
+//edit category
+Route::put('/edit-category', [\App\Http\Controllers\CategoryController::class, 'categoryInfo'])->name('category');
+Route::post('/edit-category/{id}', [\App\Http\Controllers\CategoryController::class, 'editTheCategory']);
+
+//delete category
+Route::get('/verwijder/{id}', [\App\Http\Controllers\CategoryController::class, 'deleteCategory']);
+
+//post make
+Route::get('/post', [\App\Http\Controllers\PostController::class, 'postInfo']);
+Route::post('/post', [\App\Http\Controllers\PostController::class, 'updateOrCreatePost']);
+
+//edit post
+Route::get('/editpost',  [\App\Http\Controllers\PostController::class, 'getPost']);
+
+//delete post
+Route::get('/delete/{id}', [\App\Http\Controllers\PostController::class, 'deletePost']);
+
+//contact page
 //Route::get('/contact', 'App\Http\Controllers\ContactUsFormController@createForm');
 
 Route::post('/contact', 'App\Http\Controllers\ContactUsFormController@contactUsForm')->name('contact.store');
 
-Auth::routes();
+\Illuminate\Support\Facades\Auth::routes();
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::middleware('admin')->group(function(){
+////    Route::get('/admin', 'App\Http\Controllers\AdminController@index');
+//});
+
+
+//single page
+Route::get('/{id}',  [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('singlepage');
+
+

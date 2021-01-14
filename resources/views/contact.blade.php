@@ -1,5 +1,15 @@
 @extends ('layouts/app')
 
+
+@section('content')
+<body>
+<div class="container mt-5">
+
+    <!-- Success message -->
+    @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{Session::get('success')}}
+
 @section ("content")
     <div class="section header" style="background-image: url({{asset('storage/general/header_img.png')}})">
         <div class="container">
@@ -7,6 +17,7 @@
                 <div class="col-sm"><h1>Door<strong style="color:{{$values->page_color}}">flora</strong></h1>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="section text full intro" style="background-color: {{$values->accent_color}}">
@@ -143,6 +154,12 @@
                 </div>
             </div>
         </div>
+        <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
+    </form>
+</div>
+</body>
+@endsection
+
     </div>
     <div class="socket" style="background-color:{{$values->accent_color}}">
         <div class="container">
