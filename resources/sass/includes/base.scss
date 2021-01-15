@@ -34,6 +34,11 @@ p {
 
 .col-sm {
   padding: 0;
+  position: relative;
+  z-index: 1;
+}
+.heading{
+  padding: 0;
 }
 
 .full-link {
@@ -72,6 +77,11 @@ img {
   &.three-fifth {
     min-width: calc(100% / 5 * 3);
     max-width: calc(100% / 5 * 3);
+  }
+  &.one-third{
+    display: inline-block;
+    min-width: calc(100% / 3 - 20px);
+    max-width: calc(100% / 3 - 20px);
   }
   &.one-fourth{
     min-width: calc(100% / 4 - 10px);
