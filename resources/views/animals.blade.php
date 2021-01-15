@@ -297,11 +297,10 @@
                     <h3>menu</h3>
                 </div>
                 <div class="main-menu-container">
-                    <a class="menu-item" href="#">Fotografie</a>
-                    <a class="menu-item" href="#">Recepten</a>
-                    <a class="menu-item" href="#">Over mij</a>
-                    <a class="menu-item" href="#">Contact</a>
-
+                    <a class="menu-item" href="{{'fotografie'}}">Fotografie</a>
+                    <a class="menu-item" href="{{'recepten'}}">Recepten</a>
+                    <a class="menu-item" href="{{'over'}}">Over</a>
+                    <a class="menu-item" href="{{'contact'}}">Contact</a>
                 </div>
             </div>
             <div class="column two-fifth contact" style="{{--background-color: {{$values->page_color}}--}}">

@@ -1,0 +1,24 @@
+html #root {
+  .section.delete {
+    .row {
+      .heading h3{
+        text-align: start;
+        padding-bottom: 40px;
+      }
+    }
+    .column {
+      position: relative;
+      padding: 0;
+      margin: 5px;
+      form button {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        border-radius: 50%;
+        padding: 0;
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+}

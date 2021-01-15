@@ -82,6 +82,11 @@ img {
   max-width: calc(100% / 5 * 3);
 }
 
+.column.one-fourth {
+  min-width: calc(100% / 4 - 10px);
+  max-width: calc(100% / 4 - 10px);
+}
+
 html #root .icon {
   border-radius: 50%;
   padding: 10px;
@@ -576,6 +581,27 @@ html #root .section.slider .arrow-left {
 
 html #root .section.slider .arrow-right {
   right: 20px;
+}
+
+html #root .section.delete .row .heading h3 {
+  text-align: start;
+  padding-bottom: 40px;
+}
+
+html #root .section.delete .column {
+  position: relative;
+  padding: 0;
+  margin: 5px;
+}
+
+html #root .section.delete .column form button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+  padding: 0;
+  height: 40px;
+  width: 40px;
 }
 
 html #root header#header {

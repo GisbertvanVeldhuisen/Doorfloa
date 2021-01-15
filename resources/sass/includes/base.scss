@@ -73,4 +73,8 @@ img {
     min-width: calc(100% / 5 * 3);
     max-width: calc(100% / 5 * 3);
   }
+  &.one-fourth{
+    min-width: calc(100% / 4 - 10px);
+    max-width: calc(100% / 4 - 10px);
+  }
 }
