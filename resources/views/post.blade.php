@@ -21,6 +21,14 @@
                         @endif
                     </div>
                 </div>
+
+
+                <select name="category">
+                    @foreach($subcategory as $subcat)
+                        <option value="{{$subcat->id}}">{{$subcat->name}}</option>
+                    @endforeach
+                </select>
+
                 <div class="row">
                     <div class="col-sm">
                         <label for="title_intro">titel boven intro</label>

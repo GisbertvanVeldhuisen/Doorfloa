@@ -36,7 +36,7 @@
                     <div class="col-sm">
                         <label for="category_name">Categorie naam</label>
                         <input placeholder="vul hier de titel in" type="text"
-                               name="subcategory_name">
+                               name="name">
                     </div>
 
                     <div class="row">
@@ -54,7 +54,7 @@
                     @endforeach
                     </select>
 
-                    <a class="btn btn-primary" href="verwijder/{{$subcategory->id}}" type="DELETE">Delete</a>
+{{--                    <a class="btn btn-primary" href="verwijder/{{$subcategory->id}}" type="DELETE">Delete</a>--}}
 
                 </div>
             </div>

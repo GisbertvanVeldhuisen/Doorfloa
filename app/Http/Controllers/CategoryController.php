@@ -14,7 +14,7 @@ class CategoryController extends Controller
         Subcategory::create(
             [
             'category_id' => $request->post('category_id'),
-            'subcategory_name' => $request->post('subcategory_name'),
+            'name' => $request->post('name'),
             ]
         );
 

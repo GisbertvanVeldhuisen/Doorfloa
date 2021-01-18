@@ -15,7 +15,6 @@ class CreatePostTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->integer('category_id')->default(0);
             $table->text('title_intro')->default(0);
             $table->text('intro')->default(0);
             $table->char('title')->nullable(true);
@@ -24,6 +23,7 @@ class CreatePostTable extends Migration
             $table->text('preparation')->nullable(true);
             $table->text('page_color')->nullable(true);
             $table->text('accent_color')->nullable(true);
+            $table->unsignedBigInteger('category')->nullable(true);
             $table->timestamps();
         });
     }

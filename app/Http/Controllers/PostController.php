@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -17,7 +18,8 @@ class PostController extends Controller
             'preparation_title' => $request->post('preparation_title'),
             'preparation' => $request->post('preparation'),
             'page_color' => $request->post('color'),
-            'accent_color' => $request->post('accent_color')
+            'accent_color' => $request->post('accent_color'),
+            'category' => $request->post('category'),
         ]);
 
         $request->validate([
@@ -45,7 +47,11 @@ class PostController extends Controller
 
     public function postInfo()
     {
-        return view('post');
+        $subcategory = Subcategory::all();
+
+        return view('post', [
+            'subcategory' => $subcategory
+        ]);
     }
 
     public function getPost()

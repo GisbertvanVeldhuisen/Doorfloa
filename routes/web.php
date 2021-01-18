@@ -57,8 +57,6 @@ Route::delete('form/landschap/deleteimage', [App\Http\Controllers\LandscapesPage
 //Route::get('/form/landschap', [App\Http\Controllers\LandscapesPageController::class, 'formInfo']);
 
 
-
-
 //elementen page
 Route::get('/elementen', function () {
     return view('elementen');
