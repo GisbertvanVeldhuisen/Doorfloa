@@ -29,7 +29,7 @@ html #root {
     }
     &.image {
       margin-bottom: 100px;
-      h2{
+      h2 {
         text-align: left;
         margin-bottom: 50px;
       }
@@ -60,6 +60,12 @@ html #root {
       .col-5 {
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          width: 100%;
+          padding: 0;
+          max-width: 100%;
+        }
         img {
           margin: auto 0 0 0;
         }

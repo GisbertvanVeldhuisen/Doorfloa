@@ -10,6 +10,12 @@ h1 {
   z-index: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
 a,
 li,
 strong {
@@ -81,6 +87,35 @@ img {
 @media screen and (max-width: 1024px) {
   .main .container {
     padding: 80px 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .row {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    --bs-gutter-x: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .col-7 {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .col-5 {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
   }
 }
 
@@ -216,6 +251,12 @@ html #root .section.tiles .container {
   position: relative;
 }
 
+@media screen and (max-width: 1140px) {
+  html #root .section.tiles .container {
+    padding-bottom: 80px;
+  }
+}
+
 html #root .section.tiles .intro {
   margin: 20px 0 100px;
   text-align: center;
@@ -339,6 +380,15 @@ html #root .section.text .image .container {
 html #root .section.text .image .col-5 {
   display: flex;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.text .image .col-5 {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+  }
 }
 
 html #root .section.text .image .col-5 img {
@@ -709,6 +759,8 @@ html #root header#header {
 html #root header#header .container {
   padding: 20px 10%;
   max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1024px) {
@@ -721,10 +773,9 @@ html #root header#header .container .menu-item {
   margin: 0 10px;
 }
 
-html #root header#header .container .col-11 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+html #root header#header .container .menu {
+  display: block;
+  margin: 0 0 0 auto;
 }
 
 html #root .footer {

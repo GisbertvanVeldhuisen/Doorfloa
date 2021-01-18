@@ -2,8 +2,8 @@ html #root {
   .section.tiles {
     margin-bottom: 50px;
     position: relative;
-    &.recipe{
-      .grid-container{
+    &.recipe {
+      .grid-container {
         justify-content: space-evenly;
       }
     }
@@ -32,6 +32,9 @@ html #root {
       padding-bottom: 300px;
       z-index: 99;
       position: relative;
+      @media screen and (max-width: 1140px) {
+        padding-bottom: 80px;
+      }
     }
     .intro {
       margin: 20px 0 100px;
