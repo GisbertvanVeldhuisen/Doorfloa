@@ -57,7 +57,7 @@ Route::get('/form/general', function () {
 });
 
 //get category info and make category
-Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'getCategoryInfo']);
+Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'getCategories']);
 Route::post('/category', [\App\Http\Controllers\CategoryController::class, 'updateOrCreateCategory']);
 
 //edit category

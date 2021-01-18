@@ -11,6 +11,7 @@
                 @csrf
 
                 <div class="row">
+                <div class="row">
                     <div class="col-sm">
                         <h1>Post aanmaken</h1>
                         @if(Session::has('success'))

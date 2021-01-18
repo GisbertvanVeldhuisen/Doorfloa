@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Subcategory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -10,27 +11,32 @@ class CategoryController extends Controller
 {
     public function updateOrCreateCategory(Request $request)
     {
-        Category::updateOrCreate([
-            'category_name' => $request->post('category_name'),
-        ]);
+        Subcategory::create(
+            [
+            'category_id' => $request->post('category_id'),
+            'subcategory_name' => $request->post('subcategory_name'),
+            ]
+        );
 
         return back()->with('success', 'De categorie is aangemaakt!');
     }
 
-    public function getCategoryInfo()
+    public function getCategories()
     {
+        $subcategories = Subcategory::with('category')->get();
         $categories = Category::all();
 
         return view('category', [
 
+            'subcategories' => $subcategories,
             'categories' => $categories,
 
         ]);
     }
 
-    public function deleteCategory($category_id)
+    public function deleteCategory(Request $request)
     {
-        Category::destroy($category_id);
+        Category::destroy($request->get('id'));
 
         return back()->with('success', 'De categorie is verwijderd!');
     }

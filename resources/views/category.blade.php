@@ -26,12 +26,17 @@
                             </div>
                         @endif
                     </div>
+                    <select name="category_id">
+                    @foreach($categories as $category)
+                        <option value="{{$category->id}}">{{$category->category_name}}</option>
+                    @endforeach
+                    </select>
                 </div>
                 <div class="row">
                     <div class="col-sm">
                         <label for="category_name">Categorie naam</label>
                         <input placeholder="vul hier de titel in" type="text"
-                               name="category_name">
+                               name="subcategory_name">
                     </div>
 
                     <div class="row">
@@ -43,12 +48,14 @@
 
             <div class="row">
                 <div class="col-sm">
-                    @foreach($categories as $category)
-
-                        <label>{{$category->category_name}}</label>
-                        <a class="btn btn-primary" href="verwijder/{{$category->id}}" >Delete</a>
-
+                    <select>
+                    @foreach($subcategories as $subcategory)
+                        <option value="{{$subcategory->id}}">{{$subcategory->subcategory_name}}</option>
                     @endforeach
+                    </select>
+
+                    <a class="btn btn-primary" href="verwijder/{{$subcategory->id}}" type="DELETE">Delete</a>
+
                 </div>
             </div>
 
