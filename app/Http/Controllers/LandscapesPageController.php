@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\LandscapePage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class LandscapesPageController extends Controller
 {
@@ -50,6 +52,13 @@ class LandscapesPageController extends Controller
             [
                 'value' => $value
             ]);
+    }
+    public function DeleteImage(Request $request)
+    {
+        $split = explode('/', $request->post('image'));
+        $imageName = end($split);
+        Storage::delete('public/landscapesImages/' . $imageName);
+        return back()->with('success', 'De afbeelding is verwijderd!');
     }
 
     public function LandscapePageInfo()

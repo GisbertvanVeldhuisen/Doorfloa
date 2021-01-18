@@ -83,9 +83,10 @@
                 @foreach($files as $file)
                     <div class="column one-fourth">
                         <img src="/{{$file}}" alt="">
-                        <form action="{{route('deleteimage', $file)}}" method="post">
+                        <form action="{{ route('deleteimagehumans') }}" method="post">
                             @csrf
                             @method('DELETE')
+                            <input type="hidden" name="image" value="{{ $file }}">
                             <button type="submit" class="btn btn-danger">x</button>
                         </form>
                     </div>

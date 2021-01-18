@@ -8,6 +8,10 @@ html #root {
     .container {
       padding: 20px 10%;
       max-width: 100%;
+      @media screen and (max-width: 1024px) {
+        padding: 20px 5% !important;
+      }
+
       .menu-item{
         margin: 0 10px;
       }

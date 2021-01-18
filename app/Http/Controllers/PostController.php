@@ -73,11 +73,11 @@ class PostController extends Controller
     public function singlePageContent($post_id)
     {
 
-        $posts = Post::findOrFail($post_id);
+        $values = Post::findOrFail($post_id);
 
         return view('singlepage', [
 
-            'posts' => $posts,
+            'values' => $values,
 
         ]);
     }

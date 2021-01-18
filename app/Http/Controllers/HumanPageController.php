@@ -54,9 +54,11 @@ class HumanPageController extends Controller
             ]);
     }
 
-    public function DeleteImage($file)
+    public function DeleteImage(Request $request)
     {
-        Storage::destroy($file);
+        $split = explode('/', $request->post('image'));
+        $imageName = end($split);
+        Storage::delete('public/humansImages/' . $imageName);
         return back()->with('success', 'De afbeelding is verwijderd!');
     }
 

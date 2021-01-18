@@ -48,7 +48,10 @@ Route::get('/form/landschap', [App\Http\Controllers\LandscapesPageController::cl
 //Route::get('/form/dieren', [App\Http\Controllers\AnimalPageController::class, 'formInfo']);
 
 
-Route::delete('/{$file}', [App\Http\Controllers\HumanPageController::class, 'DeleteImage'])->name('deleteimage');
+Route::delete('form/dieren/deleteimage', [App\Http\Controllers\AnimalPageController::class, 'DeleteImage'])->name('deleteimageanimals');
+Route::delete('form/mensen/deleteimage', [App\Http\Controllers\HumanPageController::class, 'DeleteImage'])->name('deleteimagehumans');
+Route::delete('form/landschap/deleteimage', [App\Http\Controllers\LandscapesPageController::class, 'DeleteImage'])->name('deleteimagelandscapes');
+
 
 
 //Route::get('/form/landschap', [App\Http\Controllers\LandscapesPageController::class, 'formInfo']);
