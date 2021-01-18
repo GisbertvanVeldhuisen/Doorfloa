@@ -44,7 +44,7 @@
                 <div class="col-7">
                     <p><strong>{{$values->contact}}</strong></p>
                     <p>{{$values->contact_text}}</p>
-                    <a class="button" href="/contact">
+                    <a class="button" href="{{'contact'}}">
                         {{$values->contact_button}} <span class="icon mail"></span>
                     </a>
                 </div>
@@ -63,10 +63,10 @@
                     <h3>menu</h3>
                 </div>
                 <div class="main-menu-container">
-                    <a class="menu-item" href="#">Fotografie</a>
-                    <a class="menu-item" href="#">Recepten</a>
-                    <a class="menu-item" href="#">Over mij</a>
-                    <a class="menu-item" href="#">Contact</a>
+                    <a class="menu-item" href="{{'fotografie'}}">Fotografie</a>
+                    <a class="menu-item" href="{{'recepten'}}">Recepten</a>
+                    <a class="menu-item" href="{{'over'}}">Over</a>
+                    <a class="menu-item" href="{{'contact'}}">Contact</a>
 
                 </div>
             </div>
