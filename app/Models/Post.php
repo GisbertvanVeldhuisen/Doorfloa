@@ -12,10 +12,12 @@ class Post extends Model
 //    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'post_title',
-        'post_ingredients',
-        'post_preparation_title',
-        'post_preparation',
+        'title_intro',
+        'intro',
+        'title',
+        'ingredients',
+        'preparation_title',
+        'preparation',
         'page_color',
         'accent_color'
     ];

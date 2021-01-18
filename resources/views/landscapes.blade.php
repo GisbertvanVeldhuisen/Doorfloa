@@ -1,5 +1,55 @@
 @extends ('layouts/app')
 
+@section('meta')
+    <meta name="title" content="{{$values->title}}">
+    <meta name="description"
+          content="{{$values->intro}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url"
+          content="{{'landschap'}}">
+    <meta property="og:title"
+          content="{{$values->title}}">
+    <meta property="og:description"
+          content="{{$values->intro}}">
+    <meta property="og:image" content="{{asset('storage/general/header_img.png')}}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url"
+          content="{{'mensen'}}">
+    <meta property="twitter:title"
+          content="{{$values->title}}">
+    <meta property="twitter:description"
+          content="{{$values->intro}}">
+    <meta property="twitter:image" content="{{asset('storage/general/header_img.png')}}">
+
+    <meta name="title" content="{{$values->title_intro}}">
+    <meta name="description"
+          content="{{$values->intro}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url"
+          content="{{'landschap'}}">
+    <meta property="og:title"
+          content="{{$values->title}}">
+    <meta property="og:description"
+          content="{{$values->intro}}">
+    <meta property="og:image" content="{{asset('storage/general/header_img.png')}}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url"
+          content="{{'landschap'}}">
+    <meta property="twitter:title"
+          content="{{$values->title}}">
+    <meta property="twitter:description"
+          content="{{$values->intro}}">
+    <meta property="twitter:image" content="{{asset('storage/general/header_img.png')}}">
+@endsection
+
 @section ("content")
     <div class="section header" style="background-image: url({{asset('storage/general/header_img.png')}})">
         <div class="container">

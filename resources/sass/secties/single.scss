@@ -1,0 +1,44 @@
+html #root {
+  .single-recipe {
+    position: relative;
+    .section.ingredients {
+      .heading {
+        max-width: 900px;
+        margin: 0 0 0 auto;
+        h1 {
+          text-align: left;
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    .section.text {
+      .container {
+        padding-top: 0;
+        h2 {
+          text-align: left;
+          font-size: 20px;
+          padding-bottom: 20px;
+        }
+      }
+    }
+    .container {
+      .col-5 {
+        padding: 0 40px;
+      }
+      .title {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    .shadow {
+      height: 80%;
+      width: 35%;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}

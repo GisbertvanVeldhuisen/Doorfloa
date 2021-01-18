@@ -5,6 +5,9 @@ h1 {
   text-align: center;
   position: relative;
   z-index: 1;
+  @media screen and (max-width: 1024px) {
+    font-size: 80px;
+  }
 }
 
 a, li, strong {
@@ -34,6 +37,12 @@ p {
 
 .col-sm {
   padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  padding: 0;
 }
 
 .full-link {
@@ -51,7 +60,8 @@ img {
   text-decoration: none;
   color: black;
 }
-.error{
+
+.error {
   color: red;
   font-size: 18px;
   font-family: $base-family;
@@ -60,6 +70,39 @@ img {
 .main {
   .container {
     padding: 80px 10%;
+    max-width: 100%;
+    @media screen and (max-width: 1024px) {
+      padding: 80px 5%;
+    }
+
+  }
+}
+
+.row {
+  @media screen and (max-width: 1024px) {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    --bs-gutter-x: 0;
+  }
+}
+
+.col-7 {
+  @media screen and (max-width: 1024px) {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+    order: -1;
+  }
+}
+
+.col-5 {
+  @media screen and (max-width: 1024px) {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
     max-width: 100%;
   }
 }
@@ -73,8 +116,14 @@ img {
     min-width: calc(100% / 5 * 3);
     max-width: calc(100% / 5 * 3);
   }
-  &.one-fourth{
+  &.one-third {
+    display: inline-block;
+    min-width: calc(100% / 3 - 20px);
+    max-width: calc(100% / 3 - 20px);
+  }
+  &.one-fourth {
     min-width: calc(100% / 4 - 10px);
     max-width: calc(100% / 4 - 10px);
   }
 }
+

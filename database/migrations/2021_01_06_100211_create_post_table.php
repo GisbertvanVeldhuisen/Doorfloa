@@ -16,10 +16,12 @@ class CreatePostTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->integer('category_id')->default(0);
-            $table->char('post_title')->nullable(true);
-            $table->string('post_ingredients')->nullable(true);
-            $table->char('post_preparation_title')->nullable(true);
-            $table->string('post_preparation')->nullable(true);
+            $table->text('title_intro')->default(0);
+            $table->text('intro')->default(0);
+            $table->char('title')->nullable(true);
+            $table->text('ingredients')->nullable(true);
+            $table->char('preparation_title')->nullable(true);
+            $table->text('preparation')->nullable(true);
             $table->text('page_color')->nullable(true);
             $table->text('accent_color')->nullable(true);
             $table->timestamps();

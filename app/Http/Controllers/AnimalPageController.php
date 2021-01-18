@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\AnimalPage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class AnimalPageController extends Controller
 {
@@ -50,6 +52,14 @@ class AnimalPageController extends Controller
             [
                 'value' => $value
             ]);
+    }
+
+    public function DeleteImage(Request $request)
+    {
+        $split = explode('/', $request->post('image'));
+        $imageName = end($split);
+        Storage::delete('public/animalsImages/' . $imageName);
+        return back()->with('success', 'De afbeelding is verwijderd!');
     }
 
     public function AnimalPageInfo()

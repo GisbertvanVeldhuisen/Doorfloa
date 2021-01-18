@@ -10,6 +10,12 @@ h1 {
   z-index: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
 a,
 li,
 strong {
@@ -43,6 +49,12 @@ p {
 
 .col-sm {
   padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  padding: 0;
 }
 
 .full-link {
@@ -72,6 +84,41 @@ img {
   max-width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+  .main .container {
+    padding: 80px 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .row {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    --bs-gutter-x: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .col-7 {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .col-5 {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
 .column.two-fifth {
   min-width: calc(100% / 5 * 2);
   max-width: calc(100% / 5 * 2);
@@ -80,6 +127,12 @@ img {
 .column.three-fifth {
   min-width: calc(100% / 5 * 3);
   max-width: calc(100% / 5 * 3);
+}
+
+.column.one-third {
+  display: inline-block;
+  min-width: calc(100% / 3 - 20px);
+  max-width: calc(100% / 3 - 20px);
 }
 
 .column.one-fourth {
@@ -175,6 +228,13 @@ html #root .section.tiles .shadow {
   z-index: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  html #root .section.tiles .shadow {
+    height: 50%;
+    width: 30vw;
+  }
+}
+
 html #root .section.tiles .shadow.left {
   left: 0;
   transform: translateY(-50%);
@@ -191,12 +251,27 @@ html #root .section.tiles .container {
   position: relative;
 }
 
+@media screen and (max-width: 1140px) {
+  html #root .section.tiles .container {
+    padding-bottom: 80px;
+  }
+}
+
 html #root .section.tiles .intro {
   margin: 20px 0 100px;
+  text-align: center;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.tiles .intro {
+    margin: 20px 0 40px;
+  }
 }
 
 html #root .section.tiles .grid-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -204,6 +279,14 @@ html #root .section.tiles .one-third {
   min-width: calc(100% / 3 - 30px);
   max-width: calc(100% / 3 - 30px);
   position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.tiles .one-third {
+    min-width: 60%;
+    max-width: 60%;
+    margin: 20px auto;
+  }
 }
 
 html #root .section.tiles .info-container {
@@ -297,6 +380,15 @@ html #root .section.text .image .container {
 html #root .section.text .image .col-5 {
   display: flex;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.text .image .col-5 {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+  }
 }
 
 html #root .section.text .image .col-5 img {
@@ -604,6 +696,58 @@ html #root .section.delete .column form button {
   width: 40px;
 }
 
+html #root .section.recipe-images {
+  margin-top: 100px;
+}
+
+html #root .section.recipe-images img {
+  background: white;
+  padding: 20px;
+}
+
+html #root .single-recipe {
+  position: relative;
+}
+
+html #root .single-recipe .section.ingredients .heading {
+  max-width: 900px;
+  margin: 0 0 0 auto;
+}
+
+html #root .single-recipe .section.ingredients .heading h1 {
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+html #root .single-recipe .section.text .container {
+  padding-top: 0;
+}
+
+html #root .single-recipe .section.text .container h2 {
+  text-align: left;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+html #root .single-recipe .container .col-5 {
+  padding: 0 40px;
+}
+
+html #root .single-recipe .container .title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+html #root .single-recipe .shadow {
+  height: 80%;
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  left: 0;
+  transform: translateY(-50%);
+}
+
 html #root header#header {
   position: fixed;
   width: 100%;
@@ -615,16 +759,23 @@ html #root header#header {
 html #root header#header .container {
   padding: 20px 10%;
   max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root header#header .container {
+    padding: 20px 5% !important;
+  }
 }
 
 html #root header#header .container .menu-item {
   margin: 0 10px;
 }
 
-html #root header#header .container .col-11 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+html #root header#header .container .menu {
+  display: block;
+  margin: 0 0 0 auto;
 }
 
 html #root .footer {

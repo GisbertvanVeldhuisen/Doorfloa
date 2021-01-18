@@ -2,8 +2,8 @@ html #root {
   .section.tiles {
     margin-bottom: 50px;
     position: relative;
-    &.recipe{
-      .grid-container{
+    &.recipe {
+      .grid-container {
         justify-content: space-evenly;
       }
     }
@@ -13,9 +13,15 @@ html #root {
       position: absolute;
       top: 50%;
       z-index: 1;
+      @media screen and (max-width: 1024px) {
+        height: 50%;
+        width: 30vw;
+      }
+
       &.left {
         left: 0;
         transform: translateY(-50%);
+
       }
       &.right {
         right: 0;
@@ -26,18 +32,32 @@ html #root {
       padding-bottom: 300px;
       z-index: 99;
       position: relative;
+      @media screen and (max-width: 1140px) {
+        padding-bottom: 80px;
+      }
     }
     .intro {
       margin: 20px 0 100px;
+      text-align: center;
+      max-width: 100%;
+      @media screen and (max-width: 1024px) {
+        margin: 20px 0 40px;
+      }
     }
     .grid-container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
     }
     .one-third {
       min-width: calc(100% / 3 - 30px);
       max-width: calc(100% / 3 - 30px);
       position: relative;
+      @media screen and (max-width: 1024px) {
+        min-width: 60%;
+        max-width: 60%;
+        margin: 20px auto;
+      }
     }
     .info-container {
       position: relative;
