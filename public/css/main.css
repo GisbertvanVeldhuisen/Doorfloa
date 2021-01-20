@@ -39,12 +39,31 @@ h2 {
   font-size: 32px;
 }
 
+@media screen and (max-width: 1024px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+}
+
 p {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 5px;
   font-size: 20px;
   margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 16px;
+  }
 }
 
 .col-sm {
@@ -66,6 +85,14 @@ p {
 img {
   max-width: 100%;
   min-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  img {
+    height: 300px;
+    min-width: auto;
+    max-width: inherit;
+  }
 }
 
 .menu-item {
@@ -251,7 +278,7 @@ html #root .section.tiles .container {
   position: relative;
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1139px) {
   html #root .section.tiles .container {
     padding-bottom: 80px;
   }
@@ -322,6 +349,12 @@ html #root .section.quote blockquote {
   max-width: calc(100% / 3 * 2);
 }
 
+@media screen and (max-width: 1024px) {
+  html #root .section.quote blockquote {
+    letter-spacing: 5px;
+  }
+}
+
 html #root .section.quote blockquote:before,
 html #root .section.quote blockquote:after {
   content: "\201C";
@@ -350,12 +383,27 @@ html #root .section.text.image h2 {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  html #root .section.text.image h2 {
+    margin-bottom: 20px;
+  }
+}
+
 html #root .section.text.quote h2 {
   margin-bottom: 50px;
   text-align: left;
   font-family: "banana", sans-serif;
   letter-spacing: 10px;
   line-height: 2;
+}
+
+@media screen and (max-width: 768px) {
+  html #root .section.text.quote h2 {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-size: 20px;
+  }
 }
 
 html #root .section.text.quote h2:before,
@@ -410,8 +458,16 @@ html #root .section.text h2 {
   z-index: 99;
 }
 
+html #root .section.text .col-5 {
+  position: relative;
+}
+
 html #root .section.text img {
-  margin-top: 50px;
+  position: absolute;
+  width: auto;
+  display: block;
+  margin: 0 0 0 auto;
+  padding: 80px 40px 80px 0;
 }
 
 html #root .section.text .shadow {
@@ -423,8 +479,15 @@ html #root .section.text .shadow {
   z-index: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  html #root .section.text .shadow {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 html #root .section.contact {
-  margin-bottom: 80px;
+  margin-bottom: 250px;
 }
 
 html #root .section.contact p:nth-child(1) {
@@ -445,8 +508,25 @@ html #root .section.contact .button .icon {
   margin-left: 10px;
 }
 
+html #root .section.contact .col-5 {
+  position: relative;
+}
+
+html #root .section.contact .image-container {
+  height: 300px;
+  padding: 40px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
 html #root .section.contact .image-container img {
-  transform: translateY(50%);
+  min-width: auto;
+  max-width: inherit;
+  height: 300px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 html #root .section.contact strong {
@@ -787,6 +867,13 @@ html #root .footer .container {
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  html #root .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 html #root .footer .container .row {
   margin: 0;
   width: 100%;
@@ -797,16 +884,39 @@ html #root .footer .contact {
   padding: 10px 10px 10px 0;
 }
 
+@media screen and (max-width: 768px) {
+  html #root .footer .menu,
+  html #root .footer .contact {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
 html #root .footer .contact {
   position: absolute;
   right: 0;
   top: 0;
 }
 
+@media screen and (max-width: 768px) {
+  html #root .footer .contact {
+    position: relative;
+  }
+}
+
 html #root .footer .contact.two-fifth {
   min-width: calc(100% / 5 * 2 + 100px);
   max-width: calc(100% / 5 * 2 + 100px);
   transform: translateY(-20%);
+}
+
+@media screen and (max-width: 768px) {
+  html #root .footer .contact.two-fifth {
+    min-width: 100%;
+    max-width: 100%;
+    transform: none;
+    order: -1;
+  }
 }
 
 html #root .footer .heading {
@@ -845,9 +955,22 @@ html #root .socket .container {
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  html #root .socket .container {
+    padding: 10px;
+  }
+}
+
 html #root .socket .container p {
   font-size: 16px;
   letter-spacing: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  html #root .socket .container p {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
 }
 
 html #root form h1 {

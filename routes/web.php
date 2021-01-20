@@ -22,6 +22,8 @@ Route::get('/recepten', [App\Http\Controllers\RecipePageController::class, 'Reci
 Route::get('/dieren', [App\Http\Controllers\AnimalPageController::class, 'AnimalPageInfo'])->name('dieren');
 Route::get('/mensen', [App\Http\Controllers\HumanPageController::class, 'HumanPageInfo'])->name('mensen');
 Route::get('/landschap', [App\Http\Controllers\LandscapesPageController::class, 'LandscapePageInfo'])->name('landschap');
+Route::get('/zoet', [App\Http\Controllers\SweetController::class, 'getCategoryInfo'])->name('Sweet');
+Route::get('/hartig', [App\Http\Controllers\HartigController::class, 'getCategoryInfo'])->name('hartig');
 
 
 //Page editor
@@ -62,9 +64,6 @@ Route::get('/elementen', function () {
     return view('elementen');
 });
 
-Route::get('/zoet', function () {
-    return view('sweet');
-});
 
 Route::get('/form/general', function () {
     return view('form-general');

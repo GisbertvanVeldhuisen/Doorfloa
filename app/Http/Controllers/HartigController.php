@@ -6,12 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Subcategory;
 
-
-class SweetController extends Controller
+class HartigController extends Controller
 {
     public function getCategoryInfo()
     {
-        $subcategories = Subcategory::where('category_id', 1)->get();
+        $subcategories = Subcategory::where('category_id', 2)->get();
 
         $posts = Post
             ::select([
@@ -20,7 +19,7 @@ class SweetController extends Controller
             ])
             ->join('subcategories', 'subcategories.id', '=', 'posts.category')
             ->join('categories', 'categories.id', '=', 'subcategories.category_id')
-            ->where('subcategories.category_id', 1)
+            ->where('subcategories.category_id', 2)
             ->get();
 
         //dd($posts);

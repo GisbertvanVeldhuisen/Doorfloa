@@ -81,7 +81,7 @@
                         });
                     </script>
                     @foreach($subcategories as $subcategory)
-                        <option value="{{url('zoet?'.$subcategory->id)}}">{{$subcategory->name}}</option>
+                        <option value="{{url('hartig?'.$subcategory->id)}}">{{$subcategory->name}}</option>
                     @endforeach
                 </select>
             </div>
@@ -90,7 +90,7 @@
                     <div class="one-third">
                         <a href="{{$post->id}}" class="full-link"></a>
                         <div class="image-container">
-                            <img src="{{asset('storage/post/'.$post->id.'image_dish.png')}}" alt="">
+                            <img src="{{asset('storage/post/'.$post->id.'image_dish3.png')}}" alt="">
                             <div class="info-container">
                                 <p>{{$post->title}}</p>
                             </div>
