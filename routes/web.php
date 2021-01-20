@@ -64,6 +64,9 @@ Route::get('/elementen', function () {
     return view('elementen');
 });
 
+Route::get('/zoet', function () {
+    return view('sweet');
+});
 
 Route::get('/form/general', function () {
     return view('form-general');

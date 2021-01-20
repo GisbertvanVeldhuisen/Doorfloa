@@ -25,6 +25,14 @@ h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 32px;
+  @media screen and (max-width: 1024px) {
+    font-size: 26px;
+  }
+  @media screen and (max-width: 768px) {
+    letter-spacing: 0;
+    line-height: 1.5;
+
+  }
 }
 
 p {
@@ -33,6 +41,9 @@ p {
   letter-spacing: 5px;
   font-size: 20px;
   margin: 0;
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
 }
 
 .col-sm {
@@ -54,6 +65,11 @@ p {
 img {
   max-width: 100%;
   min-width: 100%;
+  @media screen and (max-width: 1024px) {
+    height: 300px;
+    min-width: auto;
+    max-width: inherit;
+  }
 }
 
 .menu-item {
@@ -72,7 +88,7 @@ img {
     padding: 80px 10%;
     max-width: 100%;
     @media screen and (max-width: 1024px) {
-      padding: 80px 5%;
+      padding: 80px 5%
     }
 
   }

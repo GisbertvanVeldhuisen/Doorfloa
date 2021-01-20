@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-    <div class="section text image" style="background-color: {{$values->accent_color}}">
+    <div class="section text quote image" style="background-color: {{$values->accent_color}}">
         <div class="container">
             <div class="row">
                 <div class="col-5">

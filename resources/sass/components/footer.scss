@@ -4,6 +4,10 @@ html #root {
     .container {
       padding: 0;
       position: relative;
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
       .row {
         margin: 0;
@@ -12,15 +16,28 @@ html #root {
     }
     .menu, .contact {
       padding: 10px 10px 10px 0;
+      @media screen and (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
     }
     .contact {
       position: absolute;
       right: 0;
       top: 0;
+      @media screen and (max-width: 768px) {
+        position: relative;
+      }
       &.two-fifth {
         min-width: calc(100% / 5 * 2 + 100px);
         max-width: calc(100% / 5 * 2 + 100px);
         transform: translateY(-20%);
+        @media screen and (max-width: 768px) {
+          min-width: 100%;
+          max-width: 100%;
+          transform: none;
+          order: -1;
+        }
       }
     }
     .heading {
@@ -55,9 +72,16 @@ html #root {
       padding: 10px 30px;
       margin: 0;
       width: 100%;
+      @media screen and (max-width: 768px) {
+       padding: 10px;
+      }
       p {
         font-size: 16px;
         letter-spacing: 3px;
+        @media screen and (max-width: 768px) {
+          font-size: 10px;
+          letter-spacing: 0;
+        }
       }
     }
   }
