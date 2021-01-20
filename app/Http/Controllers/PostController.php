@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     public function updateOrCreatePost(Request $request)
     {
-        $post = Post::updateOrCreate([
+        $post = Post::create([
             'title_intro' => $request->post('title_intro'),
             'intro' => $request->post('intro'),
             'title' => $request->post('title'),
@@ -59,10 +59,12 @@ class PostController extends Controller
     public function getPost($post_id)
     {
         $post = Post::findorfail($post_id);
+        $subcategory = Subcategory::all();
 
         return view('editpost', [
 
-            'post' => $post,
+            'subcategory' => $subcategory,
+            'post' => $post
 
         ]);
     }
@@ -75,11 +77,12 @@ class PostController extends Controller
         $value->ingredients = $request->get('ingredients');
         $value->preparation_title = $request->get('preparation_title');
         $value->preparation = $request->get('preparation');
-        $value->color = $request->get('color');
+        $value->page_color = $request->get('color');
         $value->accent_color = $request->get('accent_color');
+        $value->category = $request->get('category');
         $value->save();
 
-        return redirect('/post')->with('success', 'De categorie is bijgewerkt!');
+        return redirect('/post')->with('success', 'De post is bijgewerkt!');
     }
 
     public function singlePageContent($post_id)
@@ -98,6 +101,6 @@ class PostController extends Controller
     {
         Post::destroy($post_id);
 
-        return redirect()->back()->with('success', 'De post is verwijderd!');
+        return redirect('/post')->with('success', 'De post is verwijderd!');
     }
 }
