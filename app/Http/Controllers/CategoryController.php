@@ -34,39 +34,30 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function deleteCategory(Request $request)
+    public function deleteCategory($subcategory_id)
     {
-        Category::destroy($request->get('id'));
+        Subcategory::destroy($subcategory_id);
 
-        return back()->with('success', 'De categorie is verwijderd!');
+        return redirect('/category')->with('success', 'De categorie is verwijderd!');
     }
 
-    public function categoryInfo($category_id)
+    public function categoryInfo($subcategory_id)
     {
-        $categories = Category::find($category_id);
+        $values = Subcategory::findOrFail($subcategory_id);
 
         return view('edit-category', [
 
-            'categories' => $categories
+            'values' => $values,
 
         ]);
     }
 
-    public function editTheCategory(Request $request, Category $category)
+    public function editTheCategory(Request $request)
     {
+        $value = Subcategory::find($request->get('id'));
+        $value->name = $request->get('name');
+        $value->save();
 
-        $categories['category_name'] = $request->get('category_name');
-
-        // This will save to the database
-        $category->update([
-            'category_name' => $request->get('category_name'),
-        ]);
-
-        return view('edit-category', [
-
-            'categories' => $categories
-
-        ]);
-
+        return redirect('/category')->with('success', 'De categorie is bijgewerkt!');
     }
 }

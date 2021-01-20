@@ -9,9 +9,9 @@
     </script>
     <option value="">Selecteer een categorie om te bewerken</option>
 
-    @foreach($subcategories as $subcategory)
+    @foreach($posts as $post)
 
-        <option value="{{route('category', $subcategory->id)}}">{{$subcategory->name}}</option>
+        <option value="{{route('post', $post->id)}}">{{$post->title}}</option>
 
     @endforeach
 </select>

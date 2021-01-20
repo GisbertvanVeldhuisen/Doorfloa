@@ -8,11 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Subcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subcategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_06_100211_create_post_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_100211_create_post_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_15_113413_create_subcategories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_15_113413_create_subcategories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category-select.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category-select.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit-category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit-category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editpost.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editpost.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -290,6 +291,7 @@
       <workItem from="1609839145887" duration="3291000" />
       <workItem from="1610636466141" duration="66000" />
       <workItem from="1610636683473" duration="192000" />
+      <workItem from="1611134959588" duration="8498000" />
     </task>
     <servers />
   </component>

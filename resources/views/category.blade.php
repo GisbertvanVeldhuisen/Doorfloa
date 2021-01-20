@@ -46,19 +46,6 @@
                     </div>
             </form>
 
-            <div class="row">
-                <div class="col-sm">
-                    <select>
-                    @foreach($subcategories as $subcategory)
-                        <option value="{{$subcategory->id}}">{{$subcategory->subcategory_name}}</option>
-                    @endforeach
-                    </select>
-
-{{--                    <a class="btn btn-primary" href="verwijder/{{$subcategory->id}}" type="DELETE">Delete</a>--}}
-
-                </div>
-            </div>
-
         </div>
     </div>
 

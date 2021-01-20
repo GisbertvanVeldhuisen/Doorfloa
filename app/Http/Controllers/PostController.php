@@ -48,32 +48,38 @@ class PostController extends Controller
     public function postInfo()
     {
         $subcategory = Subcategory::all();
+        $posts = Post::all();
 
         return view('post', [
-            'subcategory' => $subcategory
+            'subcategory' => $subcategory,
+            'posts' => $posts
         ]);
     }
 
-    public function getPost()
+    public function getPost($post_id)
     {
-        $posts = Post::all();
+        $post = Post::findorfail($post_id);
 
         return view('editpost', [
 
-            'posts' => $posts,
+            'post' => $post,
 
         ]);
     }
 
     public function postEdit(Request $request){
-        Post::updateOrCreate([
-            'post_title' => $request->get('post_title'),
-            'post_ingredients' => $request->get('post_ingredients'),
-            'post_preparation_title' => $request->get('post_preparation_title'),
-            'post_preparation' => $request->get('post_preparation'),
-        ]);
+        $value = Post::find($request->get('id'));
+        $value->title_intro = $request->get('title_intro');
+        $value->intro = $request->get('intro');
+        $value->title = $request->get('title');
+        $value->ingredients = $request->get('ingredients');
+        $value->preparation_title = $request->get('preparation_title');
+        $value->preparation = $request->get('preparation');
+        $value->color = $request->get('color');
+        $value->accent_color = $request->get('accent_color');
+        $value->save();
 
-        return back()->with('success', 'De post is geupdated!');
+        return redirect('/post')->with('success', 'De categorie is bijgewerkt!');
     }
 
     public function singlePageContent($post_id)
