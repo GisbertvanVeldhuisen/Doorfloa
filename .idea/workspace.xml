@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b2defa58-ef6c-4417-bbb4-8121daa8972f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_15_113413_create_subcategories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_15_113413_create_subcategories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category-select.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category-select.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/edit-category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit-category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/editpost.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editpost.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +285,7 @@
       <workItem from="1609839145887" duration="3291000" />
       <workItem from="1610636466141" duration="66000" />
       <workItem from="1610636683473" duration="192000" />
-      <workItem from="1611134959588" duration="8498000" />
+      <workItem from="1611134959588" duration="14799000" />
     </task>
     <servers />
   </component>
