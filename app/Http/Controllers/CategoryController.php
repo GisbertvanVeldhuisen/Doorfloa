@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Subcategory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -10,57 +11,53 @@ class CategoryController extends Controller
 {
     public function updateOrCreateCategory(Request $request)
     {
-        Category::updateOrCreate([
-            'category_name' => $request->post('category_name'),
-        ]);
+        Subcategory::create(
+            [
+            'category_id' => $request->post('category_id'),
+            'name' => $request->post('name'),
+            ]
+        );
 
         return back()->with('success', 'De categorie is aangemaakt!');
     }
 
-    public function getCategoryInfo()
+    public function getCategories()
     {
+        $subcategories = Subcategory::with('category')->get();
         $categories = Category::all();
 
         return view('category', [
 
+            'subcategories' => $subcategories,
             'categories' => $categories,
 
         ]);
     }
 
-    public function deleteCategory($category_id)
+    public function deleteCategory($subcategory_id)
     {
-        Category::destroy($category_id);
+        Subcategory::destroy($subcategory_id);
 
-        return back()->with('success', 'De categorie is verwijderd!');
+        return redirect('/category')->with('success', 'De categorie is verwijderd!');
     }
 
-    public function categoryInfo($category_id)
+    public function categoryInfo($subcategory_id)
     {
-        $categories = Category::find($category_id);
+        $values = Subcategory::findOrFail($subcategory_id);
 
         return view('edit-category', [
 
-            'categories' => $categories
+            'values' => $values,
 
         ]);
     }
 
-    public function editTheCategory(Request $request, Category $category)
+    public function editTheCategory(Request $request)
     {
+        $value = Subcategory::find($request->get('id'));
+        $value->name = $request->get('name');
+        $value->save();
 
-        $categories['category_name'] = $request->get('category_name');
-
-        // This will save to the database
-        $category->update([
-            'category_name' => $request->get('category_name'),
-        ]);
-
-        return view('edit-category', [
-
-            'categories' => $categories
-
-        ]);
-
+        return redirect('/category')->with('success', 'De categorie is bijgewerkt!');
     }
 }

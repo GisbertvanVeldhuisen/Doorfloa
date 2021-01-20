@@ -19,6 +19,7 @@ class Post extends Model
         'preparation_title',
         'preparation',
         'page_color',
-        'accent_color'
+        'accent_color',
+        'category'
     ];
 }

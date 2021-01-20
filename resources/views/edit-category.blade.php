@@ -9,7 +9,7 @@
                 @csrf
                 <div class="row">
                     <div class="col-sm">
-                        <input class="btn btn-primary">
+                        <a href="{{url('/category')}}" class="btn btn-primary">Terug naar categorie</a>
                         <h1>Categorie bewerken</h1>
 
                         @if(Session::has('success'))
@@ -20,18 +20,27 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="name">Categorie naam</label>
+                        <input type="hidden" name="id" value="{{$values->id}}">
+                        <input value="{{$values->name}}" type="text" name="name">
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-sm">
-                        <label for="category_name">Categorie naam</label>
-                        <input value="{{$categories->category_name}}" type="text"
-                               name="category_name">
+                        <input class="btn btn-primary" type="submit">
                     </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-sm">
-                            <input class="btn btn-primary" type="submit">
-                        </div>
+                <div class="row">
+                    <div class="col-sm">
+
+                        <label>{{$values->name}}</label>
+
+                        <a class="btn btn-primary" href="{{url('/verwijder/' . $values->id)}}" type="DELETE">Delete</a>
+
                     </div>
                 </div>
             </form>
