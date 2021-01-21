@@ -38,7 +38,7 @@ class CategoryController extends Controller
     {
         Subcategory::destroy($subcategory_id);
 
-        return redirect('/category')->with('success', 'De categorie is verwijderd!');
+        return redirect('/categorie')->with('success', 'De categorie is verwijderd!');
     }
 
     public function categoryInfo($subcategory_id)
@@ -58,6 +58,6 @@ class CategoryController extends Controller
         $value->name = $request->get('name');
         $value->save();
 
-        return redirect('/category')->with('success', 'De categorie is bijgewerkt!');
+        return redirect('/categorie')->with('success', 'De categorie is bijgewerkt!');
     }
 }

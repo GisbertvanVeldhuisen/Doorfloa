@@ -4,30 +4,6 @@
 
     <div class="section form">
         <div class="container">
-            <form action="">
-                <div class="row">
-                    <div class="col-sm">
-                        <h1>Post bewerken</h1>
-                        <select id="dynamic_select">
-                            <script>
-                                jQuery(function ($) {
-                                    jQuery("#dynamic_select").change(function () {
-                                        location.href = jQuery(this).val();
-                                    })
-
-                                });
-                            </script>
-                            <option value="">Selecteer een post om te bewerken</option>
-
-                            @foreach($posts as $post)
-
-                                <option value="{{route('post', $post->id)}}">{{$post->title}}</option>
-
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-            </form>
 
             <form method="POST" enctype="multipart/form-data" action="">
                 @csrf
@@ -47,7 +23,9 @@
                         <h1>Selecteer de categorie waarbinnen de post aangemaakt moet worden</h1>
                         <select name="category">
                             @foreach($subcategory as $subcat)
-                                <option value="{{$subcat->id}}">{{$subcat->name}} {{$subcat->category_id}}</option>
+                                @foreach($category as $cat)
+                                 <option value="{{$subcat->id}}">{{$subcat->name}} {{$cat->category_name}}</option>
+                                @endforeach
                             @endforeach
                         </select>
                     </div>
@@ -140,6 +118,33 @@
                     </div>
                 </div>
             </form>
+
+            <form action="">
+                <div class="row">
+                    <div class="col-sm">
+                        <h1>Post bewerken</h1>
+                        <select id="dynamic_select">
+                            <script>
+                                jQuery(function ($) {
+                                    jQuery("#dynamic_select").change(function () {
+                                        location.href = jQuery(this).val();
+                                    })
+
+                                });
+                            </script>
+                            <option value="">Selecteer een post om te bewerken</option>
+
+                            @foreach($posts as $post)
+
+                                <option value="{{route('post', $post->id)}}">{{$post->title}}</option>
+
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+            </form>
+
+
         </div>
     </div>
 

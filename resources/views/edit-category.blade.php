@@ -9,7 +9,7 @@
                 @csrf
                 <div class="row">
                     <div class="col-sm">
-                        <a href="{{url('/category')}}" class="btn btn-primary">Terug naar categorie aanmaken</a>
+                        <a href="{{url('/categorie')}}" class="btn btn-primary">Terug naar categorie aanmaken</a>
                         <h1>Categorie bewerken</h1>
 
                         @if(Session::has('success'))
