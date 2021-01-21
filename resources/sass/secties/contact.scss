@@ -1,6 +1,9 @@
 html #root {
   .section.contact {
     margin-bottom: 250px;
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 100px;
+    }
     p {
       &:nth-child(1) {
         margin-bottom: 30px;
@@ -18,22 +21,46 @@ html #root {
         margin-left: 10px;
       }
     }
-    .col-5{
+    .col-5 {
       position: relative;
     }
-    .image-container  {
+    .image-container {
       height: 300px;
       padding: 40px;
       position: absolute;
       right: 0;
       z-index: 1;
-      img{
+
+      @media screen and (max-width: 1024px) {
+        position: relative;
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 767px) {
+        height: auto;
+        padding: 10px;
+      }
+
+
+
+
+      img {
         min-width: auto;
         max-width: inherit;
         height: 300px;
         width: auto;
         display: block;
         margin: 0 auto;
+        @media screen and (max-width: 1024px) {
+          min-width: auto;
+          max-width: inherit;
+          margin: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          height: auto;
+          max-width: 100%;
+        }
+
       }
     }
     strong {

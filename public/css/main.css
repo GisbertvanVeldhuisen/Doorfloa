@@ -10,12 +10,6 @@ h1 {
   z-index: 1;
 }
 
-@media screen and (max-width: 1024px) {
-  h1 {
-    font-size: 80px;
-  }
-}
-
 a,
 li,
 strong {
@@ -87,14 +81,6 @@ img {
   min-width: 100%;
 }
 
-@media screen and (max-width: 1024px) {
-  img {
-    height: 300px;
-    min-width: auto;
-    max-width: inherit;
-  }
-}
-
 .menu-item {
   text-decoration: none;
   color: black;
@@ -113,7 +99,7 @@ img {
 
 @media screen and (max-width: 1024px) {
   .main .container {
-    padding: 80px 5%;
+    padding: 40px 5%;
   }
 }
 
@@ -137,13 +123,13 @@ img {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .col-5 {
-    min-width: 100%;
-    width: 100%;
-    padding: 0;
-    max-width: 100%;
-  }
+.col-5 {
+  /*  @media screen and (max-width: 1024px) {
+      min-width: 100%;
+      width: 100%;
+      padding: 0;
+      max-width: 100%;
+    }*/
 }
 
 .column.two-fifth {
@@ -221,10 +207,43 @@ html #root .section.header {
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  html #root .section.header h1 {
+    font-size: 80px;
+    letter-spacing: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html #root .section.header h1 {
+    font-size: 60px;
+    letter-spacing: 15px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  html #root .section.header h1 {
+    font-size: 35px;
+  }
+}
+
 html #root .section.header strong {
   font-family: "banana", sans-serif;
   font-size: 100px;
   letter-spacing: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  html #root .section.header strong {
+    font-size: 60px;
+    letter-spacing: 15px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  html #root .section.header strong {
+    font-size: 35px;
+  }
 }
 
 html #root .section.header:before {
@@ -241,6 +260,25 @@ html #root .section.header:before {
 html #root .section.tiles {
   margin-bottom: 50px;
   position: relative;
+}
+
+html #root .section.tiles.overview p {
+  margin: 0;
+}
+
+html #root .section.tiles.overview select {
+  min-width: 80%;
+  max-width: 80%;
+  padding: 10px;
+  margin: 50px auto 150px;
+  display: block;
+  background: transparent;
+  font-size: 16px;
+}
+
+html #root .section.tiles.overview option {
+  background: transparent;
+  margin: 10px;
 }
 
 html #root .section.tiles.recipe .grid-container {
@@ -313,6 +351,13 @@ html #root .section.tiles .one-third {
     min-width: 60%;
     max-width: 60%;
     margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html #root .section.tiles .one-third {
+    min-width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -490,6 +535,12 @@ html #root .section.contact {
   margin-bottom: 250px;
 }
 
+@media screen and (max-width: 1024px) {
+  html #root .section.contact {
+    margin-bottom: 100px;
+  }
+}
+
 html #root .section.contact p:nth-child(1) {
   margin-bottom: 30px;
   font-weight: 700;
@@ -520,6 +571,20 @@ html #root .section.contact .image-container {
   z-index: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  html #root .section.contact .image-container {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html #root .section.contact .image-container {
+    height: auto;
+    padding: 10px;
+  }
+}
+
 html #root .section.contact .image-container img {
   min-width: auto;
   max-width: inherit;
@@ -527,6 +592,21 @@ html #root .section.contact .image-container img {
   width: auto;
   display: block;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.contact .image-container img {
+    min-width: auto;
+    max-width: inherit;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.contact .image-container img {
+    height: auto;
+    max-width: 100%;
+  }
 }
 
 html #root .section.contact strong {
@@ -543,6 +623,13 @@ html #root .section.contact .shadow {
   position: absolute;
   top: 50%;
   z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.contact .shadow {
+    width: 30vw;
+    height: 60vh;
+  }
 }
 
 html #root .section.contact .shadow.left {
@@ -570,6 +657,13 @@ html #root .section.contact form .form-group {
   min-width: calc(100% / 3 * 2 - 50px);
   max-width: calc(100% / 3 * 2 - 50px);
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.contact form .form-group {
+    min-width: calc(100% - 50px);
+    max-width: calc(100% - 50px);
+  }
 }
 
 html #root .section.contact form input[type=email],

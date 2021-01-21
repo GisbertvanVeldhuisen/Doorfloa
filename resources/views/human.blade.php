@@ -52,7 +52,7 @@
     <div class="section header" style="background-image: url({{asset('storage/general/header_img.png')}})">
         <div class="container">
             <div class="row">
-                <div class="col-sm"><h1>Door<strong style="color:{{$values->page_color}}">flora</strong></h1>
+                <div class="col-sm"><h1>door<strong style="color:{{$values->page_color}}">flora</strong></h1>
                 </div>
             </div>
         </div>

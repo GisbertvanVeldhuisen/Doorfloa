@@ -40,13 +40,9 @@ class SweetController extends Controller
             ]);
     }
 
-
-    public function getPageInfo()
+    function getPageInfo(Request $request)
     {
         $values = SweetPage::find(1);
-
-
-        $subcategories = Subcategory::where('category_id', 1)->get();
 
         $posts = Post
             ::select([
@@ -58,7 +54,36 @@ class SweetController extends Controller
             ->where('subcategories.category_id', 1)
             ->get();
 
-        //dd($posts);
+        /*        $select = $request->get('category');
+
+                if ($select):
+
+                    $posts = Post
+                        ::select([
+                            'posts.id as id',
+                            'posts.title as title',
+                        ])
+                        ->join('subcategories', 'subcategories.id', '=', 'posts.category')
+                        ->join('categories', 'categories.id', '=', 'subcategories.category_id')
+                        ->where('subcategories.category_id', 1)
+                        ->get();
+
+                else:
+
+                    $posts = Post
+                        ::select([
+                            'posts.id as id',
+                            'posts.title as title',
+                        ])
+                        ->join('subcategories', 'subcategories.id', '=', 'posts.category')
+                        ->join('categories', 'categories.id', '=', 'subcategories.category_id')
+                        ->where('subcategories.category_id', 1)
+                        ->get();
+
+                endif;*/
+
+        $subcategories = Subcategory::where('category_id', 1)->get();
+
 
         return view('sweet', [
 

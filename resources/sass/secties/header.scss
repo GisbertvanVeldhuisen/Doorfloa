@@ -8,10 +8,30 @@ html #root {
     flex-wrap: wrap;
     align-items: center;
 
+    h1{
+      @media screen and (max-width: 1024px) {
+        font-size: 80px;
+        letter-spacing: 20px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 60px;
+        letter-spacing: 15px;
+      }
+      @media screen and (max-width: 479px) {
+        font-size: 35px;
+      }
+    }
     strong{
       font-family: $title-family;
       font-size: 100px;
       letter-spacing: 30px;
+      @media screen and (max-width: 767px) {
+        font-size: 60px;
+        letter-spacing: 15px;
+      }
+      @media screen and (max-width: 479px) {
+        font-size: 35px;
+      }
     }
     &:before{
       content: '';

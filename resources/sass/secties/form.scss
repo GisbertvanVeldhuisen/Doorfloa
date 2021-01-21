@@ -7,6 +7,10 @@ html #root {
       position: absolute;
       top: 50%;
       z-index: 1;
+      @media screen and (max-width: 1024px) {
+        width: 30vw;
+        height: 60vh;
+      }
       &.left {
         left: 0;
         transform: translateY(-50%);
@@ -31,6 +35,10 @@ html #root {
         min-width: calc(100% / 3 * 2 - 50px);
         max-width: calc(100% / 3 * 2 - 50px);
         margin: 0 auto;
+        @media screen and (max-width: 1024px) {
+          min-width: calc(100% - 50px);
+          max-width: calc(100% - 50px);
+        }
       }
       input[type="email"], input[type="text"], textarea {
 

@@ -2,11 +2,31 @@ html #root {
   .section.tiles {
     margin-bottom: 50px;
     position: relative;
+
+    &.overview {
+      p {
+        margin: 0;
+      }
+      select {
+        min-width: 80%;
+        max-width: 80%;
+        padding: 10px;
+        margin: 50px auto 150px;
+        display: block;
+        background: transparent;
+        font-size: 16px;
+      }
+      option{
+        background: transparent;
+        margin: 10px;
+      }
+    }
     &.recipe {
       .grid-container {
         justify-content: space-evenly;
       }
     }
+
     .shadow {
       height: 500px;
       width: 300px;
@@ -57,6 +77,10 @@ html #root {
         min-width: 60%;
         max-width: 60%;
         margin: 20px auto;
+      }
+      @media screen and (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
       }
     }
     .info-container {

@@ -51,6 +51,9 @@ Route::get('/form/landschap', [App\Http\Controllers\LandscapesPageController::cl
 Route::get('/form/zoet', [App\Http\Controllers\SweetController::class, 'formInfo']);
 Route::get('/form/hartig', [App\Http\Controllers\HartigController::class, 'formInfo']);
 
+Route::put('/form/zoet', [App\Http\Controllers\SweetController::class, 'getSelect']);
+
+
 //Route::get('/form/dieren', [App\Http\Controllers\AnimalPageController::class, 'formInfo']);
 
 
