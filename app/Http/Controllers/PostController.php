@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
@@ -49,10 +50,12 @@ class PostController extends Controller
     {
         $subcategory = Subcategory::all();
         $posts = Post::all();
+        $category = Category::all();
 
         return view('post', [
             'subcategory' => $subcategory,
-            'posts' => $posts
+            'posts' => $posts,
+            'category' => $category
         ]);
     }
 
@@ -61,10 +64,11 @@ class PostController extends Controller
         $post = Post::findorfail($post_id);
         $subcategory = Subcategory::all();
 
+
         return view('editpost', [
 
             'subcategory' => $subcategory,
-            'post' => $post
+            'post' => $post,
 
         ]);
     }

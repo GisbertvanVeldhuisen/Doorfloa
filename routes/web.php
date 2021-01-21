@@ -74,12 +74,12 @@ Route::get('/form/general', function () {
 });
 
 //get category info and make category
-Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'getCategories']);
-Route::post('/category', [\App\Http\Controllers\CategoryController::class, 'updateOrCreateCategory']);
+Route::get('/categorie', [\App\Http\Controllers\CategoryController::class, 'getCategories']);
+Route::post('/categorie', [\App\Http\Controllers\CategoryController::class, 'updateOrCreateCategory']);
 
 //edit category
-Route::get('/edit-category/{id}', [\App\Http\Controllers\CategoryController::class, 'categoryInfo'])->name('category');
-Route::post('/edit-category', [\App\Http\Controllers\CategoryController::class, 'editTheCategory'])->name('update-category');
+Route::get('/bewerk-categorie/{id}', [\App\Http\Controllers\CategoryController::class, 'categoryInfo'])->name('category');
+Route::post('/bewerk-categorie', [\App\Http\Controllers\CategoryController::class, 'editTheCategory'])->name('update-category');
 
 //delete category
 Route::get('/verwijder/{id}', [\App\Http\Controllers\CategoryController::class, 'deleteCategory']);
@@ -89,8 +89,8 @@ Route::get('/post', [\App\Http\Controllers\PostController::class, 'postInfo']);
 Route::post('/post', [\App\Http\Controllers\PostController::class, 'updateOrCreatePost']);
 
 //edit post
-Route::get('/editpost/{id}',  [\App\Http\Controllers\PostController::class, 'getPost'])->name('post');
-Route::post('/editpost',  [\App\Http\Controllers\PostController::class, 'postEdit'])->name('update-post');
+Route::get('/bewerk-post/{id}',  [\App\Http\Controllers\PostController::class, 'getPost'])->name('post');
+Route::post('/bewerk-post',  [\App\Http\Controllers\PostController::class, 'postEdit'])->name('update-post');
 
 //delete post
 Route::get('/delete/{id}', [\App\Http\Controllers\PostController::class, 'deletePost']);
