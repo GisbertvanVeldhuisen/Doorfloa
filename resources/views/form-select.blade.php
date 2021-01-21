@@ -16,5 +16,7 @@
     <option value="{{route('form')}}/dieren">Dieren</option>
     <option value="{{route('form')}}/mensen">Mensen</option>
     <option value="{{route('form')}}/landschap">Landschap</option>
+    <option value="{{route('form')}}/zoet">Zoet</option>
+    <option value="{{route('form')}}/hartig">Hartig</option>
     <option value="{{route('form')}}/general">General</option>
 </select>

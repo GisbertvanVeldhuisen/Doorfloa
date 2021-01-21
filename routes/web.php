@@ -22,8 +22,8 @@ Route::get('/recepten', [App\Http\Controllers\RecipePageController::class, 'Reci
 Route::get('/dieren', [App\Http\Controllers\AnimalPageController::class, 'AnimalPageInfo'])->name('dieren');
 Route::get('/mensen', [App\Http\Controllers\HumanPageController::class, 'HumanPageInfo'])->name('mensen');
 Route::get('/landschap', [App\Http\Controllers\LandscapesPageController::class, 'LandscapePageInfo'])->name('landschap');
-Route::get('/zoet', [App\Http\Controllers\SweetController::class, 'getCategoryInfo'])->name('Sweet');
-Route::get('/hartig', [App\Http\Controllers\HartigController::class, 'getCategoryInfo'])->name('hartig');
+Route::get('/zoet', [App\Http\Controllers\SweetController::class, 'getPageInfo'])->name('Sweet');
+Route::get('/hartig', [App\Http\Controllers\HartigController::class, 'getPageInfo'])->name('hartig');
 
 
 //Page editor
@@ -35,6 +35,8 @@ Route::post('/form/recepten', [\App\Http\Controllers\RecipePageController::class
 Route::post('/form/dieren', [\App\Http\Controllers\AnimalPageController::class, 'updateOrCreate']);
 Route::post('/form/mensen', [\App\Http\Controllers\HumanPageController::class, 'updateOrCreate']);
 Route::post('/form/landschap', [\App\Http\Controllers\LandscapesPageController::class, 'updateOrCreate']);
+Route::post('/form/zoet', [\App\Http\Controllers\SweetController::class, 'updateOrCreate']);
+Route::post('/form/hartig', [\App\Http\Controllers\HartigController::class, 'updateOrCreate']);
 Route::post('/form/general', [\App\Http\Controllers\GeneralFormController::class, 'updateOrCreate']);
 
 //Form informatie
@@ -46,6 +48,8 @@ Route::get('/form/recepten', [App\Http\Controllers\RecipePageController::class, 
 Route::get('/form/dieren', [App\Http\Controllers\AnimalPageController::class, 'formInfo']);
 Route::get('/form/mensen', [App\Http\Controllers\HumanPageController::class, 'formInfo']);
 Route::get('/form/landschap', [App\Http\Controllers\LandscapesPageController::class, 'formInfo']);
+Route::get('/form/zoet', [App\Http\Controllers\SweetController::class, 'formInfo']);
+Route::get('/form/hartig', [App\Http\Controllers\HartigController::class, 'formInfo']);
 
 //Route::get('/form/dieren', [App\Http\Controllers\AnimalPageController::class, 'formInfo']);
 

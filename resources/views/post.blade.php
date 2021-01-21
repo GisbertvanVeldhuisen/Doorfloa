@@ -47,7 +47,7 @@
                         <h1>Selecteer de categorie waarbinnen de post aangemaakt moet worden</h1>
                         <select name="category">
                             @foreach($subcategory as $subcat)
-                                <option value="{{$subcat->id}}">{{$subcat->name}}</option>
+                                <option value="{{$subcat->id}}">{{$subcat->name}} {{$subcat->category_id}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -62,10 +62,9 @@
                                name="title_intro">
                     </div>
                     <div class="col-sm">
-                        <label for="intro">titel</label>
+                        <label for="intro">intro</label>
 
-                        <input placeholder="vul hier de intro in" type="text"
-                               name="intro">
+                        <textarea placeholder="vul hier de intro in" name="intro"></textarea>
                     </div>
                 </div>
 
