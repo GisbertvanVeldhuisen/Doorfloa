@@ -39,7 +39,7 @@ class HartigController extends Controller
             ]);
     }
 
-    public function getPageInfo()
+    public function getPageInfo(Request $request)
     {
         $values = HartigPage::find(1);
 
@@ -55,9 +55,22 @@ class HartigController extends Controller
             ->where('subcategories.category_id', 2)
             ->get();
 
+        if ($request->get('category'))
+            $posts = Post
+                ::select([
+                    'posts.id as id',
+                    'posts.title as title',
+                ])
+                ->join('subcategories', 'subcategories.id', '=', 'posts.category')
+                ->join('categories', 'categories.id', '=', 'subcategories.category_id')
+                ->where('subcategories.category_id', 2)
+                ->where('subcategories.id', $request->get('category'))
+                ->get();
+
+
         //dd($posts);
 
-        return view('sweet', [
+        return view('hartig', [
 
             'values' => $values,
             'subcategories' => $subcategories,

@@ -23,7 +23,7 @@ Route::get('/dieren', [App\Http\Controllers\AnimalPageController::class, 'Animal
 Route::get('/mensen', [App\Http\Controllers\HumanPageController::class, 'HumanPageInfo'])->name('mensen');
 Route::get('/landschap', [App\Http\Controllers\LandscapesPageController::class, 'LandscapePageInfo'])->name('landschap');
 Route::get('/zoet', [App\Http\Controllers\SweetController::class, 'getPageInfo'])->name('Sweet');
-Route::get('/hartig', [App\Http\Controllers\HartigController::class, 'getPageInfo'])->name('hartig');
+Route::get('/hartig', [App\Http\Controllers\HartigController::class, 'getPageInfo'])->name('Hartig');
 
 
 //Page editor

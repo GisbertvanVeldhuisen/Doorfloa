@@ -397,6 +397,15 @@ html #root .section.quote blockquote {
 @media screen and (max-width: 1024px) {
   html #root .section.quote blockquote {
     letter-spacing: 5px;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  html #root .section.quote blockquote {
+    font-size: 24px;
   }
 }
 
@@ -419,8 +428,40 @@ html #root .section.text.intro .container {
   padding-bottom: 20px;
 }
 
+html #root .section.text.recipe img {
+  position: relative;
+  margin: auto;
+  transform: translateY(25%);
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.text.recipe img {
+    transform: none;
+    margin: 0 auto;
+  }
+}
+
+html #root .section.text.recipe .shadow {
+  width: 500px;
+  height: 150px;
+  transform: none;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.text.recipe .shadow {
+    width: 380px;
+  }
+}
+
 html #root .section.text.image {
-  margin-bottom: 100px;
+  margin-bottom: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.text.image {
+    margin-bottom: 100px;
+  }
 }
 
 html #root .section.text.image h2 {
@@ -442,12 +483,17 @@ html #root .section.text.quote h2 {
   line-height: 2;
 }
 
+@media screen and (max-width: 1140px) {
+  html #root .section.text.quote h2 {
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   html #root .section.text.quote h2 {
     margin-bottom: 20px;
     letter-spacing: 2px;
     line-height: 1.5;
-    font-size: 20px;
   }
 }
 
@@ -512,15 +558,17 @@ html #root .section.text img {
   width: auto;
   display: block;
   margin: 0 0 0 auto;
-  padding: 80px 40px 80px 0;
+  height: 350px;
+  min-width: inherit;
+  transform: translateY(50%);
 }
 
 html #root .section.text .shadow {
   position: absolute;
-  width: 400px;
+  width: 350px;
   height: 350px;
   top: 0;
-  transform: translate(40%, 40%);
+  transform: translate(20%, 70%);
   z-index: 1;
 }
 
@@ -704,6 +752,13 @@ html #root .section.slider .shadow {
   z-index: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  html #root .section.slider .shadow {
+    height: 50%;
+    width: 30vw;
+  }
+}
+
 html #root .section.slider .shadow.left {
   left: 0;
   transform: translateY(-50%);
@@ -723,6 +778,18 @@ html #root .section.slider .carousel {
   position: relative;
   padding-top: 60%;
   overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.slider .carousel {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html #root .section.slider .carousel {
+    height: 40vh;
+  }
 }
 
 html #root .section.slider .inner {
@@ -827,6 +894,13 @@ html #root .section.slider .arrow {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) {
+  html #root .section.slider .arrow {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 html #root .section.slider .arrow:before {
   content: "";
   display: inline-block;
@@ -838,6 +912,15 @@ html #root .section.slider .arrow:before {
   top: 15px;
   left: 20px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-right' class='svg-inline--fa fa-chevron-right fa-w-10' role='img' viewBox='0 0 320 512'%3E%3Cpath fill='currentColor' d='M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z'/%3E%3C/svg%3E");
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.slider .arrow:before {
+    width: 15px;
+    left: 12px;
+    top: 8px;
+    height: 15px;
+  }
 }
 
 html #root .section.slider .arrow-left {

@@ -10,6 +10,13 @@ html #root {
       max-width: calc(100% / 3 * 2);
       @media screen and (max-width: 1024px) {
         letter-spacing: 5px;
+        min-width: 100%;
+        max-width: 100%;
+        font-size: 40px;
+      }
+
+      @media screen and (max-width: 479px) {
+        font-size: 24px;
       }
 
       &:before, &:after {
@@ -31,8 +38,32 @@ html #root {
         padding-bottom: 20px;
       }
     }
+    &.recipe {
+      img {
+        position: relative;
+        margin: auto;
+        transform: translateY(25%);
+        @media screen and (max-width: 1024px) {
+          transform: none;
+          margin: 0 auto;
+        }
+      }
+      .shadow {
+        width: 500px;
+        height: 150px;
+        transform: none;
+        margin-top: 50px;
+        @media screen and (max-width: 1024px) {
+          width: 380px;
+          //height: 150px;
+        }
+      }
+    }
     &.image {
-      margin-bottom: 100px;
+      margin-bottom: 200px;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 100px;
+      }
       h2 {
         text-align: left;
         margin-bottom: 50px;
@@ -48,11 +79,15 @@ html #root {
         font-family: $title-family;
         letter-spacing: 10px;
         line-height: 2;
+
+        @media screen and (max-width: 1140px) {
+          font-size: 22px;
+        }
+
         @media screen and (max-width: 768px) {
           margin-bottom: 20px;
           letter-spacing: 2px;
           line-height: 1.5;
-          font-size: 20px;
         }
 
         &:before, &:after {
@@ -103,15 +138,18 @@ html #root {
       width: auto;
       display: block;
       margin: 0 0 0 auto;
-      padding: 80px 40px 80px 0;
+      height: 350px;
+      min-width: inherit;
+      transform: translateY(50%);
+      //padding: 80px 40px 80px 0;
     }
 
     .shadow {
       position: absolute;
-      width: 400px;
+      width: 350px;
       height: 350px;
       top: 0;
-      transform: translate(40%, 40%);
+      transform: translate(20%, 70%);
       z-index: 1;
       @media screen and (max-width: 1024px) {
         width: 300px;
