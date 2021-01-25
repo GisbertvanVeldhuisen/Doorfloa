@@ -23,9 +23,7 @@
                         <h1>Selecteer de categorie waarbinnen de post aangemaakt moet worden</h1>
                         <select name="category">
                             @foreach($subcategory as $subcat)
-                                @foreach($category as $cat)
-                                 <option value="{{$subcat->id}}">{{$subcat->name}} {{$cat->category_name}}</option>
-                                @endforeach
+                                <option value="{{$subcat->id}}">{{$subcat->name}} @if($subcat->category_id == 1) Zoet @else() Hartig @endif</option>
                             @endforeach
                         </select>
                     </div>

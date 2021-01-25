@@ -17,11 +17,11 @@
                             </div>
                         @endif
 
-                    <select name="category_id">
-                    @foreach($categories as $category)
-                        <option value="{{$category->id}}">{{$category->category_name}}</option>
-                    @endforeach
-                    </select>
+                        <select name="category_id">
+                            @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->category_name}}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="row">
