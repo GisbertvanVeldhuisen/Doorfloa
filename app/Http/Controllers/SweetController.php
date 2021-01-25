@@ -54,33 +54,18 @@ class SweetController extends Controller
             ->where('subcategories.category_id', 1)
             ->get();
 
-        /*        $select = $request->get('category');
+        if ($request->get('category'))
+            $posts = Post
+                ::select([
+                    'posts.id as id',
+                    'posts.title as title',
+                ])
+                ->join('subcategories', 'subcategories.id', '=', 'posts.category')
+                ->join('categories', 'categories.id', '=', 'subcategories.category_id')
+                ->where('subcategories.category_id', 1)
+                ->where('subcategories.id', $request->get('category'))
+                ->get();
 
-                if ($select):
-
-                    $posts = Post
-                        ::select([
-                            'posts.id as id',
-                            'posts.title as title',
-                        ])
-                        ->join('subcategories', 'subcategories.id', '=', 'posts.category')
-                        ->join('categories', 'categories.id', '=', 'subcategories.category_id')
-                        ->where('subcategories.category_id', 1)
-                        ->get();
-
-                else:
-
-                    $posts = Post
-                        ::select([
-                            'posts.id as id',
-                            'posts.title as title',
-                        ])
-                        ->join('subcategories', 'subcategories.id', '=', 'posts.category')
-                        ->join('categories', 'categories.id', '=', 'subcategories.category_id')
-                        ->where('subcategories.category_id', 1)
-                        ->get();
-
-                endif;*/
 
         $subcategories = Subcategory::where('category_id', 1)->get();
 

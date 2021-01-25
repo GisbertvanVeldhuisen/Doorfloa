@@ -71,25 +71,28 @@
                     </p>
 
                     <form method="get">
-                        <select title="select" name="category">
-                            <option style="background-color: {{$values->accent_color}}">Categorieën</option>
+                        <select id="dynamic_select" title="select" name="category">
+                            <script>
+                                jQuery(function ($) {
+                                    jQuery("#dynamic_select").change(function () {
+                                        location.href = jQuery(this).val();
+                                    })
+
+                                });
+                            </script>
+                            <option style="background-color: {{$values->accent_color}}" value="">Filteren op categorieën?</option>
 
                             @foreach($subcategories as $subcategory)
-                                <option style="background-color: {{$values->accent_color}}" value="{{url('zoet?'.$subcategory->id)}}">{{$subcategory->name}}</option>
-                                   @endforeach
-                 {{--       @foreach($subcategories as $subcategory)
-
-
-                                <option @if($select == $subcategory->id) selected
-                                        @endif value="{{ $subcategory->name }}">
-                                    {{$subcategory->name }}
-                                </option>
-                            @endforeach--}}
+                                <option style="background-color: {{$values->accent_color}}" value="{{url('zoet?category='.$subcategory->id)}}">{{$subcategory->name}}</option>
+                            @endforeach
                         </select>
                     </form>
                 </div>
             </div>
             <div class="grid-container">
+                @if($posts->count() == 0)
+                    <p style="width: 100%" class="text-center">Geen resultaten gevonden</p>
+                @endif
                 @foreach($posts as $post)
                     <div class="one-third">
                         <a href="{{$post->id}}" class="full-link"></a>
