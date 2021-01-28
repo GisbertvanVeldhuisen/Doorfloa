@@ -4,7 +4,10 @@
 
     <div class="section form">
         <div class="container">
-
+            <form action="">
+                <h1>Welke pagina wil je bewerken?</h1>
+                @include('form-select')
+            </form>
             <form method="POST" enctype="multipart/form-data" action="">
                 @csrf
                 <div class="row">
