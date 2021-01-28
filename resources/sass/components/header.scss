@@ -1,4 +1,5 @@
 html #root {
+
   header#header {
     position: fixed;
     width: 100%;
@@ -20,7 +21,77 @@ html #root {
       .menu {
         display: block;
         margin: 0 0 0 auto;
+        @media screen and (max-width: 480px) {
+          display: none;
+        }
       }
+      .mobile-menu {
+        display: none;
+        width: 100%;
+        .menu-item {
+          display: block;
+          text-align: center;
+          margin: 40px 0;
+        }
+      }
+
+      .mobile-menu-toggle {
+        display: none;
+        cursor: pointer;
+        position: relative;
+        margin: 0 0 0 auto;
+        @media screen and (max-width: 480px) {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .bars {
+          width: 30px;
+          background-color: black;
+          height: 2px;
+          transition: 400ms ease;
+          &:before {
+            top: 0;
+          }
+
+          &:after {
+            bottom: 0;
+          }
+
+          &:before, &:after {
+            content: '';
+            transition: 400ms ease;
+            position: absolute;
+            width: 30px;
+            background-color: black;
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+  &.nav-open {
+    #header {
+      height: 100%;
+    }
+    .mobile-menu-toggle {
+      .bars {
+        background-color: transparent!important;
+        &:before {
+          transform: rotate(45deg);
+          top: inherit!important;
+        }
+
+        &:after {
+          bottom: inherit!important;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    .mobile-menu {
+      display: block !important;
     }
   }
 }
