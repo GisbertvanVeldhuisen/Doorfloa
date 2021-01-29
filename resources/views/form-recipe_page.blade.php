@@ -56,7 +56,7 @@
                                   name="text">{{$value->text}}</textarea>
                     </div>
                     <div class="col-sm">
-                        <label for="checkbox">Wil je een foto toevoegen?</label>
+                        <label for="checkbox">Wil je een foto toevoegen? (Foto: 350 x 350)</label>
                         <input type="checkbox" class="checkbox" name="checkbox" value=""/>
                         <input class="file-hidden" type="file" name="image_right">
                         @error('image_1')
@@ -79,7 +79,7 @@
                                   name="text_1">{{$value->text_1}}</textarea>
                     </div>
                     <div class="col-sm">
-                        <label for="checkbox">Wil je een foto toevoegen?</label>
+                        <label for="checkbox">Wil je een foto toevoegen? (Foto: 350 x 350)</label>
                         <input type="checkbox" class="checkbox" name="checkbox" value=""/>
                         <input class="file-hidden" type="file" name="image_left">
                         @error('image_1')
@@ -104,7 +104,7 @@
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <label for="file">Foto voor zoet toevoegen?</label>
+                        <label for="file">Foto voor zoet toevoegen? (Foto: 440 x 440)</label>
                         <input type="file" name="image_zoet">
                         @error('image_fotografie')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -112,7 +112,7 @@
                         <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-4">
-                        <label for="file">Foto voor hartig toevoegen?</label>
+                        <label for="file">Foto voor hartig toevoegen? (Foto: 440 x 440)</label>
                         <input type="file" name="image_hartig">
                         @error('image_recepten')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>

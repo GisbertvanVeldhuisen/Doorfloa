@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-sm">
                         <div class="col-sm">
-                            <label for="file">Foto van gerecht</label>
+                            <label for="file">Foto van gerecht (Foto: 720 x 720)</label>
                             <input type="file" name="image_dish">
                             @error('image_dish')
                             <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -99,7 +99,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <label for="file">Foto gerecht toevoegen?</label>
+                        <label for="file">Foto gerecht toevoegen? (Foto: 500 x 500)</label>
                         <input type="file" name="image_dish1">
                         @error('image_dish1')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -108,7 +108,7 @@
                         <img src="{{asset('/storage/post/'.$post->id.'image_dish1.png')}}" alt="">
                     </div>
                     <div class="col-sm">
-                        <label for="file">Foto van gerecht toevoegen?</label>
+                        <label for="file">Foto van gerecht toevoegen? (Foto: 500 x 500)</label>
                         <input type="file" name="image_dish2">
                         @error('image_dish2')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -117,7 +117,7 @@
                         <img src="{{asset('/storage/post/'.$post->id.'image_dish2.png')}}" alt="">
                     </div>
                     <div class="col-sm">
-                        <label for="file">Foto van gerecht toevoegen?</label>
+                        <label for="file">Foto van gerecht toevoegen? (Foto: 500 x 500)</label>
                         <input type="file" name="image_dish3">
                         @error('image_dish3')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>

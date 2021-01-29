@@ -48,7 +48,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <label for="file">Foto toevoegen aan de slider?</label>
+                        <label for="file">Foto toevoegen aan de slider? (Foto: 1400 x 840)</label>
                         <input type="file" name="image_slider">
                         @error('image_slider')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -56,7 +56,7 @@
                         <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
-                        <label for="file">Foto toevoegen aan de slider?</label>
+                        <label for="file">Foto toevoegen aan de slider? (Foto: 1400 x 840)</label>
                         <input type="file" name="image_slider1">
                         @error('image_slider1')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -64,7 +64,7 @@
                         <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
-                        <label for="file">Foto toevoegen aan de slider?</label>
+                        <label for="file">Foto toevoegen aan de slider? (Foto: 1400 x 840)</label>
                         <input type="file" name="image_slider2">
                         @error('image_slider2')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>

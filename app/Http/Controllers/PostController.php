@@ -24,7 +24,7 @@ class PostController extends Controller
         ]);
 
         $request->validate([
-            'image_dish' =>['mimes:png', 'max:2048'],
+            'image_dish' => ['mimes:png', 'max:2048'],
             'image_dish1' => ['mimes:png', 'max:2048'],
             'image_dish2' => ['mimes:png', 'max:2048'],
             'image_dish3' => ['mimes:png', 'max:2048'],

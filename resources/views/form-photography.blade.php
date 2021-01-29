@@ -59,7 +59,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <label for="file">Foto voor dieren toevoegen?</label>
+                        <label for="file">Foto voor dieren toevoegen? (Foto: 440 x 440)</label>
                         <input type="file" name="image_dieren">
                         @error('image_dieren')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -67,7 +67,7 @@
                         <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
-                        <label for="file">Foto voor mensen toevoegen?</label>
+                        <label for="file">Foto voor mensen toevoegen? (Foto: 440 x 440)</label>
                         <input type="file" name="image_mensen">
                         @error('image_mensen')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -75,7 +75,7 @@
                         <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
-                        <label for="file">Foto voor landschap toevoegen?</label>
+                        <label for="file">Foto voor landschap toevoegen? (Foto: 440 x 440)</label>
                         <input type="file" name="image_landschap">
                         @error('image_landschap')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>

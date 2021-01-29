@@ -48,7 +48,7 @@
                                   name="text">{{$value->text}}</textarea>
                     </div>
                     <div class="col-sm">
-                        <label for="checkbox">Wil je een foto toevoegen?</label>
+                        <label for="checkbox">Wil je een foto toevoegen? (Foto: 350 x 350)</label>
                         <input type="checkbox" class="checkbox" name="checkbox" value=""/>
                         <input class="file-hidden @error('image') is-invalid @enderror" type="file" name="image">
                         @error('image')

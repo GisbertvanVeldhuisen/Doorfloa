@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-sm">
                         <div class="col-sm">
-                            <label for="file">Foto van gerecht toevoegen?</label>
+                            <label for="file">Foto van gerecht toevoegen? (Foto: 720 x 720)</label>
                             <input type="file" name="image_dish">
                             @error('image_dish')
                             <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <label for="file">Foto gerecht toevoegen?</label>
+                        <label for="file">Foto gerecht toevoegen? (Foto: 500 x 500)</label>
                         <input type="file" name="image_dish1">
                         @error('image_dish1')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -99,7 +99,7 @@
                         <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
-                        <label for="file">Foto van gerecht toevoegen?</label>
+                        <label for="file">Foto van gerecht toevoegen? (Foto: 500 x 500)</label>
                         <input type="file" name="image_dish2">
                         @error('image_dish2')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -107,7 +107,7 @@
                         <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
-                        <label for="file">Foto van gerecht toevoegen?</label>
+                        <label for="file">Foto van gerecht toevoegen? (Foto: 500 x 500)</label>
                         <input type="file" name="image_dish3">
                         @error('image_dish3')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
@@ -137,11 +137,14 @@
             <form action="">
                 <div class="row">
                     <div class="col-sm">
+{{--                       @foreach($posts as $post)--}}
+{{--                           @dd($post)--}}
+{{--                        @endforeach--}}
                         <h1>Post bewerken</h1>
-                        <select id="dynamic_select">
+                        <select id="post_select">
                             <script>
                                 jQuery(function ($) {
-                                    jQuery("#dynamic_select").change(function () {
+                                    jQuery("#post_select").change(function () {
                                         location.href = jQuery(this).val();
                                     })
 
@@ -150,9 +153,7 @@
                             <option value="">Selecteer een post om te bewerken</option>
 
                             @foreach($posts as $post)
-
                                 <option value="{{route('post', $post->id)}}">{{$post->title}}</option>
-
                             @endforeach
                         </select>
                     </div>
