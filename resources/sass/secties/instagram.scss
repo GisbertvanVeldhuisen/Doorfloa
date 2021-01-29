@@ -1,0 +1,50 @@
+html #root {
+  .section.instagram {
+    .image-container {
+      background-color: white;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      @media screen and (max-width: 1139px) {
+        padding: 5px 10px;
+      }
+      @media screen and (max-width: 480px) {
+        padding: 10px 0;
+      }
+      .column {
+        padding: 10px 5px;
+        margin: 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (max-width: 1139px) {
+          padding: 5px !important;
+        }
+        @media screen and (max-width: 480px) {
+          padding: 10px 20px!important;
+        }
+        &:nth-child(1) {
+          padding-left: 10px;
+        }
+        &:nth-last-child(1) {
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .instagram-text {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .instagram {
+      margin-left: 5px;
+      font-weight: 700;
+      font-size: 20px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
