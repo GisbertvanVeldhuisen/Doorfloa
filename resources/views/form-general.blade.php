@@ -26,7 +26,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <label for="file">Foto voor header toevoegen?</label>
+                        <label for="file">Foto voor header toevoegen? (Foto: 1920 x 1080)</label>
                         <input type="file" name="header_img">
                         @error('header_img')
                         <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
