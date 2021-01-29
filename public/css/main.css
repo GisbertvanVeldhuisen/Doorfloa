@@ -668,7 +668,7 @@ html #root .section.text img {
   margin: 0 0 0 auto;
   height: 350px;
   min-width: inherit;
-  transform: translateY(50%);
+  transform: translateY(25%);
 }
 
 html #root .section.text .shadow {
@@ -676,7 +676,7 @@ html #root .section.text .shadow {
   width: 350px;
   height: 350px;
   top: 0;
-  transform: translate(20%, 70%);
+  transform: translate(20%, 50%);
   z-index: 1;
 }
 
@@ -1218,6 +1218,10 @@ html #root .single-recipe .shadow {
   html #root .single-recipe .shadow {
     width: 60vw;
   }
+}
+
+html #root .section.instagram {
+  margin-bottom: 100px;
 }
 
 html #root .section.instagram .image-container {
