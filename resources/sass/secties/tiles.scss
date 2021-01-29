@@ -15,8 +15,11 @@ html #root {
         display: block;
         background: transparent;
         font-size: 16px;
+        @media screen and (max-width: 1024px) {
+          margin: 50px auto;
+        }
       }
-      option{
+      option {
         background: transparent;
         margin: 10px;
       }
@@ -24,6 +27,47 @@ html #root {
     &.recipe {
       .grid-container {
         justify-content: space-evenly;
+      }
+    }
+    &.overview {
+      .shadow {
+        height: 50%;
+      }
+      .grid-container {
+        justify-content: inherit;
+        .one-third {
+          margin: 15px;
+          .image-container img {
+
+          }
+          @media screen and (max-width: 1139px) {
+            min-width: calc(100% / 3 - 30px);
+            max-width: calc(100% / 3 - 30px);
+          }
+
+          @media screen and (max-width: 767px) {
+            min-width: calc(100% / 2 - 30px);
+            max-width: calc(100% / 2 - 30px);
+          }
+
+          @media screen and (max-width: 480px) {
+            min-width: 100%;
+            max-width: 100%;
+            margin: 15px 0;
+          }
+
+          .info-container {
+
+            @media screen and (max-width: 1024px) {
+              padding: 20px 10px;
+            }
+            p {
+              @media screen and (max-width: 1599px) {
+                font-size: 20px;
+              }
+            }
+          }
+        }
       }
     }
 
@@ -84,9 +128,12 @@ html #root {
       }
     }
     .info-container {
-      position: relative;
+      //position: relative;
       text-align: center;
       padding: 30px 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
       p {
         font-family: $title-family;
         font-size: 35px;
@@ -102,7 +149,7 @@ html #root {
         top: 0;
         left: 0;
         right: 0;
-        opacity: 0.6;
+        opacity: 0.8;
       }
     }
   }

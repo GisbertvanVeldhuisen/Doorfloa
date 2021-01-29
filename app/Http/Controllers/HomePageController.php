@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Home;
+use App\Models\Instagram;
+
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -73,6 +75,30 @@ class HomePageController extends Controller
 
     public function Homeinfo()
     {
+
+        /*$response = Http::get('https://graph.instagram.com/me/media?access_token=' . env('INSTAGRAM_ACCESS_TOKEN'));
+        $instagramData = json_decode($response->body());
+        // If the API limit has been reached or a connection issue occurs
+        if (!isset($instagramData->data)) {
+            return;
+        }
+        foreach ($instagramData->data as $instagramMedia) {
+            $mediaResponse = Http::get('https://graph.instagram.com/' . $instagramMedia->id . '?fields=id,media_type,media_url,permalink&access_token=' . env('INSTAGRAM_ACCESS_TOKEN'));
+            $mediaResponse = json_decode($mediaResponse->body());
+            // Used to prevent possible connection failure issues impacting the website
+            if (!isset($mediaResponse->media_url) || !isset($mediaResponse->permalink)) {
+                break;
+            }
+            Instagram::updateOrCreate([
+                'id' => $instagramMedia->id,
+            ],
+                [
+                    'id' => $instagramMedia->id,
+                    'media_url' => $mediaResponse->media_url,
+                    'permalink' => $mediaResponse->permalink,
+                ]);
+        }*/
+
         $values = Home::find(1);
 
         return view('home',
@@ -80,5 +106,4 @@ class HomePageController extends Controller
                 'values' => $values
             ]);
     }
-
 }

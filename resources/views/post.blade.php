@@ -4,6 +4,10 @@
 
     <div class="section form">
         <div class="container">
+            <form action="">
+                <h1>Welke pagina wil je bewerken?</h1>
+                @include('form-select')
+            </form>
 
             <form method="POST" enctype="multipart/form-data" action="">
                 @csrf
@@ -23,7 +27,8 @@
                         <h1>Selecteer de categorie waarbinnen de post aangemaakt moet worden</h1>
                         <select name="category">
                             @foreach($subcategory as $subcat)
-                                <option value="{{$subcat->id}}">{{$subcat->name}} @if($subcat->category_id == 1) Zoet @else() Hartig @endif</option>
+                                <option value="{{$subcat->id}}">{{$subcat->name}} @if($subcat->category_id == 1)
+                                        Zoet @else() Hartig @endif</option>
                             @endforeach
                         </select>
                     </div>

@@ -276,6 +276,12 @@ html #root .section.tiles.overview select {
   font-size: 16px;
 }
 
+@media screen and (max-width: 1024px) {
+  html #root .section.tiles.overview select {
+    margin: 50px auto;
+  }
+}
+
 html #root .section.tiles.overview option {
   background: transparent;
   margin: 10px;
@@ -283,6 +289,52 @@ html #root .section.tiles.overview option {
 
 html #root .section.tiles.recipe .grid-container {
   justify-content: space-evenly;
+}
+
+html #root .section.tiles.overview .shadow {
+  height: 50%;
+}
+
+html #root .section.tiles.overview .grid-container {
+  justify-content: inherit;
+}
+
+html #root .section.tiles.overview .grid-container .one-third {
+  margin: 15px;
+}
+
+@media screen and (max-width: 1139px) {
+  html #root .section.tiles.overview .grid-container .one-third {
+    min-width: calc(100% / 3 - 30px);
+    max-width: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html #root .section.tiles.overview .grid-container .one-third {
+    min-width: calc(100% / 2 - 30px);
+    max-width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html #root .section.tiles.overview .grid-container .one-third {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.tiles.overview .grid-container .one-third .info-container {
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  html #root .section.tiles.overview .grid-container .one-third .info-container p {
+    font-size: 20px;
+  }
 }
 
 html #root .section.tiles .shadow {
@@ -362,9 +414,11 @@ html #root .section.tiles .one-third {
 }
 
 html #root .section.tiles .info-container {
-  position: relative;
   text-align: center;
   padding: 30px 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 html #root .section.tiles .info-container p {
@@ -382,7 +436,7 @@ html #root .section.tiles .info-container:before {
   top: 0;
   left: 0;
   right: 0;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 html #root .section.quote blockquote {
@@ -459,20 +513,42 @@ html #root .section.text.image {
 }
 
 @media screen and (max-width: 1024px) {
+  html #root .section.text.image .col-5 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   html #root .section.text.image {
     margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.text.image .shadow {
+    transform: translate(30%, 30%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html #root .section.text.image .shadow {
+    transform: translate(0%, 10%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.text.image img {
+    margin: 20px 0 0 0;
+    transform: none;
+    width: 300px;
+    height: auto;
+    position: relative;
   }
 }
 
 html #root .section.text.image h2 {
   text-align: left;
   margin-bottom: 50px;
-}
-
-@media screen and (max-width: 768px) {
-  html #root .section.text.image h2 {
-    margin-bottom: 20px;
-  }
 }
 
 html #root .section.text.quote h2 {
@@ -609,6 +685,12 @@ html #root .section.contact .button .icon {
 
 html #root .section.contact .col-5 {
   position: relative;
+}
+
+@media screen and (max-width: 480px) {
+  html #root .section.contact .col-5 {
+    width: 100%;
+  }
 }
 
 html #root .section.contact .image-container {
@@ -1035,6 +1117,86 @@ html #root header#header .container .menu {
   margin: 0 0 0 auto;
 }
 
+@media screen and (max-width: 480px) {
+  html #root header#header .container .menu {
+    display: none;
+  }
+}
+
+html #root header#header .container .mobile-menu {
+  display: none;
+  width: 100%;
+}
+
+html #root header#header .container .mobile-menu .menu-item {
+  display: block;
+  text-align: center;
+  margin: 40px 0;
+}
+
+html #root header#header .container .mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  margin: 0 0 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+  html #root header#header .container .mobile-menu-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+html #root header#header .container .mobile-menu-toggle .bars {
+  width: 30px;
+  background-color: black;
+  height: 2px;
+  transition: 400ms ease;
+}
+
+html #root header#header .container .mobile-menu-toggle .bars:before {
+  top: 0;
+}
+
+html #root header#header .container .mobile-menu-toggle .bars:after {
+  bottom: 0;
+}
+
+html #root header#header .container .mobile-menu-toggle .bars:before,
+html #root header#header .container .mobile-menu-toggle .bars:after {
+  content: "";
+  transition: 400ms ease;
+  position: absolute;
+  width: 30px;
+  background-color: black;
+  height: 2px;
+}
+
+html #root.nav-open #header {
+  height: 100%;
+}
+
+html #root.nav-open .mobile-menu-toggle .bars {
+  background-color: transparent !important;
+}
+
+html #root.nav-open .mobile-menu-toggle .bars:before {
+  transform: rotate(45deg);
+  top: inherit !important;
+}
+
+html #root.nav-open .mobile-menu-toggle .bars:after {
+  bottom: inherit !important;
+  transform: rotate(-45deg);
+}
+
+html #root.nav-open .mobile-menu {
+  display: block !important;
+}
+
 html #root .footer {
   margin-top: 120px;
 }
@@ -1073,6 +1235,7 @@ html #root .footer .contact {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
