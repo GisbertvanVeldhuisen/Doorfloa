@@ -50,9 +50,11 @@
                     <div class="col-sm">
                         <label for="checkbox">Wil je een foto toevoegen?</label>
                         <input type="checkbox" class="checkbox" name="checkbox" value=""/>
-                        <input class="file-hidden" type="file" name="image">
-                        <div class="error">{{ $errors->first('image') }}</div>
-
+                        <input class="file-hidden @error('image') is-invalid @enderror" type="file" name="image">
+                        @error('image')
+                            <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
+                        @enderror
+                        <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                 </div>
                 <div class="row">

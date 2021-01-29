@@ -50,17 +50,26 @@
                     <div class="col-sm">
                         <label for="file">Foto toevoegen aan de slider?</label>
                         <input type="file" name="image_slider">
-                        <div class="error">{{ $errors->first('image_slider') }}</div>
+                        @error('image_slider')
+                        <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
+                        @enderror
+                        <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
                         <label for="file">Foto toevoegen aan de slider?</label>
                         <input type="file" name="image_slider1">
-                        <div class="error">{{ $errors->first('image_slider1') }}</div>
+                        @error('image_slider1')
+                        <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
+                        @enderror
+                        <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
                         <label for="file">Foto toevoegen aan de slider?</label>
                         <input type="file" name="image_slider2">
-                        <div class="error">{{ $errors->first('image_slider2') }}</div>
+                        @error('image_slider2')
+                        <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
+                        @enderror
+                        <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                 </div>
                 <div class="row">

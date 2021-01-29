@@ -26,9 +26,9 @@ class LandscapesPageController extends Controller
         );
 
         $request->validate([
-            'image_slider' => ['mimes:png'],
-            'image_slider1' => ['mimes:png'],
-            'image_slider2' => ['mimes:png'],
+            'image_slider' => ['mimes:png', 'max:2048'],
+            'image_slider1' => ['mimes:png', 'max:2048'],
+            'image_slider2' => ['mimes:png', 'max:2048'],
         ]);
 
         /*controleert of image gevuld is anders doet hij niks.*/

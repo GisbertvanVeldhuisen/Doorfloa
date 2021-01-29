@@ -61,7 +61,10 @@
                         <div class="col-sm">
                             <label for="file">Foto van gerecht toevoegen?</label>
                             <input type="file" name="image_dish">
-                            <div class="error">{{ $errors->first('image_dish') }}</div>
+                            @error('image_dish')
+                            <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
+                            @enderror
+                            <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                         </div>
                     </div>
 
@@ -85,17 +88,26 @@
                     <div class="col-sm">
                         <label for="file">Foto gerecht toevoegen?</label>
                         <input type="file" name="image_dish1">
-                        <div class="error">{{ $errors->first('image_dish1') }}</div>
+                        @error('image_dish1')
+                        <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
+                        @enderror
+                        <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
                         <label for="file">Foto van gerecht toevoegen?</label>
                         <input type="file" name="image_dish2">
-                        <div class="error">{{ $errors->first('image_dish2') }}</div>
+                        @error('image_dish2')
+                        <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
+                        @enderror
+                        <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                     <div class="col-sm">
                         <label for="file">Foto van gerecht toevoegen?</label>
                         <input type="file" name="image_dish3">
-                        <div class="error">{{ $errors->first('image_dish3') }}</div>
+                        @error('image_dish3')
+                        <div class="error">Bestand is groter dan 2 mb of geen .png bestand</div>
+                        @enderror
+                        <div style="font-weight: 700">Foto's kunnen maximaal 2 mb zijn en .png bestand. Comprimeer jouw bestanden hier: <a style="color: red; font-weight: 700" href="https://tinypng.com/">TinyPNG</a></div>
                     </div>
                 </div>
 

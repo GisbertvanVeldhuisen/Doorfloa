@@ -35,11 +35,11 @@ class HomePageController extends Controller
         );
         /*controleert of image png is*/
         $request->validate([
-            'image' => ['mimes:png'],
-            'image_1' => ['mimes:png'],
-            'image_fotografie' => ['mimes:png'],
-            'image_recepten' => ['mimes:png'],
-            'image_contact' => ['mimes:png'],
+            'image' => ['mimes:png', 'max:2048'],
+            'image_1' => ['mimes:png', 'max:2048'],
+            'image_fotografie' => ['mimes:png', 'max:2048'],
+            'image_recepten' => ['mimes:png', 'max:2048'],
+            'image_contact' => ['mimes:png', 'max:2048'],
         ]);
 
         /*controleert of image gevuld is anders doet hij niks.*/

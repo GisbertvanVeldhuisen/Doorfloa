@@ -32,10 +32,10 @@ class RecipePageController extends Controller
         );
         /*controleert of image png is*/
         $request->validate([
-            'image_zoet' => ['mimes:png'],
-            'image_hartig' => ['mimes:png'],
-            'image_right' => ['mimes:png'],
-            'image_left' => ['mimes:png'],
+            'image_zoet' => ['mimes:png', 'max:2048'],
+            'image_hartig' =>['mimes:png', 'max:2048'],
+            'image_right' => ['mimes:png', 'max:2048'],
+            'image_left' => ['mimes:png', 'max:2048'],
         ]);
 
         /*controleert of image gevuld is anders doet hij niks.*/

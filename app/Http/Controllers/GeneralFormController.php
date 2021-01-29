@@ -9,8 +9,8 @@ class GeneralFormController extends Controller
     public function updateOrCreate(Request $request)
     {
         $request->validate([
-            'header_img' => ['mimes:png'],
-            'contact_img' => ['mimes:png'],
+            'header_img' => ['mimes:png', 'max:2048'],
+            'contact_img' => ['mimes:png', 'max:2048'],
         ]);
 
         /*controleert of image gevuld is anders doet hij niks.*/

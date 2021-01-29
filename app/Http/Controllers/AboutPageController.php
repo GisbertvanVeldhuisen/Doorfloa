@@ -30,7 +30,7 @@ class AboutPageController extends Controller
         );
         /*controleert of image png is*/
         $request->validate([
-            'image' => ['mimes:png'],
+            'image' => ['mimes:png', 'max:2048']
         ]);
         /*controleert of image gevuld is anders doet hij niks.*/
         if ($request->file('image'))
@@ -41,6 +41,8 @@ class AboutPageController extends Controller
 
         return back()->with('success', 'De about pagina is aangepast!');
     }
+
+
     public function formInfo()
     {
         $value = About::find(1);

@@ -27,9 +27,9 @@ class PhotographyPageController extends Controller
         );
         /*controleert of image png is*/
         $request->validate([
-            'image_dieren' => ['mimes:png'],
-            'image_mensen' => ['mimes:png'],
-            'image_landschap' => ['mimes:png'],
+            'image_dieren' => ['mimes:png', 'max:2048'],
+            'image_mensen' => ['mimes:png', 'max:2048'],
+            'image_landschap' => ['mimes:png', 'max:2048'],
         ]);
 
         /*controleert of image gevuld is anders doet hij niks.*/
