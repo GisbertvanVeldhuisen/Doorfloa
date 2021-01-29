@@ -24,13 +24,13 @@
             <a class="menu-item" href="{{'contact'}}">
                 <span class="icon mail"></span>
             </a>
-            <a class="menu-item" href="{{'contact'}}">
+            <a class="menu-item" href="{{url('http://www.instagram.com/doorflora')}}">
                 <span class="icon instagram"></span>
             </a>
-            <a class="menu-item" href="{{'contact'}}">
+            <a class="menu-item" href="{{url('http://www.pinterest.com/doorflora')}}">
                 <span class="icon pintrest"></span>
             </a>
-            <a class="menu-item" href="{{'contact'}}">
+            <a class="menu-item" href="{{url('http://www.facebook.com/doorflora')}}">
                 <span class="icon facebook"></span>
             </a>
 
@@ -51,13 +51,13 @@
             <a class="menu-item" href="{{'contact'}}">
                 <span class="icon mail"></span>
             </a>
-            <a class="menu-item" href="{{'contact'}}">
+            <a class="menu-item" href="{{url('http://www.instagram.com/doorflora')}}">
                 <span class="icon instagram"></span>
             </a>
-            <a class="menu-item" href="{{'contact'}}">
+            <a class="menu-item" href="{{url('http://www.pinterest.com/doorflora')}}">
                 <span class="icon pintrest"></span>
             </a>
-            <a class="menu-item" href="{{'contact'}}">
+            <a class="menu-item" href="{{url('http://www.facebook.com/doorflora')}}">
                 <span class="icon facebook"></span>
             </a>
         </div>
