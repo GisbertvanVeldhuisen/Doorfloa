@@ -21,17 +21,20 @@ html #root {
       .menu {
         display: block;
         margin: 0 0 0 auto;
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 768px) {
           display: none;
         }
       }
       .mobile-menu {
         display: none;
         width: 100%;
+
         .menu-item {
           display: block;
           text-align: center;
-          margin: 40px 0;
+          margin: 30px 0;
+
+
         }
       }
 
@@ -40,7 +43,7 @@ html #root {
         cursor: pointer;
         position: relative;
         margin: 0 0 0 auto;
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 768px) {
           display: flex;
           flex-wrap: wrap;
           align-items: center;

@@ -108,12 +108,12 @@ img {
 }
 
 .col-5 {
-/*  @media screen and (max-width: 1024px) {
-    min-width: 100%;
-    width: 100%;
-    padding: 0;
-    max-width: 100%;
-  }*/
+  /*  @media screen and (max-width: 1024px) {
+      min-width: 100%;
+      width: 100%;
+      padding: 0;
+      max-width: 100%;
+    }*/
 }
 
 .column {
@@ -124,6 +124,18 @@ img {
   &.three-fifth {
     min-width: calc(100% / 5 * 3);
     max-width: calc(100% / 5 * 3);
+  }
+  &.one-fifth {
+    min-width: calc(100% / 5);
+    max-width: calc(100% / 5);
+    @media screen and (max-width: 1139px) {
+      min-width: calc(100% / 3);
+      max-width: calc(100% / 3);
+    }
+    @media screen and (max-width: 480px) {
+      min-width: 100%;
+      max-width: 100%;
+    }
   }
   &.one-third {
     display: inline-block;

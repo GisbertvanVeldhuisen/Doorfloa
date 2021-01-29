@@ -57,7 +57,6 @@
             </div>
         </div>
     </div>
-
     <div class="section tiles" style="background-color: {{$values->accent_color}}">
         <div class="shadow left" style="background-color: {{$values->page_color}}"></div>
         <div class="shadow right" style="background-color: {{$values->page_color}}"></div>
@@ -112,6 +111,19 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="section instagram" style="background-color: {{$values->accent_color}}">
+        <div class="container">
+            <div class="image-container">
+                @foreach($posts as $post)
+                    <div class="column one-fifth">
+                        <a class="full-link" href="{{$post->permalink}}"></a>
+                        <img src="{{$post->media_url}}" alt="">
+                    </div>
+                @endforeach
+            </div>
+            <span class="instagram-text">Volg mij op instagram</span><a href="" class="instagram">@doorflora</a>
         </div>
     </div>
     <div class="section text quote image" style="background-color: {{$values->accent_color}}">

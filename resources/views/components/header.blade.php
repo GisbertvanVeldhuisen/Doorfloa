@@ -11,32 +11,55 @@
                 });
             });
         </script>
+        <div class="menu">
+            <a class="menu-item" href="{{'fotografie'}}">
+                <span class="icon photography"></span>
+            </a>
+            <a class="menu-item" href="{{'recepten'}}">
+                <span class="icon recipe"></span>
+            </a>
+            <a class="menu-item" href="{{'over'}}">
+                <span class="icon about"></span>
+            </a>
+            <a class="menu-item" href="{{'contact'}}">
+                <span class="icon mail"></span>
+            </a>
+            <a class="menu-item" href="{{'contact'}}">
+                <span class="icon instagram"></span>
+            </a>
+            <a class="menu-item" href="{{'contact'}}">
+                <span class="icon pintrest"></span>
+            </a>
+            <a class="menu-item" href="{{'contact'}}">
+                <span class="icon facebook"></span>
+            </a>
+
+        </div>
         <div class="mobile-menu-toggle">
             <div class="bars"></div>
         </div>
         <div class="mobile-menu">
-            <a class="menu-item" href="">
-                <span class="icon search"></span>
+            <a class="menu-item" href="{{'fotografie'}}">
+                <span class="icon photography"></span>
             </a>
-            <a class="menu-item" href="">
-                <span class="icon instagram"></span>
+            <a class="menu-item" href="{{'recepten'}}">
+                <span class="icon recipe"></span>
             </a>
-            <a class="menu-item" href="">
-                <span class="icon pintrest"></span>
+            <a class="menu-item" href="{{'over'}}">
+                <span class="icon about"></span>
             </a>
-            <a class="menu-item" href="">
-                <span class="icon facebook"></span>
-            </a>
-            <a class="menu-item" href="">
+            <a class="menu-item" href="{{'contact'}}">
                 <span class="icon mail"></span>
             </a>
-        </div>
-        <div class="menu">
-            <a class="menu-item icon search" href="{{ url('#') }}"></a>
-            <a class="menu-item icon instagram" href="{{ url('#') }}"></a>
-            <a class="menu-item icon pintrest" href="{{ url('#') }}"></a>
-            <a class="menu-item icon facebook" href="{{ url('#') }}"></a>
-            <a class="menu-item icon mail" href="{{ url('#') }}"></a>
+            <a class="menu-item" href="{{'contact'}}">
+                <span class="icon instagram"></span>
+            </a>
+            <a class="menu-item" href="{{'contact'}}">
+                <span class="icon pintrest"></span>
+            </a>
+            <a class="menu-item" href="{{'contact'}}">
+                <span class="icon facebook"></span>
+            </a>
         </div>
     </div>
 </header>

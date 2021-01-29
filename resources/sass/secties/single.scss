@@ -5,9 +5,47 @@ html #root {
       .heading {
         max-width: 900px;
         margin: 0 0 0 auto;
-        h1 {
+        @media screen and (max-width: 1024px) {
+          max-width: 100%;
+          margin: 0;
+        }
+        h2 {
+          font-size: 100px;
+          letter-spacing: 30px;
+          font-family: $title-family;
           text-align: left;
           padding-bottom: 20px;
+          @media screen and (max-width: 1599px) {
+            font-size: 60px;
+            letter-spacing: 20px;
+          }
+          @media screen and (max-width: 1024px) {
+            font-size: 40px;
+            letter-spacing: 10px;
+            text-align: right;
+          }
+          @media screen and (max-width: 599px) {
+            font-size: 25px;
+            text-align: left;
+            letter-spacing: 5px;
+          }
+        }
+      }
+      .col-5,
+      .col-sm {
+        img {
+          @media screen and (max-width: 1024px) {
+            width: 350px;
+            min-width: auto;
+            margin: 0 0 0 auto;
+            display: block;
+          }
+
+        }
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+          padding: 0;
         }
       }
     }
@@ -25,20 +63,32 @@ html #root {
     .container {
       .col-5 {
         padding: 0 40px;
+        position: relative;
+        z-index: 1;
       }
       .title {
         text-transform: uppercase;
         font-weight: 700;
+        @media screen and (max-width: 1024px) {
+          margin-top: 50px;
+          padding-bottom: 20px;
+
+        }
       }
     }
+
     .shadow {
       height: 80%;
-      width: 35%;
+      width: 35vw;
       position: absolute;
       top: 50%;
       z-index: 1;
       left: 0;
       transform: translateY(-50%);
+      @media screen and (max-width: 480px) {
+        width: 60vw;
+      }
     }
   }
+
 }

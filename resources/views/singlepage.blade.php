@@ -80,7 +80,7 @@
                 <div class="row">
                     <div class="col-sm">
                         <div class="heading">
-                            <h1>{{$values->title}}</h1>
+                            <h2>{{$values->title}}</h2>
                         </div>
                     </div>
                 </div>
