@@ -183,21 +183,25 @@
                     <h3>contact</h3>
                 </div>
                 <div class="main-menu-container">
-                    <a class="menu-item" href="www.doorflora.nl">
+                     <span class="menu-item">
+                        <span class="icon about"></span>
+                        <span class="item">Doorflora</span>
+                    </span>
+                    <span class="menu-item">
                         <span class="icon location"></span>
-                        <span class="item">Doorflora.nl</span>
+                        <span class="item">Lelystad</span>
+                    </span>
+                    <a class="menu-item" href="{{url('http://www.facebook.com/doorflora')}}">
+                        <span class="icon facebook"></span>
+                        <span class="item">Doorflora</span>
                     </a>
-                    <a class="menu-item" href="www.doorflora.nl">
-                        <span class="icon search"></span>
-                        <span class="item">Doorflora.nl</span>
-                    </a>
-                    <a class="menu-item" href="www.doorflora.nl">
+                    <a class="menu-item" href="{{url('http://www.instagram.com/doorflora')}}">
                         <span class="icon instagram"></span>
-                        <span class="item">Doorflora.nl</span>
+                        <span class="item">Doorflora</span>
                     </a>
-                    <a class="menu-item" href="www.doorflora.nl">
+                    <a class="menu-item" href="{{url('http://www.pinterest.com/doorflora')}}">
                         <span class="icon pintrest"></span>
-                        <span class="item">Doorflora.nl</span>
+                        <span class="item">Doorflora</span>
                     </a>
 
                 </div>
@@ -207,7 +211,8 @@
     </div>
     <div class="socket" style="background-color:{{$values->accent_color}}">
         <div class="container">
-            <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen & Jurre van Esveld</p>
+            <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen &
+                Jurre van Esveld</p>
         </div>
     </div>
 @endsection
