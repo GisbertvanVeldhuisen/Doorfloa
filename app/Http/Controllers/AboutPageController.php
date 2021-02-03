@@ -45,6 +45,7 @@ class AboutPageController extends Controller
 
     public function formInfo()
     {
+        //haalt de id 1 op
         $value = About::find(1);
 
         return view('form-about',
@@ -55,6 +56,7 @@ class AboutPageController extends Controller
 
     public function Aboutinfo()
     {
+        //haalt de id 1 op
         $values = About::find(1);
 
         return view('about',

@@ -48,6 +48,7 @@ class PostController extends Controller
 
     public function postInfo()
     {
+        //haalt alles op van subcategory/post/category op om deze te returen in de blade
         $subcategory = Subcategory::all();
         $posts = Post::all();
         $category = Category::all();
@@ -61,6 +62,7 @@ class PostController extends Controller
 
     public function getPost($post_id)
     {
+        //zoekt naar de post_id als deze bestaat
         $post = Post::findorfail($post_id);
         $subcategory = Subcategory::all();
 
@@ -74,6 +76,7 @@ class PostController extends Controller
     }
 
     public function postEdit(Request $request){
+        //alle data van de post die geselecteerd is word opgehaald om deze te bewerken in een formulier van de blade
         $value = Post::find($request->get('id'));
         $value->title_intro = $request->get('title_intro');
         $value->intro = $request->get('intro');
@@ -91,7 +94,7 @@ class PostController extends Controller
 
     public function singlePageContent($post_id)
     {
-
+        //Zoekt naar de post_id
         $values = Post::findOrFail($post_id);
 
         return view('singlepage', [
@@ -103,6 +106,7 @@ class PostController extends Controller
 
     public function deletePost($post_id)
     {
+        //verwijderen van een post op de post_id
         Post::destroy($post_id);
 
         return redirect('/post')->with('success', 'De post is verwijderd!');

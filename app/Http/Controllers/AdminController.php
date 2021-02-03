@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
+    //testen van admincheck
     public function index(){
         return view('admin');
     }

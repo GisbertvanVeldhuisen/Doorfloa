@@ -46,6 +46,7 @@ class HumanPageController extends Controller
 
     public function formInfo()
     {
+        //Haalt id 1 op
         $value = HumanPage::find(1);
 
         return view('form-human_page',
@@ -56,6 +57,7 @@ class HumanPageController extends Controller
 
     public function DeleteImage(Request $request)
     {
+        //verwijderen van images
         $split = explode('/', $request->post('image'));
         $imageName = end($split);
         Storage::delete('public/humansImages/' . $imageName);
@@ -64,6 +66,7 @@ class HumanPageController extends Controller
 
     public function HumanPageInfo()
     {
+        //Haalt id 1 op
         $values = HumanPage::find(1);
 
         return view('human',

@@ -32,6 +32,7 @@ class SweetController extends Controller
 
     public function formInfo()
     {
+        //Haalt id 1 op
         $value = SweetPage::find(1);
 
         return view('form-sweet',
@@ -42,8 +43,10 @@ class SweetController extends Controller
 
     function getPageInfo(Request $request)
     {
+        //Haalt id 1 op
         $values = SweetPage::find(1);
 
+        //Subcategorie is gelijk aan post_category. category_id is gelijk aan subcategory_id. De category_id moet gevonden worden binnnen subcategories en deze moet 1/2 zijn ofterwijl zoet/hartig
         $posts = Post
             ::select([
                 'posts.id as id',

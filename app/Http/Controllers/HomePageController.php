@@ -66,6 +66,7 @@ class HomePageController extends Controller
 
     public function formInfo()
     {
+        //Haalt id 1 op
         $value = Home::find(1);
 
         return view('form',
@@ -76,8 +77,9 @@ class HomePageController extends Controller
 
     public function Homeinfo()
     {
-
+        //Haalt id 1 op
         $values = Home::find(1);
+        //haalt de laatste 5 instagram posts op
         $posts = Instagram::take(5)->orderBy('created_at', 'desc')->get();
         return view('home',
             [

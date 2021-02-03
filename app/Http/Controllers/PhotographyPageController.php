@@ -47,6 +47,7 @@ class PhotographyPageController extends Controller
 
     public function formInfo()
     {
+        //Haalt id 1 op
         $value = photography::find(1);
 
         return view('form-photography',
@@ -57,6 +58,7 @@ class PhotographyPageController extends Controller
 
     public function PhotographyInfo()
     {
+        //Haalt id 1 op
         $values = photography::find(1);
 
         return view('photography',

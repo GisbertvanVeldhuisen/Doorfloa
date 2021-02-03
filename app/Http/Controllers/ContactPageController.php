@@ -41,6 +41,7 @@ class ContactPageController extends Controller
     }
     public function formInfo()
     {
+        //haalt de id 1 op
         $value = ContactPage::find(1);
 
         return view('form-contact',
@@ -51,6 +52,7 @@ class ContactPageController extends Controller
 
     public function ContactInfo()
     {
+        //haalt de id 1 op
         $values = ContactPage::find(1);
 
         return view('contact',
