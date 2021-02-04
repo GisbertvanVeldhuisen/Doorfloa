@@ -56,6 +56,7 @@ class RecipePageController extends Controller
 
     public function formInfo()
     {
+        //Haalt id 1 op
         $value = Recipe::find(1);
 
         return view('form-recipe_page',
@@ -66,6 +67,7 @@ class RecipePageController extends Controller
 
     public function RecipeInfo()
     {
+        //Haalt id 1 op
         $values = Recipe::find(1);
 
         return view('recipe',

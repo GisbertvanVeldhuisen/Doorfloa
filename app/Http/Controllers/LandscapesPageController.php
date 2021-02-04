@@ -46,6 +46,7 @@ class LandscapesPageController extends Controller
 
     public function formInfo()
     {
+        //Haalt id 1 op
         $value = LandscapePage::find(1);
 
         return view('form-landscapes_page',
@@ -55,6 +56,7 @@ class LandscapesPageController extends Controller
     }
     public function DeleteImage(Request $request)
     {
+        //verwijderen van foto's
         $split = explode('/', $request->post('image'));
         $imageName = end($split);
         Storage::delete('public/landscapesImages/' . $imageName);
@@ -63,6 +65,7 @@ class LandscapesPageController extends Controller
 
     public function LandscapePageInfo()
     {
+        //Haalt id 1 op
         $values = LandscapePage::find(1);
 
         return view('landscapes',

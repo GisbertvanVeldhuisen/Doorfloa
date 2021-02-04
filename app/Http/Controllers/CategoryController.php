@@ -11,6 +11,7 @@ class CategoryController extends Controller
 {
     public function updateOrCreateCategory(Request $request)
     {
+        //aanmaken van subcategorie
         Subcategory::create(
             [
             'category_id' => $request->post('category_id'),
@@ -23,6 +24,7 @@ class CategoryController extends Controller
 
     public function getCategories()
     {
+        //ophalen van een subcategorie om deze op de blade te returnen
         $subcategories = Subcategory::with('category')->get();
         $categories = Category::all();
 
@@ -36,6 +38,7 @@ class CategoryController extends Controller
 
     public function deleteCategory($subcategory_id)
     {
+        //verwijderen van een subcategorie op de id
         Subcategory::destroy($subcategory_id);
 
         return redirect('/categorie')->with('success', 'De categorie is verwijderd!');
@@ -43,6 +46,7 @@ class CategoryController extends Controller
 
     public function categoryInfo($subcategory_id)
     {
+        //subcategorie ophalen voor het bewerken van dit
         $values = Subcategory::findOrFail($subcategory_id);
 
         return view('edit-category', [
@@ -54,6 +58,7 @@ class CategoryController extends Controller
 
     public function editTheCategory(Request $request)
     {
+        //bewerken van een subcategorie
         $value = Subcategory::find($request->get('id'));
         $value->name = $request->get('name');
         $value->save();

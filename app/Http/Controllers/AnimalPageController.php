@@ -46,6 +46,7 @@ class AnimalPageController extends Controller
 
     public function formInfo()
     {
+        //haalt de id 1 op
         $value = AnimalPage::find(1);
 
         return view('form-animal_page',
@@ -56,6 +57,7 @@ class AnimalPageController extends Controller
 
     public function DeleteImage(Request $request)
     {
+        //verwijderen van foto's
         $split = explode('/', $request->post('image'));
         $imageName = end($split);
         Storage::delete('public/animalsImages/' . $imageName);
@@ -64,6 +66,7 @@ class AnimalPageController extends Controller
 
     public function AnimalPageInfo()
     {
+        //haalt de id 1 op
         $values = AnimalPage::find(1);
 
         return view('animals',

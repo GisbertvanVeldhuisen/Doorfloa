@@ -31,6 +31,7 @@ class HartigController extends Controller
 
     public function formInfo()
     {
+        //haalt de id van 1 op
         $value = HartigPage::find(1);
 
         return view('form-hartig',
@@ -45,6 +46,8 @@ class HartigController extends Controller
 
         $subcategories = Subcategory::where('category_id', 2)->get();
 
+
+        //Subcategorie is gelijk aan post_category. category_id is gelijk aan subcategory_id. De category_id moet gevonden worden binnnen subcategories en deze moet 1/2 zijn ofterwijl zoet/hartig
         $posts = Post
             ::select([
                 'posts.id as id',
