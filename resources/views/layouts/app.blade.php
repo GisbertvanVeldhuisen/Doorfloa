@@ -10,10 +10,9 @@
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Doorflora</title>
 @yield('meta')
-{{--@yield('meta')--}}
 
 <!-- Site includes -->
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}?ver=7.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -21,7 +20,6 @@
 <div id="wrap_all">
     @include('components/header')
     <div class="main">
-        {{--   @yield('title')--}}
         @yield('content')
     </div>
 </div>

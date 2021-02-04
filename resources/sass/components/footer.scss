@@ -62,6 +62,10 @@ html #root {
         margin: 20px 0;
         display: block;
         font-size: 18px;
+
+        .about:before {
+          vertical-align: text-top;
+        }
         .item {
           margin-left: 20px;
         }
@@ -74,7 +78,7 @@ html #root {
       margin: 0;
       width: 100%;
       @media screen and (max-width: 768px) {
-       padding: 10px;
+        padding: 10px;
       }
       p {
         font-size: 16px;

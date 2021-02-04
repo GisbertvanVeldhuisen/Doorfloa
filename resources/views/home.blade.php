@@ -118,9 +118,11 @@
             <div class="image-container">
                 @foreach($posts as $post)
                     <div class="column one-fifth">
-                        <a class="full-link" href="{{$post->permalink}}"></a>
-                        <img src="{{$post->media_url}}" alt="">
+                        <a {{--class="full-link"--}} href="{{$post->permalink}}">
+                            <img src="{{$post->media_url}}" alt="">
+                        </a>
                     </div>
+
                 @endforeach
             </div>
             <span class="instagram-text">Volg mij op instagram</span><a href="" class="instagram">@doorflora</a>

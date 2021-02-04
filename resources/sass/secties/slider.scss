@@ -26,6 +26,7 @@ html #root {
 
     .carousel {
       width: 100%;
+      max-width: 100%;
       position: relative;
       padding-top: 60%;
       overflow: hidden;
@@ -39,6 +40,7 @@ html #root {
 
     .inner {
       width: 100%;
+      max-width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
@@ -46,8 +48,11 @@ html #root {
     }
 
     .slide {
+      background-position: center;
+      background-size: auto;
       width: 100%;
       height: 100%;
+      max-width: 100%;
       position: absolute;
       top: 0;
       right: 0;

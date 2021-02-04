@@ -19,6 +19,9 @@ html #root {
       .icon {
         padding: 4px 10px;
         margin-left: 10px;
+        &:before{
+          vertical-align: inherit;
+        }
       }
     }
     .col-5 {

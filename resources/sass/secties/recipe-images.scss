@@ -19,6 +19,7 @@ html #root {
       }
     }
     img {
+      padding: 20px;
       background: white;
       @media screen and (max-width: 1024px) {
         background-color: transparent;
@@ -28,6 +29,7 @@ html #root {
         min-width: auto;
         margin: 0 auto;
         display: block;
+        padding: 0;
       }
     }
   }
