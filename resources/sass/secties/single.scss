@@ -3,7 +3,7 @@ html #root {
     position: relative;
     .section.ingredients {
       .heading {
-        max-width: 900px;
+        max-width: 700px;
         margin: 0 0 0 auto;
         @media screen and (max-width: 1024px) {
           max-width: 100%;
@@ -14,6 +14,7 @@ html #root {
           letter-spacing: 30px;
           font-family: $title-family;
           text-align: left;
+          text-transform: capitalize;
           padding-bottom: 20px;
           @media screen and (max-width: 1599px) {
             font-size: 60px;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a82083c5-e126-4274-b56a-1f5ae4d4333e" name="Doorflora" url="http://www.doorflora.nl">
+        <fileTransfer host="www.doorflora.nl" port="21" rootFolder="/public_html/test2021">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

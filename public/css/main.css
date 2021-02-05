@@ -7,7 +7,7 @@ html #root #wrap-all {
 
 h1 {
   font-family: "banana", sans-serif;
-  font-size: 100px;
+  font-size: 80px;
   letter-spacing: 30px;
   text-align: center;
   position: relative;
@@ -54,7 +54,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 5px;
-  font-size: 20px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -177,6 +177,22 @@ img {
   max-width: calc(100% / 4 - 10px);
 }
 
+html #root .arrow-down {
+  cursor: default;
+}
+
+html #root .arrow-down:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  vertical-align: text-bottom;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-down' class='svg-inline--fa fa-arrow-down fa-w-14' role='img' viewBox='0 0 448 512'%3E%3Cpath fill='currentColor' d='M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z'/%3E%3C/svg%3E");
+}
+
 html #root .icon {
   border-radius: 50%;
   padding: 10px;
@@ -186,11 +202,12 @@ html #root .icon {
 html #root .icon:before {
   content: "";
   width: 20px;
-  height: 18px;
+  height: 20px;
   display: inline-block;
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
+  vertical-align: text-bottom;
 }
 
 html #root .icon.location:before {
@@ -199,6 +216,7 @@ html #root .icon.location:before {
 
 html #root .icon.home:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='far' data-icon='home' class='svg-inline--fa fa-home fa-w-18' role='img' viewBox='0 0 576 512'%3E%3Cpath fill='%23ffffff' d='M570.24 247.41L512 199.52V104a8 8 0 0 0-8-8h-32a8 8 0 0 0-7.95 7.88v56.22L323.87 45a56.06 56.06 0 0 0-71.74 0L5.76 247.41a16 16 0 0 0-2 22.54L14 282.25a16 16 0 0 0 22.53 2L64 261.69V448a32.09 32.09 0 0 0 32 32h128a32.09 32.09 0 0 0 32-32V344h64v104a32.09 32.09 0 0 0 32 32h128a32.07 32.07 0 0 0 32-31.76V261.67l27.53 22.62a16 16 0 0 0 22.53-2L572.29 270a16 16 0 0 0-2.05-22.59zM463.85 432H368V328a32.09 32.09 0 0 0-32-32h-96a32.09 32.09 0 0 0-32 32v104h-96V222.27L288 77.65l176 144.56z'/%3E%3C/svg%3E");
+  vertical-align: top;
 }
 
 html #root .icon.photography:before {
@@ -241,6 +259,47 @@ html #root .section.header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+html #root .section.header .arrow.down {
+  max-width: 100%;
+  min-width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 90%;
+}
+
+html #root .section.header .bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -298,6 +357,20 @@ html #root .section.tiles {
   position: relative;
 }
 
+html #root .section.tiles h2 {
+  margin-bottom: 50px;
+}
+
+html #root .section.tiles.overview {
+  margin-bottom: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+  html #root .section.tiles.overview {
+    margin-bottom: 100px;
+  }
+}
+
 html #root .section.tiles.overview p {
   margin: 0;
 }
@@ -315,6 +388,8 @@ html #root .section.tiles.overview select {
 @media screen and (max-width: 1024px) {
   html #root .section.tiles.overview select {
     margin: 50px auto;
+    min-width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -335,18 +410,17 @@ html #root .section.tiles.overview .grid-container {
   justify-content: inherit;
 }
 
+@media screen and (max-width: 768px) {
+  html #root .section.tiles.overview .grid-container {
+    display: flex;
+  }
+}
+
 html #root .section.tiles.overview .grid-container .one-third {
   margin: 15px;
 }
 
 @media screen and (max-width: 1139px) {
-  html #root .section.tiles.overview .grid-container .one-third {
-    min-width: calc(100% / 3 - 30px);
-    max-width: calc(100% / 3 - 30px);
-  }
-}
-
-@media screen and (max-width: 767px) {
   html #root .section.tiles.overview .grid-container .one-third {
     min-width: calc(100% / 2 - 30px);
     max-width: calc(100% / 2 - 30px);
@@ -355,9 +429,9 @@ html #root .section.tiles.overview .grid-container .one-third {
 
 @media screen and (max-width: 480px) {
   html #root .section.tiles.overview .grid-container .one-third {
-    min-width: 100%;
-    max-width: 100%;
-    margin: 15px 0;
+    min-width: inherit;
+    max-width: 300px;
+    margin: 15px auto;
   }
 }
 
@@ -428,6 +502,12 @@ html #root .section.tiles .grid-container {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  html #root .section.tiles .grid-container {
+    display: block;
+  }
+}
+
 html #root .section.tiles .one-third {
   min-width: calc(100% / 3 - 30px);
   max-width: calc(100% / 3 - 30px);
@@ -436,17 +516,26 @@ html #root .section.tiles .one-third {
 
 @media screen and (max-width: 1024px) {
   html #root .section.tiles .one-third {
-    min-width: 60%;
-    max-width: 60%;
     margin: 20px auto;
   }
 }
 
 @media screen and (max-width: 768px) {
   html #root .section.tiles .one-third {
-    min-width: 100%;
-    max-width: 100%;
+    min-width: 400px;
+    max-width: 400px;
   }
+}
+
+@media screen and (max-width: 480px) {
+  html #root .section.tiles .one-third {
+    min-width: inherit;
+    max-width: 300px;
+  }
+}
+
+html #root .section.tiles .one-third:hover .info-container:before {
+  opacity: 1;
 }
 
 html #root .section.tiles .info-container {
@@ -455,11 +544,12 @@ html #root .section.tiles .info-container {
   position: absolute;
   bottom: 0;
   width: 100%;
+  transition: 400ms ease;
 }
 
 html #root .section.tiles .info-container p {
   font-family: "banana", sans-serif;
-  font-size: 35px;
+  font-size: 25px;
   position: relative;
 }
 
@@ -472,6 +562,7 @@ html #root .section.tiles .info-container:before {
   top: 0;
   left: 0;
   right: 0;
+  transition: 400ms ease;
   opacity: 0.8;
 }
 
@@ -521,7 +612,7 @@ html #root .section.text.intro .container {
 html #root .section.text.recipe img {
   position: relative;
   margin: auto;
-  transform: translateY(25%);
+  transform: translateY(50%);
 }
 
 @media screen and (max-width: 1024px) {
@@ -532,10 +623,11 @@ html #root .section.text.recipe img {
 }
 
 html #root .section.text.recipe .shadow {
-  width: 500px;
-  height: 150px;
+  width: 100%;
+  left: 0;
+  height: 250px;
   transform: none;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -582,6 +674,12 @@ html #root .section.text.image {
   }
 }
 
+@media screen and (max-width: 480px) {
+  html #root .section.text.image img {
+    width: 200px;
+  }
+}
+
 html #root .section.text.image h2 {
   text-align: left;
   margin-bottom: 50px;
@@ -590,6 +688,7 @@ html #root .section.text.image h2 {
 html #root .section.text.quote h2 {
   margin-bottom: 50px;
   text-align: left;
+  text-transform: capitalize;
   font-family: "banana", sans-serif;
   letter-spacing: 10px;
   line-height: 2;
@@ -691,6 +790,14 @@ html #root .section.text .shadow {
   }
 }
 
+@media screen and (max-width: 480px) {
+  html #root .section.text .shadow {
+    width: 200px !important;
+    height: 200px !important;
+    transform: translate(10%, -20%) !important;
+  }
+}
+
 html #root .section.contact {
   margin-bottom: 250px;
 }
@@ -709,6 +816,7 @@ html #root .section.contact p:nth-child(1) {
 
 html #root .section.contact .button {
   font-size: 24px;
+  text-transform: uppercase;
   text-decoration: none;
   color: black;
   font-weight: 700;
@@ -717,6 +825,10 @@ html #root .section.contact .button {
 html #root .section.contact .button .icon {
   padding: 4px 10px;
   margin-left: 10px;
+}
+
+html #root .section.contact .button .icon:before {
+  vertical-align: inherit;
 }
 
 html #root .section.contact .col-5 {
@@ -751,6 +863,14 @@ html #root .section.contact .image-container {
   }
 }
 
+@media screen and (max-width: 480px) {
+  html #root .section.contact .image-container {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+}
+
 html #root .section.contact .image-container img {
   min-width: auto;
   max-width: inherit;
@@ -768,14 +888,14 @@ html #root .section.contact .image-container img {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
   html #root .section.contact .image-container img {
-    height: auto;
-    max-width: 100%;
+    height: 200px;
   }
 }
 
 html #root .section.contact strong {
+  text-transform: uppercase;
   font-weight: 700;
 }
 
@@ -860,6 +980,7 @@ html #root .section.contact form label.required:after {
 
 html #root .section.slider {
   position: relative;
+  margin-bottom: 200px;
 }
 
 html #root .section.slider .shadow {
@@ -893,6 +1014,7 @@ html #root .section.slider .wrapper {
 
 html #root .section.slider .carousel {
   width: 100%;
+  max-width: 100%;
   position: relative;
   padding-top: 60%;
   overflow: hidden;
@@ -912,6 +1034,7 @@ html #root .section.slider .carousel {
 
 html #root .section.slider .inner {
   width: 100%;
+  max-width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -919,8 +1042,11 @@ html #root .section.slider .inner {
 }
 
 html #root .section.slider .slide {
+  background-position: center;
+  background-size: auto;
   width: 100%;
   height: 100%;
+  max-width: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -1096,6 +1222,7 @@ html #root .section.recipe-images {
 }
 
 html #root .section.recipe-images img {
+  padding: 10px;
   background: white;
 }
 
@@ -1111,6 +1238,7 @@ html #root .section.recipe-images img {
     min-width: auto;
     margin: 0 auto;
     display: block;
+    padding: 0;
   }
 }
 
@@ -1119,7 +1247,7 @@ html #root .single-recipe {
 }
 
 html #root .single-recipe .section.ingredients .heading {
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 0 0 auto;
 }
 
@@ -1135,6 +1263,7 @@ html #root .single-recipe .section.ingredients .heading h2 {
   letter-spacing: 30px;
   font-family: "banana", sans-serif;
   text-align: left;
+  text-transform: capitalize;
   padding-bottom: 20px;
 }
 
@@ -1257,6 +1386,12 @@ html #root .section.instagram .image-container .column {
   flex-wrap: wrap;
 }
 
+html #root .section.instagram .image-container .column img {
+  min-width: inherit;
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 1139px) {
   html #root .section.instagram .image-container .column {
     padding: 5px !important;
@@ -1295,7 +1430,7 @@ html #root header#header {
   position: fixed;
   width: 100%;
   background: white;
-  z-index: 999;
+  z-index: 9999;
   box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -1474,6 +1609,7 @@ html #root .footer h3 {
   text-align: start;
   line-height: 1;
   font-size: 28px;
+  text-transform: capitalize;
   margin: 0;
   font-family: "banana", sans-serif;
 }
@@ -1487,6 +1623,11 @@ html #root .footer .main-menu-container .menu-item {
   margin: 20px 0;
   display: block;
   font-size: 18px;
+  letter-spacing: 5px;
+}
+
+html #root .footer .main-menu-container .menu-item .about:before {
+  vertical-align: text-top;
 }
 
 html #root .footer .main-menu-container .menu-item .item {
@@ -1494,7 +1635,7 @@ html #root .footer .main-menu-container .menu-item .item {
 }
 
 html #root .socket .container {
-  padding: 10px 30px;
+  padding: 15px 30px;
   margin: 0;
   width: 100%;
 }
@@ -1506,13 +1647,13 @@ html #root .socket .container {
 }
 
 html #root .socket .container p {
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 3px;
 }
 
 @media screen and (max-width: 768px) {
   html #root .socket .container p {
-    font-size: 10px;
+    font-size: 8px;
     letter-spacing: 0;
   }
 }

@@ -13,13 +13,14 @@ html #root {
     }
     .button {
       font-size: 24px;
+      text-transform: uppercase;
       text-decoration: none;
       color: black;
       font-weight: 700;
       .icon {
         padding: 4px 10px;
         margin-left: 10px;
-        &:before{
+        &:before {
           vertical-align: inherit;
         }
       }
@@ -27,7 +28,7 @@ html #root {
     .col-5 {
       position: relative;
       @media screen and (max-width: 480px) {
-      width: 100%;
+        width: 100%;
       }
     }
     .image-container {
@@ -45,6 +46,9 @@ html #root {
         height: auto;
         padding: 10px;
       }
+      @media screen and (max-width: 480px) {
+        max-width: max-content;
+      }
 
       img {
         min-width: auto;
@@ -59,14 +63,13 @@ html #root {
           margin: 0;
         }
 
-        @media screen and (max-width: 1024px) {
-          height: auto;
-          max-width: 100%;
+        @media screen and (max-width: 480px) {
+          height: 200px;
         }
-
       }
     }
     strong {
+      text-transform: uppercase;
       font-weight: 700;
     }
   }

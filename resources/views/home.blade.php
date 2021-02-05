@@ -56,6 +56,9 @@
                 </div>
             </div>
         </div>
+        <div class="arrow down bounce">
+            <a class="arrow-down fa-2x" href="javascript:"></a>
+        </div>
     </div>
     <div class="section tiles" style="background-color: {{$values->accent_color}}">
         <div class="shadow left" style="background-color: {{$values->page_color}}"></div>
@@ -118,7 +121,7 @@
             <div class="image-container">
                 @foreach($posts as $post)
                     <div class="column one-fifth">
-                        <a {{--class="full-link"--}} href="{{$post->permalink}}">
+                        <a {{--class="full-link"--}} target="_blank" href="{{$post->permalink}}">
                             <img src="{{$post->media_url}}" alt="">
                         </a>
                     </div>
@@ -189,15 +192,15 @@
                         <span class="icon location"></span>
                         <span class="item">Lelystad</span>
                     </span>
-                    <a class="menu-item" href="{{url('http://www.facebook.com/doorflora')}}">
+                    <a class="menu-item" target="_blank" href="{{url('http://www.facebook.com/doorflora')}}">
                         <span class="icon facebook"></span>
                         <span class="item">Doorflora</span>
                     </a>
-                    <a class="menu-item" href="{{url('http://www.instagram.com/doorflora')}}">
+                    <a class="menu-item" target="_blank" href="{{url('http://www.instagram.com/doorflora')}}">
                         <span class="icon instagram"></span>
                         <span class="item">Doorflora</span>
                     </a>
-                    <a class="menu-item" href="{{url('http://www.pinterest.com/doorflora')}}">
+                    <a class="menu-item" target="_blank" href="{{url('http://www.pinterest.com/doorflora')}}">
                         <span class="icon pintrest"></span>
                         <span class="item">Doorflora</span>
                     </a>
@@ -209,7 +212,7 @@
     <div class="socket" style="background-color: {{$values->accent_color}}">
         <div class="container">
             <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen &
-                Jurre van Esveld</p>
+                Jurre van Esveld designed by Babette Westeneng.</p>
         </div>
     </div>
 @endsection

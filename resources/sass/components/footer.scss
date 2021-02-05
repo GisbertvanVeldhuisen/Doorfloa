@@ -51,6 +51,7 @@ html #root {
       text-align: start;
       line-height: 1;
       font-size: 28px;
+      text-transform: capitalize;
       margin: 0;
       font-family: $title-family;
 
@@ -62,6 +63,7 @@ html #root {
         margin: 20px 0;
         display: block;
         font-size: 18px;
+        letter-spacing: 5px;
 
         .about:before {
           vertical-align: text-top;
@@ -74,17 +76,17 @@ html #root {
   }
   .socket {
     .container {
-      padding: 10px 30px;
+      padding: 15px 30px;
       margin: 0;
       width: 100%;
       @media screen and (max-width: 768px) {
         padding: 10px;
       }
       p {
-        font-size: 16px;
+        font-size: 12px;
         letter-spacing: 3px;
         @media screen and (max-width: 768px) {
-          font-size: 10px;
+          font-size: 8px;
           letter-spacing: 0;
         }
       }

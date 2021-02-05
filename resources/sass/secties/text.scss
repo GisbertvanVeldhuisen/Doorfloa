@@ -42,17 +42,18 @@ html #root {
       img {
         position: relative;
         margin: auto;
-        transform: translateY(25%);
+        transform: translateY(50%);
         @media screen and (max-width: 1024px) {
           transform: none;
           margin: 0 auto;
         }
       }
       .shadow {
-        width: 500px;
-        height: 150px;
+        width: 100%;
+        left: 0;
+        height: 250px;
         transform: none;
-        margin-top: 50px;
+        margin-top: 100px;
         @media screen and (max-width: 1024px) {
           width: 380px;
           //height: 150px;
@@ -85,6 +86,9 @@ html #root {
           height: auto;
           position: relative;
         }
+        @media screen and (max-width: 480px) {
+          width: 200px;
+        }
       }
       h2 {
         text-align: left;
@@ -98,6 +102,7 @@ html #root {
       h2 {
         margin-bottom: 50px;
         text-align: left;
+        text-transform: capitalize;
         font-family: $title-family;
         letter-spacing: 10px;
         line-height: 2;
@@ -163,7 +168,6 @@ html #root {
       height: 350px;
       min-width: inherit;
       transform: translateY(25%);
-      //padding: 80px 40px 80px 0;
     }
 
     .shadow {
@@ -176,6 +180,11 @@ html #root {
       @media screen and (max-width: 1024px) {
         width: 300px;
         height: 300px;
+      }
+      @media screen and (max-width: 480px) {
+        width: 200px!important;
+        height: 200px!important;
+        transform: translate(10%, -20%) !important;
       }
     }
   }

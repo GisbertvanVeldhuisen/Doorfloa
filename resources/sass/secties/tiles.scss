@@ -2,8 +2,14 @@ html #root {
   .section.tiles {
     margin-bottom: 50px;
     position: relative;
-
+    h2 {
+      margin-bottom: 50px;
+    }
     &.overview {
+      margin-bottom: 200px;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 100px;
+      }
       p {
         margin: 0;
       }
@@ -17,6 +23,8 @@ html #root {
         font-size: 16px;
         @media screen and (max-width: 1024px) {
           margin: 50px auto;
+          min-width: 100%;
+          max-width: 100%;
         }
       }
       option {
@@ -35,25 +43,23 @@ html #root {
       }
       .grid-container {
         justify-content: inherit;
+        @media screen and (max-width: 768px) {
+          display: flex;
+        }
         .one-third {
           margin: 15px;
           .image-container img {
 
           }
           @media screen and (max-width: 1139px) {
-            min-width: calc(100% / 3 - 30px);
-            max-width: calc(100% / 3 - 30px);
-          }
-
-          @media screen and (max-width: 767px) {
             min-width: calc(100% / 2 - 30px);
             max-width: calc(100% / 2 - 30px);
           }
 
           @media screen and (max-width: 480px) {
-            min-width: 100%;
-            max-width: 100%;
-            margin: 15px 0;
+            min-width: inherit;
+            max-width: 300px;
+            margin: 15px auto;
           }
 
           .info-container {
@@ -112,19 +118,33 @@ html #root {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
     }
     .one-third {
       min-width: calc(100% / 3 - 30px);
       max-width: calc(100% / 3 - 30px);
       position: relative;
       @media screen and (max-width: 1024px) {
-        min-width: 60%;
-        max-width: 60%;
+        //min-width: 400px;
+        //max-width: 400px;
         margin: 20px auto;
       }
       @media screen and (max-width: 768px) {
-        min-width: 100%;
-        max-width: 100%;
+        min-width: 400px;
+        max-width: 400px;
+      }
+
+      @media screen and (max-width: 480px) {
+        min-width: inherit;
+        max-width: 300px;
+      }
+
+      &:hover {
+        .info-container:before {
+          opacity: 1;
+        }
       }
     }
     .info-container {
@@ -134,9 +154,10 @@ html #root {
       position: absolute;
       bottom: 0;
       width: 100%;
+      transition: 400ms ease;
       p {
         font-family: $title-family;
-        font-size: 35px;
+        font-size: 25px;
         position: relative;
 
       }
@@ -149,6 +170,7 @@ html #root {
         top: 0;
         left: 0;
         right: 0;
+        transition: 400ms ease;
         opacity: 0.8;
       }
     }

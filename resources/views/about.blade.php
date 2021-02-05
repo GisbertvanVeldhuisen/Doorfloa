@@ -53,7 +53,7 @@
     <div class="section header" style="background-image: url({{asset('storage/general/header_img.png')}})">
         <div class="container">
             <div class="row">
-                <div class="col-sm"><h1>Door<strong style="color: {{$values->page_color}}">flora</strong></h1>
+                <div class="col-sm"><h1>door<strong style="color: {{$values->page_color}}">flora</strong></h1>
                 </div>
             </div>
         </div>
@@ -70,8 +70,13 @@
             </div>
         </div>
     </div>
-    <div class="section text image" style="background-color: {{$values->accent_color}}">
-        <div class="container">
+    <div class="section text quote image" style="background-color: {{$values->accent_color}}">
+        <div class="container" style="    padding-bottom: 200px;">
+            <div class="row">
+                <div class="col-sm">
+                    <h2>{{$values->title_text}}</h2>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-5">
                     <img src="{{asset('storage/about/image-about.png')}}" alt="">
@@ -79,7 +84,6 @@
                 </div>
 
                 <div class="col-7">
-                    <h2>{{$values->title_text}}</h2>
                     <p>
                         {{$values->text}}
                     </p>
@@ -151,7 +155,7 @@
     <div class="socket" style="background-color: {{$values->accent_color}}">
         <div class="container">
             <p>Copyright © 2020 Doorflora Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen &
-                Jurre van Esveld</p>
+                Jurre van Esveld designed by Babette Westeneng.</p>
         </div>
     </div>
 @endsection
