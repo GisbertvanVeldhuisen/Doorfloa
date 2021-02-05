@@ -47,10 +47,25 @@
                 <div class="row">
                     <div class="col-sm">
                         <h1>Welke categorie wil je bewerken?</h1>
-                        @include('category-select')
+                        <select id="category_select">
+                            <script>
+                                jQuery(function ($) {
+                                    jQuery("#category_select").change(function () {
+                                        location.href = jQuery(this).val();
+                                    })
+
+                                });
+                            </script>
+                            <option value="">Selecteer een categorie om te bewerken</option>
+
+                            @foreach($subcategories as $subcategory)
+                                <option value="{{route('category', $subcategory->id)}}">{{$subcategory->name}}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </form>
+
 
         </div>
     </div>
