@@ -9,6 +9,20 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="Doorflora">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="GelderseCamperCentrale-dev">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="HTWP">
         <serverdata>
           <mappings>
@@ -58,7 +72,21 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="agfacommissie-dev">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="allesovererven-live">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="aofondsrijk-dev">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -289,6 +317,27 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="nhv-dev ">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="nhv-live">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="nhv-live (1)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="ocw-fase2">
         <serverdata>
           <mappings>
@@ -297,6 +346,13 @@
         </serverdata>
       </paths>
       <paths name="premium-live">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="qbsnew-dev">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -352,6 +408,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="sofokles-dev">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="technicalvalley-dev">
         <serverdata>
           <mappings>
@@ -388,6 +451,20 @@
         </serverdata>
       </paths>
       <paths name="werkenbijska-live">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="www.nhv.nu">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="zonwering-dev">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
