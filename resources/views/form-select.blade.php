@@ -18,6 +18,6 @@
     <option value="{{route('form')}}/landschap">Landschap</option>
     <option value="{{route('form')}}/zoet">Zoet</option>
     <option value="{{route('form')}}/hartig">Hartig</option>
-    <option value="/post">Post aanmaken</option>
-    <option value="/categorie">Categorie aanmaken</option>
+    <option value="{{route('post-url')}}">Post aanmaken</option>
+    <option value="{{route('category-url')}}">Categorie aanmaken</option>
 </select>

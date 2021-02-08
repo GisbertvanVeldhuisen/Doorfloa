@@ -52,7 +52,7 @@ Route::middleware('admin')->group(function () {
     Route::delete('form/landschap/deleteimage', [App\Http\Controllers\LandscapesPageController::class, 'DeleteImage'])->name('deleteimagelandscapes');
 
 //get category info and make a category
-    Route::get('/categorie', [\App\Http\Controllers\CategoryController::class, 'getCategories']);
+    Route::get('/categorie', [\App\Http\Controllers\CategoryController::class, 'getCategories'])->name('category-url');
     Route::post('/categorie', [\App\Http\Controllers\CategoryController::class, 'updateOrCreateCategory']);
 
 //edit category
@@ -63,7 +63,7 @@ Route::middleware('admin')->group(function () {
     Route::get('/verwijder/{id}', [\App\Http\Controllers\CategoryController::class, 'deleteCategory']);
 
 //post create
-    Route::get('/post', [\App\Http\Controllers\PostController::class, 'postInfo']);
+    Route::get('/post', [\App\Http\Controllers\PostController::class, 'postInfo'])->name('post-url');
     Route::post('/post', [\App\Http\Controllers\PostController::class, 'updateOrCreatePost']);
 
 //edit post
