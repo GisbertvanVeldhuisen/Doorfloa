@@ -57,8 +57,11 @@
                 <div class="col-sm"><h1>door<strong style="color: {{$values->page_color}}">flora</strong></h1></div>
             </div>
         </div>
+        <div class="arrow down bounce">
+            <a class="arrow-down fa-2x" href="javascript:"></a>
+        </div>
     </div>
-    <div class="section tiles" style="">
+    <div class="section tiles" style="background-color: {{$values->accent_color}}">
         <div class="shadow left" style="background-color: {{$values->page_color}}"></div>
         <div class="shadow right" style="background-color: {{$values->page_color}}"></div>
         <div class="container">

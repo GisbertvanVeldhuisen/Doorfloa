@@ -59,6 +59,9 @@
                 </div>
             </div>
         </div>
+        <div class="arrow down bounce">
+            <a class="arrow-down fa-2x" href="javascript:"></a>
+        </div>
     </div>
 
     <div class="section text full intro" style="background-color: {{$values->accent_color}}">
@@ -90,8 +93,11 @@
                     </div>
                     <div class="col-5">
                         <p class="title">ingrediënten</p>
+                        <p style="line-height: 28px;white-space: pre-line">
+                            {{ $values->ingredients}}
+                        </p>
 
-                        <p>{{$values->ingredients}}</p>
+
                     </div>
                 </div>
             </div>
@@ -104,6 +110,8 @@
                         <h2>{{$values->preparation_title}}</h2>
                     </div>
                     <div class="col-sm">
+                       {{-- {{$data = str_replace(";", "HAHAHAHAHA", $values->preparation)}} {{$data}}--}}
+
                         <p>{{$values->preparation}}</p>
                     </div>
                 </div>

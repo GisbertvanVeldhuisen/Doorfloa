@@ -57,6 +57,9 @@
                 </div>
             </div>
         </div>
+        <div class="arrow down bounce">
+            <a class="arrow-down fa-2x" href="javascript:"></a>
+        </div>
     </div>
 
     <div class="section tiles recipe" style="background-color: {{$values->accent_color}}">

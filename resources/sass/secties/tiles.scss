@@ -17,7 +17,7 @@ html #root {
         min-width: 80%;
         max-width: 80%;
         padding: 10px;
-        margin: 50px auto 150px;
+        margin: 100px auto;
         display: block;
         background: transparent;
         font-size: 16px;
@@ -90,12 +90,12 @@ html #root {
 
       &.left {
         left: 0;
-        transform: translateY(-50%);
+        transform: translateY(-35%);
 
       }
       &.right {
         right: 0;
-        transform: translateY(10%);
+        transform: translateY(5%);
       }
     }
     .container {
@@ -107,7 +107,7 @@ html #root {
       }
     }
     .intro {
-      margin: 20px 0 100px;
+      margin: 20px 0 200px;
       text-align: center;
       max-width: 100%;
       @media screen and (max-width: 1024px) {

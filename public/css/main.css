@@ -379,7 +379,7 @@ html #root .section.tiles.overview select {
   min-width: 80%;
   max-width: 80%;
   padding: 10px;
-  margin: 50px auto 150px;
+  margin: 100px auto;
   display: block;
   background: transparent;
   font-size: 16px;
@@ -464,12 +464,12 @@ html #root .section.tiles .shadow {
 
 html #root .section.tiles .shadow.left {
   left: 0;
-  transform: translateY(-50%);
+  transform: translateY(-35%);
 }
 
 html #root .section.tiles .shadow.right {
   right: 0;
-  transform: translateY(10%);
+  transform: translateY(5%);
 }
 
 html #root .section.tiles .container {
@@ -485,7 +485,7 @@ html #root .section.tiles .container {
 }
 
 html #root .section.tiles .intro {
-  margin: 20px 0 100px;
+  margin: 20px 0 200px;
   text-align: center;
   max-width: 100%;
 }
@@ -607,6 +607,14 @@ html #root .section.text.intro {
 
 html #root .section.text.intro .container {
   padding-bottom: 20px;
+}
+
+html #root .section.text.intro .container h2 {
+  margin-bottom: 50px;
+}
+
+html #root .section.text.intro .container p {
+  margin-bottom: 50px;
 }
 
 html #root .section.text.recipe img {
@@ -1005,7 +1013,7 @@ html #root .section.slider .shadow.left {
 
 html #root .section.slider .shadow.right {
   right: 0;
-  transform: translateY(10%);
+  transform: translateY(5%);
 }
 
 html #root .section.slider .wrapper {

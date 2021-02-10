@@ -91,7 +91,7 @@
                 @php($files = glob('storage/animalsImages/*.{png}', GLOB_BRACE))
                 @foreach($files as $file)
                     <div class="column one-fourth">
-                        <img src="/{{$file}}" alt="">
+                        <img src="../{{$file}}" alt="">
                         <form action="{{ route('deleteimageanimals') }}" method="post">
                             @csrf
                             @method('DELETE')
